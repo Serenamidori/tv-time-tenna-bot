@@ -1,10 +1,15 @@
 const { SlashCommandBuilder } = require("discord.js");
+const utils = require("../../utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("balance")
     .setDescription("Ready to see how many points you've racked up?"),
   async execute(interaction) {
-    await interaction.reply("Whoops! I don't know how to do that yet! Sorry!");
+    const profile = await utils.profile.getProfile(interaction.user.id);
+    const name = utils.profile.getName(interaction, profile);
+
+    await interaction.reply(`Mike! Fetch ${name}'s points, please!`);
+    utils.mike.getPoints(interaction, profile, name);
   },
 };

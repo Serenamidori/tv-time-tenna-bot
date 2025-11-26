@@ -7,7 +7,6 @@ async function getProfile(id) {
       { $setOnInsert: { id: id, createdAt: new Date() } },
       { upsert: true, new: true, setDefaultsOnInsert: true }
     )
-    console.log(`Profile '${id}' found`);
     return profile;
   } catch (error) {
     console.error(`Error creating/retrieving profile'${id}':`, error);
@@ -22,6 +21,14 @@ async function getProfile(id) {
   }
 };
 
+function getName(interaction, profile = null) {
+  return (
+    profile?.nickname || 
+    interaction.member?.nickname || 
+    interaction.user.username
+  );
+}
+
 module.exports = {
-  getProfile
+  getProfile, getName
 }
