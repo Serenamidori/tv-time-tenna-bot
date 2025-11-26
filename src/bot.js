@@ -1,4 +1,5 @@
 require("dotenv").config();
+const mongoose = require("mongoose");
 const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, GatewayIntentBits, MessageFlags } = require("discord.js");
@@ -40,9 +41,13 @@ const loadCommands = () => {
 
 loadCommands();
 
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log('✅ Connected to database'))
+.catch(err => console.error('MongoDB connection error:', err));
+
 bot.on("ready", () => {
-  console.info(`Logged in as ${bot.user.tag}`);
-  console.info(`Loaded ${bot.commands.size} slash commands`);
+  console.info(`✅ Logged in as ${bot.user.tag}`);
+  console.info(`✅ Loaded ${bot.commands.size} commands`);
 });
 
 bot.on("interactionCreate", async (interaction) => {
