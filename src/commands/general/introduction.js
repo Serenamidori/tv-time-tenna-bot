@@ -30,7 +30,7 @@ module.exports = {
     try {
       const profile = await utils.profile.getProfile(interaction.user.id);
       if (anyOptions(interaction.options)) {
-        if (!validBirthday(interaction.options)) {
+        if (interaction.options.getString("birthday") && !validBirthday(interaction.options)) {
           await interaction.reply(`Sorry, didn't quite catch that birthday! Want to give it another go?`);
         } else {
           await setPreferences(profile, interaction.options);
@@ -47,7 +47,7 @@ module.exports = {
 };
 
 const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday"));
-const validBirthday = (options) => (isValidBirthday(options.getString("birthday")))
+const validBirthday = (options) => !!(isValidBirthday(options.getString("birthday")))
 
 function isValidBirthday(birthdayStr) {
   const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/;
