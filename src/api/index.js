@@ -1,5 +1,5 @@
-// const randomWord = require('./services/randomWord');
+const affirmation = require('./services/affirmation');
 
-// module.exports = {
-//   randomWord
-// };
+module.exports = {
+  affirmation
+};
