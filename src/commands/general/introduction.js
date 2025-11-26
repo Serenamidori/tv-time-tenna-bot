@@ -1,4 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
+const utils = require("../../utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -9,15 +10,15 @@ module.exports = {
         .setDescription("Got a cool nickname you go by?")
         .setRequired(false)
     )
-    .addIntegerOption((option) =>
+    .addStringOption((option) =>
       option
         .setName("pronouns")
         .setDescription("What pronouns should I use when we chat?")
         .setRequired(false)
         .addChoices(
-          { name: "He/Him", value: 0 },
-          { name: "She/Her", value: 1 },
-          { name: "They/Them", value: 2 }
+          { name: "He/Him", value: "he" },
+          { name: "She/Her", value: "she" },
+          { name: "They/Them", value: "they" }
         )
     )
     .addStringOption((option) =>
@@ -26,12 +27,49 @@ module.exports = {
         .setRequired(false)
     ),
   async execute(interaction) {
-    const nickname = interaction.options.getString("nickname");
-    const pronouns = interaction.options.getInteger("pronouns");
-    const birthday = interaction.options.getString("birthday");
-    console.log(nickname)
-    console.log(pronouns)
-    console.log(birthday)
-    await interaction.reply("Whoops! I don't know how to do that yet! Sorry!");
+    try {
+      const profile = await utils.profile.getProfile(interaction.user.id);
+      if (anyOptions(interaction.options)) {
+        if (!validBirthday(interaction.options)) {
+          await interaction.reply(`Sorry, didn't quite catch that birthday! Want to give it another go?`);
+        } else {
+          await setPreferences(profile, interaction.options);
+          await interaction.reply(`I'll be sure to remember that! Thanks, ${profile.nickname || "superstar"}!`);
+        }
+      } else {
+        await interaction.reply(`Nice to meet you, ${profile.nickname || "superstar"}!`);
+      }
+    } catch (error) {
+      console.error('Profile retrieval failed:', error.message);
+      await interaction.reply("Whoops! I seem to have lost my notes, please stand by!");
+    }
   },
+};
+
+const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday"));
+const validBirthday = (options) => (isValidBirthday(options.getString("birthday")))
+
+function isValidBirthday(birthdayStr) {
+  const regex = /^(0[1-9]|1[0-2])\/(0[1-9]|[12][0-9]|3[01])\/(19|20)\d{2}$/;
+  return regex.test(birthdayStr);
+};
+
+async function setPreferences(profile, options) {
+  const nickname = options.getString("nickname");
+  const pronouns = options.getString("pronouns");
+  const birthdayStr = options.getString("birthday");
+
+  if (nickname) {
+    profile.nickname = nickname;
+  }
+
+  if (pronouns) {
+    profile.pronouns = pronouns;
+  }
+
+  if (birthdayStr && isValidBirthday(birthdayStr)) {
+    profile.birthday = new Date(birthdayStr);
+  }
+
+  profile.save();
 };
