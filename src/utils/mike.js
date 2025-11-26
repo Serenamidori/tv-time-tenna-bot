@@ -1,7 +1,7 @@
 const { AttachmentBuilder, EmbedBuilder } = require("discord.js");
 const path = require('path');
 const random = require('./random');
-const quotes = ["Sure thing, boss!", "Yous got it, boss.", "..."]
+const quotes = ["Right away, Mr. Tenna!", "Yous got it, boss.", "..."]
 
 function getMike() {
   const i = random.rand(3);
