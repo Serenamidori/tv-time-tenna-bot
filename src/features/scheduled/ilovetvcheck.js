@@ -51,17 +51,22 @@ const lines = [
   `I Love TV. That's all you gotta say.`,
   'Hey! Who here loves TV?',
   `Got some points with _your_ name on them if you reply with "I Love TV"!`,
-  '-# ...does anyone love TV...?'
+  '-# ...does anyone love TV...?',
+  'Do _you_ love TV? I bet you do!',
+  `Let's all shout "I Love TV"! Don't be shy now!`
 ]
 const thanks = [
   `Yes, you _do_ love TV, don't you?`,
   `That's CORRECT!`,
   'I could hear that 99 more times!',
   `Haha, that's right!`,
-  '<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>'
+  '<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>',
+  'You really <:love1:1443452223387340984><:love2:1443452224029065276> TV? I knew it!'
 ]
 const nope = [
   `That's the wrong answer!`,
-  `Hmm, that's not quite right...`,
-  `Sorry, what was that?! Couldn't hear you!`
+  `Hmm, that doesn't sound quite right...`,
+  `Sorry, what was that?! Couldn't hear you!`,
+  'I must not have heard you right. You meant to say "I love TV" right?',
+  'Ooh, so close. But, not really. Try again!'
 ]
