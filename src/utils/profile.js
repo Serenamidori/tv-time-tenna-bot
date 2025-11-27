@@ -1,6 +1,6 @@
 const Profile = require('../../models/Profile');
 
-async function getProfile(id) {
+async function find(id) {
   try {
     const profile = await Profile.findOneAndUpdate(
       { id: id },
@@ -30,5 +30,5 @@ function getName(interaction, profile = null) {
 }
 
 module.exports = {
-  getProfile, getName
+  find, getName
 }

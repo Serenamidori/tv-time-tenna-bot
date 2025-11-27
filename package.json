@@ -9,6 +9,7 @@
 		"dotenv": "^8.2.0",
 		"mongodb": "^3.6.2",
 		"mongoose": "^8.20.1",
+		"node-cron": "^4.2.1",
 		"winston": "^3.3.3"
 	},
 	"engines": {
