@@ -21,7 +21,7 @@ async function getPoints(interaction, profile, name) {
   const pointsEmbed = new EmbedBuilder()
     .setColor(0xFF362C)
     .setTitle(`"${quotes[i]}"`)
-    .addFields({ name: `${name.toUpperCase()}'S BALANCE`, value: `${profile.points} points` })
+    .addFields({ name: `${name.toUpperCase()}'S BALANCE`, value: `${profile.points} POINTS` })
     .setThumbnail(`attachment://${attachment.name}`);
 
   await interaction.channel.send({ embeds: [pointsEmbed], files: [attachment]});

@@ -29,9 +29,8 @@ module.exports = (bot) => {
         response = thanks[utils.random.rand(thanks.length)-1];
 
         if (!respondedUsers.has(message.author.id)) {
-          response += " (+15 POINTS)"
+          response += " [+15 POINTS]"
           utils.points.give(message.author.id, 15)
-
           respondedUsers.add(message.author.id);
         };
 

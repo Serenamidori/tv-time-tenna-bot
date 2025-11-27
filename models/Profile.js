@@ -12,7 +12,9 @@ const Profile = new Schema({
     },
     nickname: String,
     pronouns: String,
-    birthday: Date
+    birthday: Date,
+    quizCount: Number,
+    lastQuizAt: Date
 });
 
 module.exports = model('Profile', Profile);

@@ -1,5 +1,5 @@
-const affirmation = require('./services/affirmation');
+const trivia = require('./services/trivia');
 
 module.exports = {
-  affirmation
+  trivia
 };
