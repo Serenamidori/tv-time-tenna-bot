@@ -1,23 +1,6 @@
 const cron = require('node-cron');
 const utils = require("../../utils");
 const { setTimeout } = require("timers/promises");
-const lines = [
-  'Hey folks! Just popping in to ask, do you _love_ TV?',
-  'At Everyone! Do you love TV?\n-# ... did I do that right?',
-  'Quick! Someone reply with "I Love TV!"\n-# ... please?',
-  `I Love TV. That's all you gotta say.`
-]
-const thanks = [
-  `Yes, you _do_ love TV, don't you?`,
-  `That's CORRECT!`,
-  'I could hear that 99 more times!',
-  `Haha, that's right!`
-]
-const nope = [
-  `That's the wrong answer!`,
-  `Hmm, that's not quite right...`,
-  `Sorry, what was that?! Couldn't hear you!`
-]
 const lovesTvPattern = /\b(i|we|i really|we really)?\s+(lo+ve|lu+v)\s+(tv|television|watching tv)\b/i;
 
 module.exports = (bot) => {
@@ -59,3 +42,26 @@ module.exports = (bot) => {
     }
   });
 };
+
+// dialogue
+const lines = [
+  'Hey folks! Just popping in to ask, do you _love_ TV?',
+  'At Everyone! Do you love TV?\n-# ... did I do that right?',
+  'Quick! Someone reply with "I Love TV!"\n-# ... please?',
+  `I Love TV. That's all you gotta say.`,
+  'Hey! Who here loves TV?',
+  `Got some points with _your_ name on them if you reply with "I Love TV"!`,
+  '-# ...does anyone love TV...?'
+]
+const thanks = [
+  `Yes, you _do_ love TV, don't you?`,
+  `That's CORRECT!`,
+  'I could hear that 99 more times!',
+  `Haha, that's right!`,
+  '<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>'
+]
+const nope = [
+  `That's the wrong answer!`,
+  `Hmm, that's not quite right...`,
+  `Sorry, what was that?! Couldn't hear you!`
+]
