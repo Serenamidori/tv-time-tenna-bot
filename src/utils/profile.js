@@ -10,14 +10,27 @@ async function find(id) {
     return profile;
   } catch (error) {
     console.error(`Error creating/retrieving profile'${id}':`, error);
+    throwError(error);
+  }
+};
 
-    if (error.name === 'MongoError' || error.name === 'MongoServerError') {
-      throw new Error('Database connection failed');
-    } else if (error.name === 'ValidationError') {
-      throw new Error('Invalid profile data');
-    } else {
-      throw new Error('Failed to retrieve or create profile');
-    }
+async function all() {
+   try {
+    const allProfiles = Profile.find({});
+    return await allProfiles;
+  } catch (error) {
+    console.error(`Error retrieving all profiles`, error);
+    throwError(error);
+  }
+}
+
+function throwError(error) {
+  if (error.name === 'MongoError' || error.name === 'MongoServerError') {
+    throw new Error('Database connection failed');
+  } else if (error.name === 'ValidationError') {
+    throw new Error('Invalid profile data');
+  } else {
+    throw new Error('Failed to retrieve or create profile');
   }
 };
 
@@ -31,5 +44,5 @@ function getName(interaction, profile = null) {
 }
 
 module.exports = {
-  find, getName
+  find, all, getName
 }

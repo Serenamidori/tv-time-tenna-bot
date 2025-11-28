@@ -31,7 +31,6 @@ const loadCommands = () => {
 
       if ("data" in command && "execute" in command) {
         bot.commands.set(command.data.name, command);
-        console.log(`Loaded command: ${command.data.name}`);
       } else {
         console.warn(`Command ${filePath} is missing a "data" or "execute"`);
       }
@@ -43,10 +42,11 @@ loadCommands();
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('✅ Connected to database'))
+.then(() => require('./features/scheduled/birthday.js')(bot))
 .catch(err => console.error('MongoDB connection error:', err));
 
 bot.on("ready", () => {
-  console.info(`✅ Logged in as ${bot.user.tag}`);
+  console.info(`🔓 Logged in as ${bot.user.tag}`);
   console.info(`✅ Loaded ${bot.commands.size} commands`);
   require('./features/scheduled/ilovetvcheck.js')(bot);
 });
@@ -99,7 +99,7 @@ const startBot = async () => {
       process.exit(1);
     }
     
-    console.info("Logging in...");
+    console.info("🔐 Logging in...");
     await bot.login(process.env.TOKEN);
     
   } catch (error) {
