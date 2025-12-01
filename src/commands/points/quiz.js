@@ -27,7 +27,7 @@ module.exports = {
       const difficulty = interaction.options.getString("difficulty") || 2;
       const question = await getQuestion(difficulty);
       if (question == null) {
-        await interaction.reply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _Mike, where did the trivia go!? ... Well, go find some more! And hurry!_`);
+        await interaction.reply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _(Mike, where did the trivia go!? ... Well, go find some more! And hurry!!)_`);
       } else {
         const answers = formatAnswers(question);
         let points = 5;

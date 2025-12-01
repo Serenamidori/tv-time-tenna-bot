@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, GatewayIntentBits, MessageFlags } = require("discord.js");
+const { handleDialogue } = require('./features/conversation/handler');
 
 const bot = new Client({
   intents: [
@@ -83,6 +84,10 @@ bot.on("interactionCreate", async (interaction) => {
   }
 });
 
+bot.on('messageCreate', async (message) => {
+  if (message.author.bot) return;
+  await handleDialogue(message, bot);
+});
 
 bot.on("error", (error) => {
   console.error("[discord.js error]", error);

@@ -1,10 +1,10 @@
 const cron = require('node-cron');
 const utils = require("../../utils");
 const { setTimeout } = require("timers/promises");
-const lovesTvPattern = /\b(i|we|i really|we really)?\s+(lo+ve|lu+v)\s+(tv|television|watching tv)\b/i;
+const lovesTvPattern = /\b(i do|we do|me|indeed|ye+s|yea+h)\b|\b(i|we|i really|we really)?\s+(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)\b/i;
+let dailyMessageId = null;
 
 module.exports = async (bot) => {
-  let dailyMessageId = null;
   let respondedUsers = new Set();
 
   cron.schedule('0 10 * * *', async () => {
@@ -41,18 +41,20 @@ module.exports = async (bot) => {
         };
 
       } else {
-        response = nope[utils.random.rand(nope.length)-1];
+        response = {content: nope[utils.random.rand(nope.length)-1], ephemeral: true};
       }
       await message.reply(response);
     }
   });
 };
 
+module.exports.getDailyMessageId = () => dailyMessageId;
+
 // dialogue
 const lines = [
   'Hey folks! Just popping in to ask, do you _love_ TV?',
-  'At Everyone! Do you love TV?\n-# ... did I do that right?',
-  'Quick! Someone reply with "I Love TV!"\n-# ... please?',
+  'At Everyone! Do you love TV?\n-# _(... did I do that right?)_',
+  'Quick! Someone reply with "I Love TV!"\n-# _(... please?)_',
   `I Love TV. That's all you gotta say.`,
   'Hey! Who here loves TV?',
   `Got some points with _your_ name on them if you reply with "I Love TV"!`,
