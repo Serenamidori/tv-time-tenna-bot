@@ -1,8 +1,9 @@
 const offLimits = [
-  'sex', 'nsfw', 'not safe for work',
+  'fuck me', 'have sex', 'sex with me',
+  'nsfw', 'not safe for work',
   'porn', 'porno','hentai', 'yaoi', 'yuri',
-  'nude', 'naked', 'boobs', 'dick', 'cock', 'pussy',
-  'fuck me', 'kys', 'get pregnant', 'deltaruined',
+  'boobs', 'dick', 'cock', 'pussy',
+  'get pregnant', 'deltaruined',
   'r34', 'wireplay', 'bussy'
 ];
 
@@ -20,10 +21,10 @@ const thankYou = /^(thank+|thank you+|ty|thanks+|thankies)(\s|$|!|\?)/i;
 const compliment = /(you're|you are\s*(so\s*)?(cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love)\s*(you|tv|television|your show|tv time|your nose|your head|your face)|(big|huge)\s*fan|like you)/i;
 const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i;
 
-const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(so|pretty\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
-const userFeelingBad = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(so|pretty\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby)/i;
-const userDayGood = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(so|pretty\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i;
-const userDayBad = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(so|pretty|fucking\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby)/i;
+const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
+const userFeelingBad = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby)/i;
+const userDayGood = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i;
+const userDayBad = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby)/i;
 const userVenting = /(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ugh|bleh|meh|exhausted|stressed out|weh|OTL)/i;
 
 const tvQuestionWhen = /(when|what time).*(show|episode|broadcast|air|start|next|tv time)/i;
@@ -51,9 +52,9 @@ const workersMention = /(pippins|ramb|zapper|shadowguy|shuttah)/i;
 const laninoElninaMention = /(lanino|elnina|the weather|weather duo|weather news team)/i;
 const spamtonMention = /(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy)/i;
 const knightMention = /(the knight|roaring knight)/i;
-const lancerMention = /(lancer|prancer|dancer|mr. generosity|chaos king)/i;
+const lancerMention = /(lancer|prancer|dancer|mr. generosity|chaos king|king wingy)/i;
 const queenMention = /(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)/i;
-const whoMention = /(rouxls|battat|jongler|pluey)/i;
+const whoMention = /(rouxls|battat|jongler|pluey|defernull|gaster)/i;
 
 const insult = /(trash heap|i hate you|fuck you|kill yourself|you're a bitch|you suck|you're lame|you're annoying|boring)/i;
 const insultOld = /(you're old|you're so old|old tv|obsolete)/i;

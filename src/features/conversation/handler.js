@@ -55,11 +55,11 @@ function detectIntent(content) {
   if (triggers.whoMention.test(content)) return 'whoMention';
   if (triggers.loveFans.test(content)) return 'loveFans';
   if (triggers.compliment.test(content)) return 'compliment';
+  if (triggers.userVenting.test(content)) return 'userVenting';
   if (triggers.userFeelingGood.test(content)) return 'userFeelingGood';
   if (triggers.userFeelingBad.test(content)) return 'userFeelingBad';
   if (triggers.userDayGood.test(content)) return 'userDayGood';
   if (triggers.userDayBad.test(content)) return 'userDayBad';
-  if (triggers.userVenting.test(content)) return 'userVenting';
   if (triggers.selfQuestionWho.test(content)) return 'selfQuestionWho';
   if (triggers.selfQuestionHow.test(content)) return 'selfQuestionHow';
   if (triggers.selfQuestionWhatsUp.test(content)) return 'selfQuestionWhatsUp';
