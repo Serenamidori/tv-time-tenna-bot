@@ -16,6 +16,8 @@ module.exports = async (bot) => {
 
     await setTimeout(randomDelayMs);
 
+    await channel.sendTyping();
+    await setTimeout(3000);
     const sentMessage = await channel.send(lines[utils.random.rand(lines.length)-1]);
     dailyMessageId = sentMessage.id;
     respondedUsers.clear();
