@@ -20,6 +20,12 @@ const thankYou = /^(thank+|thank you+|ty|thanks+|thankies)(\s|$|!|\?)/i;
 const compliment = /(you're|you are\s*(so\s*)?(cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love)\s*(you|tv|television|your show|tv time|your nose|your head|your face)|(big|huge)\s*fan|like you)/i;
 const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i;
 
+const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(so|pretty\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
+const userFeelingBad = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(so|pretty\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby)/i;
+const userDayGood = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(so|pretty\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i;
+const userDayBad = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(so|pretty|fucking\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby)/i;
+const userVenting = /(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ugh|bleh|meh|exhausted|stressed out|weh|OTL)/i;
+
 const tvQuestionWhen = /(when|what time).*(show|episode|broadcast|air|start|next|tv time)/i;
 const tvQuestionRating = /(rating|ratings|popular|viewers|how many|how well)/i;
 const tvQuestionWhat = /(what|which).*(show|episode|channel|program|watch|on tv|tv time)/i;
@@ -27,7 +33,7 @@ const tvQuestionTVTime = /(what).*(time|tv time|time is it)/i;
 const tvQuestionHow = /(how).*(watch|tune in|see|find|tv time)/i;
 
 const selfQuestionWho = /(who are you|who is tenna|who's tenna)/i;
-const selfQuestionHow = /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin)/i;
+const selfQuestionHow = /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you)/i;
 const selfQuestionWhatsUp = /(what up|what's up|what is up|wassup|what's going on|what is going on|whatcha up to|what are you up to|what you up to)/i;
 const selfQuestionWhat = /(what are you|what is tenna|what do you do)/i;
 const selfQuestionLike = /(do you like|do you enjoy|do you love|you a fan of|are you into)/i;
@@ -66,6 +72,11 @@ module.exports = {
   thankYou,
   compliment,
   loveFans,
+  userFeelingGood,
+  userFeelingBad,
+  userDayGood,
+  userDayBad,
+  userVenting,
   tvQuestionWhen,
   tvQuestionRating,
   tvQuestionWhat,

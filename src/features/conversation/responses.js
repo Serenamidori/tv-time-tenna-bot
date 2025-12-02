@@ -35,7 +35,10 @@ module.exports = {
     "Hi there!",
     "Hello!",
     "Hi! Great to see you!",
-    "Hellü!"
+    "Hellü!",
+    "Hey there! How's it going?",
+    "Heya!",
+    "Hey! What's up?"
   ],
 
   goodbye: [
@@ -77,6 +80,41 @@ module.exports = {
     "Aww, I'm flattered {user}!! How could I say 'no' to this attention?"
   ],
   
+  userFeelingGood: [
+    "<:love1:1443452223387340984><:love2:1443452224029065276> that energy! Keep it up!!",
+    "That's great to hear, {user}! 8>[^D]",
+    "<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>!! That's what I like to hear!",
+    "Wonderful! Sounds like you're feeling electric!!"
+  ],
+
+  userFeelingBad: [
+    "I'm so sorry to hear that! ...maybe watching some TV will help?",
+    "That's rough {user}... Want me to distract you? I've heard I'm very distracting!",
+    "Hey, I get it {user}! I get it... I have days like that too!",
+    "We're all a little glooby sometimes! It'll be okay!"
+  ],
+
+  userDayGood: [
+    "You're having a good day? Fantastic!!",
+    "Great days deserve great TV!\n-# _(Just saying!)_",
+    "Glad to hear it! Tell me more, I'm all antenna!!",
+    "That's great {user}! Let's make sure it stays that way!!"
+  ],
+
+  userDayBad: [
+    "Rough day? Nothing a little <:show1:1445469367654416435><:show2:1445469370494222549><:show3:1445469372884979764> can't fix!",
+    "Sorry to hear that, {user}. Maybe we can watch something nice?",
+    "Bad days do happen... But hey, at least you've got me! And your friends in the server!\n-# _(And MIKE too!)_",
+    "Well that's no good. Want to talk about it?\n-# _(I may not always understand, but I'm a great listener!)_"
+  ],
+
+  userVenting: [
+    "Hang in there **superstar**! Maybe take a break and watch something?",
+    "I hear ya... Rest up! The TV will always be here when you're ready!",
+    "You deserve a break! Preferably in front of a TV!\n-# _(Just saying.)_",
+    "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_"
+  ],
+
   tvQuestionWhen: [
     "The show's ALWAYS on! Tune in anytime!",
     "Next episode? How about **RIGHT NOW**?",
@@ -108,10 +146,11 @@ module.exports = {
   ],
 
   selfQuestionWho: [
-    "I'm Tenna! Mr. Ant Tenna, if you're being formal!",
+    "I'm Tenna! Mr. Tenna, if you're being formal!",
     "Your favorite TV host!\n-# _(...I am your favorite, right?)_",
     "The King of Only! Tenna!",
     "Who am I? _WHO AM I?!_ I'm the MAIN EVENT, baby!",
+    "Haha, I was hoping you'd ask! I'm Mr. (Ant) Tenna! But you can just call me Tenna!"
   ],
 
   selfQuestionHow: [
@@ -132,7 +171,7 @@ module.exports = {
     "I'm a TV host! An entertainer! A STAR!",
     "I'm the heart and soul of TV Time!!",
     "Three-colors, cathode raytube!! Make you laugh, make you cry!! Entertainment that never gets old!!",
-    "I'm a TV."
+    "I'm a TV!!"
   ],
 
   selfQuestionLike: [

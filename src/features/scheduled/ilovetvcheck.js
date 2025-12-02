@@ -1,7 +1,7 @@
 const cron = require('node-cron');
 const utils = require("../../utils");
 const { setTimeout } = require("timers/promises");
-const lovesTvPattern = /\b(i do|we do|me|indeed|ye+s|yea+h)\b|\b(i|we|i really|we really)?\s+(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)\b/i;
+const lovesTvPattern = /\b(i do|we do|me|indeed|ye+s|yea+h|ilovetv)\b|\b(i|we|i really|we really)?\s+(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)\b/i;
 let dailyMessageId = null;
 
 module.exports = async (bot) => {
