@@ -12,7 +12,7 @@ const balanceCommand = /(what is my balance|what's my balance|how many points|ch
 const introduceCommand = /(my name is|my birthday is|my pronouns are|introduce myself|my nickname is)/i;
 const scheduleCommand = /(create an event|make an event|plan an event|schedule a)/i;
 
-const greeting = /^(hi+|hey+|hewwo+|hello+|howdy|hay|yo+|sup|hiya+|heya+|greetings|good evening|good afternoon)(\s|$|!|\?)/i;
+const greeting = /^(heyo|hi+|hey+|hewwo+|hello+|howdy|hay|yo+|sup|hiya+|heya+|greetings|good evening|good afternoon)(\s|$|!|\?)/i;
 const goodbye = /^(bye+|goodbye|good bye|see you later|see u later|see you|see ya+|byebye|bye bye|seeya+)(\s|$|!|\?)/i;
 const goodMorning = /^(good morning+|gm|good mornin'|mornin')(\s|$|!|\?)/i;
 const goodnight = /^(good night+|gn|nighty night)(\s|$|!|\?)/i;
@@ -24,8 +24,8 @@ const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(
 const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
 const userFeelingBad = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby)/i;
 const userDayGood = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i;
-const userDayBad = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby)/i;
-const userVenting = /(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ugh|bleh|meh|exhausted|stressed out|weh|OTL)/i;
+const userDayBad = /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i;
+const userVenting = /(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ough|ugh|bleh|meh|exhausted|stressed out|weh|OTL)/i;
 
 const tvQuestionWhen = /(when|what time).*(show|episode|broadcast|air|start|next|tv time)/i;
 const tvQuestionRating = /(rating|ratings|popular|viewers|how many|how well)/i;

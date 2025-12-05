@@ -38,8 +38,9 @@ function getName(interaction, profile = null) {
   return (
     profile?.nickname || 
     interaction.member?.nickname || 
-    interaction.user.globalName || 
-    interaction.user.username
+    interaction.member?.user?.globalName || 
+    interaction.member?.user?.username ||
+    'superstar'
   );
 }
 
