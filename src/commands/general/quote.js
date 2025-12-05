@@ -485,7 +485,7 @@ const quotes = [
   `Wow, folks! Looks like they've reached the end of our FINAL <:board1:1445921047496101952><:board2:1445921048737484990>!`,
   `It's sad to say goodbye, but when you gotta go... you gotta go!`,
   `MIKE, roll the credits...!`,
-  `STOP!!! <:breaking1:1443144107777064992><:breaking2:1443144122977484854><:breaking3:1443144140329062401><:breaking4:1443144154183110798>!`,
+  `STOP!!! <:breaking1:1446597036601507840><:breaking2:1446597037486375113><:breaking3:1446597038639681628><:breaking4:1446597046290350151><:breaking5:1446597047615754280>!`,
   `Due to your SPEED, viewer donations have been POURING IN...`,
   `And we have met the SPECIAL INCENTIVE!`,
   `YES! The <:funometer1:1446242625886748802><:funometer2:1446242628684353733><:funometer3:1446242629615616275><:funometer4:1446242631175635005><:funometer5:1446242632677199903> doesn't lie! The viewers' voices are in...!`,

@@ -44,14 +44,14 @@ function happyBirthdayMessage(birthdays) {
 
 // dialogue
 const lines = [
-  `<:breaking1:1443144107777064992><:breaking2:1443144122977484854><:breaking3:1443144140329062401><:breaking4:1443144154183110798> We've got a birthday today! Happy Birthday {users}!`,
+  `<:breaking1:1446597036601507840><:breaking2:1446597037486375113><:breaking3:1446597038639681628><:breaking4:1446597046290350151><:breaking5:1446597047615754280> We've got a birthday today! Happy Birthday {users}!`,
   `Hope you have an <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> birthday {users}!`,
   `Hey {users}! Are you having <:fun1:1444090417078341723><:fun2:1444090418127048734> on your birthday? I hope you are!`,
   `Oh {users}, I hope you're having a <:lovely1:1444089294154109049><:lovely2:1444089295521710231> birthday today!`
 ];
 
 const linesPlural = [
-  `<:breaking1:1443144107777064992><:breaking2:1443144122977484854><:breaking3:1443144140329062401><:breaking4:1443144154183110798> We've got some birthdays today! Happy Birthday {users}!`,
+  `<:breaking1:1446597036601507840><:breaking2:1446597037486375113><:breaking3:1446597038639681628><:breaking4:1446597046290350151><:breaking5:1446597047615754280> We've got some birthdays today! Happy Birthday {users}!`,
   `Hope you all have an <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> birthday {users}!`,
   `Hey {users}! Are you all having <:fun1:1444090417078341723><:fun2:1444090418127048734> on your birthday? I hope you are!`,
   `Oh {users}, I hope you're all having a <:lovely1:1444089294154109049><:lovely2:1444089295521710231> birthday today!`
