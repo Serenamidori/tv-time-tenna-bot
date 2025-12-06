@@ -301,6 +301,7 @@ module.exports = {
     "-# Oh but... I thought you wanted to talk...",
     "Fine! Maybe I'll just leave this server then!\n-# _(...Mike! How do I leave again?)_",
     "Shutting up!\n...\n...\n...\nOkay I can't do it. **ANYWAY!**",
+    "Sorry {user}, that's premium!"
   ],
   
   fallback: [

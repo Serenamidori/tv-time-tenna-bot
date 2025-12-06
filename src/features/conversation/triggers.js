@@ -1,6 +1,6 @@
 const offLimits = [
   'fuck me', 'have sex', 'sex with me',
-  'nsfw', 'not safe for work',
+  'nsfw', 'not safe for work', 'cunt',
   'porn', 'porno','hentai', 'yaoi', 'yuri',
   'boobs', 'dick', 'cock', 'pussy', 'penis',
   'get pregnant', 'deltaruined', 'booty',
@@ -18,7 +18,7 @@ const goodMorning = /^(good morning+|gm|good mornin'|mornin')(\s|$|!|\?)/i;
 const goodnight = /^(good night+|gn|nighty night)(\s|$|!|\?)/i;
 
 const thankYou = /^(thank+|thank you+|ty|thanks+|thankies)(\s|$|!|\?)/i;
-const compliment = /(you're|you are\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love|smooch|slaps|slap)\s*(you|tv|television|your show|tv time|your nose|your head|your face|your ass)|(big|huge)\s*fan|like you)/i;
+const compliment = /(you're|you are\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love|smooch|slaps|slap)\s*(you|tv|television|your show|tv time|your nose|your head|your face|your ass|your antennas|your antenna)|(big|huge)\s*fan|like you)/i;
 const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i;
 
 const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
@@ -63,7 +63,7 @@ const insultShutUp = /(shut up|go away|leave me alone|nobody asked|who asked)/i;
 
 const dontWorry = /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i;
 const youllSee = /(you'll see|you'll find out|you will|you will soon)/i;
-const imSorry = /(i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i;
+const imSorry = /(sowwy|i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i;
 
 
 // TODO: FRESH FROM THE JUICE and other quotes with responses (coming to your house, tennas balls, etc)
