@@ -34,7 +34,7 @@ const tvQuestionTVTime = /(what).*(time|tv time|time is it)/i;
 const tvQuestionHow = /(how).*(watch|tune in|see|find|tv time)/i;
 
 const selfQuestionWho = /(who are you|who is tenna|who's tenna)/i;
-const selfQuestionHow = /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you)/i;
+const selfQuestionHow = /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you|how has your day)/i;
 const selfQuestionWhatsUp = /(what up|what's up|what is up|wassup|what's going on|what is going on|whatcha up to|what are you up to|what you up to)/i;
 const selfQuestionWhat = /(what are you|what is tenna|what do you do)/i;
 const selfQuestionLike = /(do you like|do you enjoy|do you love|you a fan of|are you into)/i;
@@ -50,7 +50,7 @@ const mikeMention = /(mike)/i;
 const mettatonMention = /(mettaton|mtt|metta)/i;
 const workersMention = /(pippins|ramb|zapper|shadowguy|shuttah)/i;
 const laninoElninaMention = /(lanino|elnina|the weather|weather duo|weather news team)/i;
-const spamtonMention = /(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy)/i;
+const spamtonMention = /(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton)/i;
 const knightMention = /(the knight|roaring knight)/i;
 const lancerMention = /(lancer|prancer|dancer|mr. generosity|chaos king|king wingy)/i;
 const queenMention = /(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)/i;

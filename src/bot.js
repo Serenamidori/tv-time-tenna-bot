@@ -58,7 +58,7 @@ bot.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   const allowedChannels = [
-    process.env.GENERAL_CHANNEL,
+    process.env.GENERAL_CHAT,
     process.env.STAGE_CHAT,
     process.env.LOUNGE_VOICE_CHAT
   ];
