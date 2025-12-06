@@ -2,7 +2,7 @@ const offLimits = [
   'fuck me', 'have sex', 'sex with me',
   'nsfw', 'not safe for work',
   'porn', 'porno','hentai', 'yaoi', 'yuri',
-  'boobs', 'dick', 'cock', 'pussy',
+  'boobs', 'dick', 'cock', 'pussy', 'penis',
   'get pregnant', 'deltaruined',
   'r34', 'wireplay', 'bussy', 'eggnant'
 ];
@@ -61,6 +61,9 @@ const insult = /(trash heap|i hate you|fuck you|kill yourself|you're a bitch|you
 const insultOld = /(you're old|you're so old|old tv|obsolete|old)/i;
 const insultShutUp = /(shut up|go away|leave me alone|nobody asked|who asked)/i;
 
+const dontWorry = /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i;
+const youllSee = /(you'll see|you'll find out|you will|you will soon)/i;
+
 module.exports = {
   offLimits,
   quizCommand,
@@ -108,5 +111,7 @@ module.exports = {
   whoMention,
   insult,
   insultOld,
-  insultShutUp
+  insultShutUp,
+  dontWorry,
+  youllSee
 };

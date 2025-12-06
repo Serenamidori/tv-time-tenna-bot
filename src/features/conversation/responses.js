@@ -1,3 +1,5 @@
+const { dontWorry, youllSee } = require("./triggers");
+
 module.exports = {
   empty: [
     "Hmm?",
@@ -307,5 +309,16 @@ module.exports = {
     "Sorry, bad reception on that one. What was that?",
     "Uh, sorry! Didn't make any sense to me!",
     "Does anyone know what this means?"
+  ],
+
+  dontWorry: [
+    "Okay! Yay!!",
+    "Oh, okay then!",
+    "Alright, I won't!!"
+  ],
+
+  youllSee: [
+    "...I'm worried!!",
+    "Hm! That's concerning!"
   ]
 };
