@@ -175,7 +175,7 @@ const correctLines = [
 ];
 
 const incorrectLines = [
-  `Aaand that's the wrong answer. Let's hear some boo's, folks!\n-#_Just kidding! Force of habit!_`,
+  `Aaand that's the wrong answer. Let's hear some boo's, folks!\n-# _(Just kidding! Force of habit!)_`,
   `Sorry, that's the wrong answer. Try again next time!`,
   `Seems you've chosen the wrong answer. You'll get 'em next time!`
 ];
