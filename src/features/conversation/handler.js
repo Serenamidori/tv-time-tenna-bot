@@ -54,6 +54,7 @@ function detectIntent(content) {
   if (triggers.lancerMention.test(content)) return 'lancerMention';
   if (triggers.queenMention.test(content)) return 'queenMention';
   if (triggers.whoMention.test(content)) return 'whoMention';
+  if (triggers.imSorry.test(content)) return 'imSorry';
   if (triggers.insultOld.test(content)) return 'insultOld';
   if (triggers.insultShutUp.test(content)) return 'insultShutUp';
   if (triggers.insult.test(content)) return 'insult';

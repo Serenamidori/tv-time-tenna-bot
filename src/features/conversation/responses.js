@@ -320,5 +320,11 @@ module.exports = {
   youllSee: [
     "...I'm worried!!",
     "Hm! That's concerning!"
+  ],
+
+  imSorry: [
+    "It's okay, I forgive you!!",
+    "That's more like it... I can't stay mad at you!!",
+    "You mean it? Then all is forgiven!!!"
   ]
 };

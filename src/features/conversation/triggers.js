@@ -3,7 +3,7 @@ const offLimits = [
   'nsfw', 'not safe for work',
   'porn', 'porno','hentai', 'yaoi', 'yuri',
   'boobs', 'dick', 'cock', 'pussy', 'penis',
-  'get pregnant', 'deltaruined',
+  'get pregnant', 'deltaruined', 'booty',
   'r34', 'wireplay', 'bussy', 'eggnant'
 ];
 
@@ -43,7 +43,7 @@ const selfQuestionOpinion = /(what do you think|what's your opinion|what do you 
 const pipisMention = /(pipis|little darling)/i;
 const emailMention = /(email|e-mail|mail)/i;
 const krisMention = /(kris|krissy)/i;
-const susieMention = /(susie|susiezilla|snoozie|su)/i;
+const susieMention = /(susie|susiezilla|snoozie)/i;
 const ralseiMention = /(ralsei|fluffy boy|toothpaste boy)/i;
 const torielMention = /(toriel|tori)/i;
 const familyMention = /(asgore|asriel|dess|december|noel|noelle|dreemurr|dreemurrs|the holidays)/i;
@@ -63,6 +63,15 @@ const insultShutUp = /(shut up|go away|leave me alone|nobody asked|who asked)/i;
 
 const dontWorry = /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i;
 const youllSee = /(you'll see|you'll find out|you will|you will soon)/i;
+const imSorry = /(i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i;
+
+
+// TODO: FRESH FROM THE JUICE and other quotes with responses (coming to your house, tennas balls, etc)
+// Update him to respond with "sure" and "yes" to affirmatives
+// Free Points responses
+// add response to knowing about sex (virgin, etc)
+// Mention list adds: Miku, Addisons, King (on his own)
+
 
 module.exports = {
   offLimits,
@@ -113,5 +122,6 @@ module.exports = {
   insultOld,
   insultShutUp,
   dontWorry,
-  youllSee
+  youllSee,
+  imSorry
 };
