@@ -4,7 +4,7 @@ const cron = require('node-cron');
 const utils = require("../../utils");
 
 module.exports = async (bot) => {
-  cron.schedule('0 14 6 12 *', async () => { //'0 14 6 12 *'
+  cron.schedule('0 20 6 12 *', async () => { //'0 14 6 12 *'
     const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
     const typingDelay = 9000 // 30 seconds of Tenna typing
 

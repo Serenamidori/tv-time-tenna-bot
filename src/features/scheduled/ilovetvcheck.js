@@ -7,7 +7,7 @@ let dailyMessageId = null;
 module.exports = async (bot) => {
   let respondedUsers = new Set();
 
-  cron.schedule('0 10 * * *', async () => {
+  cron.schedule('0 16 * * *', async () => {
     const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
     const randomDelayMs = Math.floor(Math.random() * 43200000); // 43200000 ms = 12 hours
     const delayHours = Math.floor(randomDelayMs / 3600000);

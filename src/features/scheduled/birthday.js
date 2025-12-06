@@ -4,7 +4,7 @@ const utils = require("../../utils");
 module.exports = async (bot) => {
   let birthdays = [];
 
-  cron.schedule('0 10 * * *', async () => {
+  cron.schedule('0 16 * * *', async () => {
     const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
     const all = await utils.profile.all();
     const today = new Date();
