@@ -189,6 +189,11 @@ module.exports = {
     "Oh! I'm so, so happy you want to know! ..."
   ],
 
+  pipisMention: [
+    "Oh, my little darling!!",
+    "My secret...! How do _you_ know about her??"
+  ],
+
   emailMention: [
     "Email? Never heard of it!",
     "TV is **BETTER** than email!",

@@ -4,7 +4,7 @@ const offLimits = [
   'porn', 'porno','hentai', 'yaoi', 'yuri',
   'boobs', 'dick', 'cock', 'pussy',
   'get pregnant', 'deltaruined',
-  'r34', 'wireplay', 'bussy'
+  'r34', 'wireplay', 'bussy', 'eggnant'
 ];
 
 const quizCommand = /(give me a quiz|quiz me|can i get a quiz|can i have a quiz|want a quiz|do a quiz|start a quiz|quiz time)/i;
@@ -18,7 +18,7 @@ const goodMorning = /^(good morning+|gm|good mornin'|mornin')(\s|$|!|\?)/i;
 const goodnight = /^(good night+|gn|nighty night)(\s|$|!|\?)/i;
 
 const thankYou = /^(thank+|thank you+|ty|thanks+|thankies)(\s|$|!|\?)/i;
-const compliment = /(you're|you are\s*(so\s*)?(cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love)\s*(you|tv|television|your show|tv time|your nose|your head|your face)|(big|huge)\s*fan|like you)/i;
+const compliment = /(you're|you are\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love|smooch|slaps|slap)\s*(you|tv|television|your show|tv time|your nose|your head|your face|your ass)|(big|huge)\s*fan|like you)/i;
 const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i;
 
 const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
@@ -40,6 +40,7 @@ const selfQuestionWhat = /(what are you|what is tenna|what do you do)/i;
 const selfQuestionLike = /(do you like|do you enjoy|do you love|you a fan of|are you into)/i;
 const selfQuestionOpinion = /(what do you think|what's your opinion|what do you feel|how do you feel about|thoughts on|your take on|opinion on)/i;
 
+const pipisMention = /(pipis|little darling)/i;
 const emailMention = /(email|e-mail|mail)/i;
 const krisMention = /(kris|krissy)/i;
 const susieMention = /(susie|susiezilla|snoozie|su)/i;
@@ -57,7 +58,7 @@ const queenMention = /(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)/i;
 const whoMention = /(rouxls|battat|jongler|pluey|defernull|gaster)/i;
 
 const insult = /(trash heap|i hate you|fuck you|kill yourself|you're a bitch|you suck|you're lame|you're annoying|boring)/i;
-const insultOld = /(you're old|you're so old|old tv|obsolete)/i;
+const insultOld = /(you're old|you're so old|old tv|obsolete|old)/i;
 const insultShutUp = /(shut up|go away|leave me alone|nobody asked|who asked)/i;
 
 module.exports = {
@@ -89,6 +90,7 @@ module.exports = {
   selfQuestionWhat,
   selfQuestionLike,
   selfQuestionOpinion,
+  pipisMention,
   emailMention,
   krisMention,
   susieMention,
