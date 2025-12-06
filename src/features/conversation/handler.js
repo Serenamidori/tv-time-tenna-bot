@@ -53,6 +53,9 @@ function detectIntent(content) {
   if (triggers.lancerMention.test(content)) return 'lancerMention';
   if (triggers.queenMention.test(content)) return 'queenMention';
   if (triggers.whoMention.test(content)) return 'whoMention';
+  if (triggers.insultOld.test(content)) return 'insultOld';
+  if (triggers.insultShutUp.test(content)) return 'insultShutUp';
+  if (triggers.insult.test(content)) return 'insult';
   if (triggers.loveFans.test(content)) return 'loveFans';
   if (triggers.compliment.test(content)) return 'compliment';
   if (triggers.userVenting.test(content)) return 'userVenting';
@@ -71,9 +74,6 @@ function detectIntent(content) {
   if (triggers.tvQuestionRating.test(content)) return 'tvQuestionRating';
   if (triggers.tvQuestionWhat.test(content)) return 'tvQuestionWhat';
   if (triggers.tvQuestionHow.test(content)) return 'tvQuestionHow';
-  if (triggers.insultOld.test(content)) return 'insultOld';
-  if (triggers.insultShutUp.test(content)) return 'insultShutUp';
-  if (triggers.insult.test(content)) return 'insult';
   if (triggers.thankYou.test(content)) return 'thankYou';
   if (triggers.goodMorning.test(content)) return 'goodMorning';
   if (triggers.goodnight.test(content)) return 'goodnight';
