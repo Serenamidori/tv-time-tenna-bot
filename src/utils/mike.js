@@ -34,7 +34,7 @@ function getMikeMessage(i, title = null, description = null, fields = null) {
 
   if (fields) embed.addFields(fields);
 
-  return { embeds: [embed], files: [attachment]}
+  return { embeds: [embed], files: [attachment] }
 }
 
 module.exports = {

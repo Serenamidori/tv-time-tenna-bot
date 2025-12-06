@@ -13,7 +13,7 @@ module.exports = async (bot) => {
     await channel.send(tennaIntro);
 
     await setTimeout(2000);
-    mikeMessage = utils.mike.getMikeMessage(0, mikeTitle, mikeIntro);
+    const mikeMessage = utils.mike.getMikeMessage(0, mikeTitle, mikeIntro);
     await channel.send(mikeMessage);
   });
 

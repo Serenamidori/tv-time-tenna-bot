@@ -4,6 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, GatewayIntentBits, MessageFlags } = require("discord.js");
 const { handleDialogue } = require('./features/conversation/handler');
+const utils = require("./utils");
 
 const bot = new Client({
   intents: [
@@ -55,6 +56,23 @@ bot.on("ready", () => {
 
 bot.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
+
+  const allowedChannels = [
+    process.env.GENERAL_CHANNEL,
+    process.env.STAGE_CHAT,
+    process.env.LOUNGE_VOICE_CHAT
+  ];
+
+  if (!allowedChannels.includes(interaction.channelId)) {
+    const mike = utils.mike.getMikeMessage("error", `Hey! Stop that!!`, `Tenna ain't allowed in this channel! Don't go calling for him in here!`);
+    await interaction.reply({
+      embeds: mike.embeds,
+      files: mike.files,
+      flags: MessageFlags.Ephemeral
+    });
+    return;
+  }
+
   const commandName = interaction.commandName;
   const command = bot.commands.get(commandName);
 
@@ -68,8 +86,10 @@ bot.on("interactionCreate", async (interaction) => {
   } catch (error) {
     console.error(`Error executing '${commandName}' by ${interaction.user.tag}:`, error);
 
+    const mike = utils.mike.getMikeMessage("error", `Whoops!`, `Looks like "${commandName}" got its wires crossed!! Looks like we got the ol' "${error} error. Why don'tcha try again?`);
     const errorContent = {
-      content: `Whoops! Looks like "${commandName}" got its wires crossed. Mind trying again?`,
+      embeds: mike.embeds,
+      files: mike.files,
       flags: MessageFlags.Ephemeral
     };
 

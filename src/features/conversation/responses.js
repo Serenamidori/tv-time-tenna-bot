@@ -28,7 +28,7 @@ module.exports = {
   ],
 
   scheduleCommand: [
-    "Oh sorry! I can't do that just yet!\n\nBut when Mike and I work out all the issues, you can type `/schedule` and I'll have Mike make an event for you in the server!\n-# _(Just make sure that I get an invite too!)_"
+    "Oh, you're having a shindig? And you want me to help plan it?? I'd <:love1:1443452223387340984><:love2:1443452224029065276> to!\n\nJust type `/schedule` and let me know ALL the details! I'll announce it to the server right after you do so, and even make you a nifty little event in the server itself!\n-# _(Just make sure that I get an invite too, okay?)_"
   ],
   
   greeting: [
