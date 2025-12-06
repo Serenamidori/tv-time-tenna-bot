@@ -18,7 +18,7 @@ const goodMorning = /^(good morning+|gm|good mornin'|mornin')(\s|$|!|\?)/i;
 const goodnight = /^(good night+|gn|nighty night)(\s|$|!|\?)/i;
 
 const thankYou = /^(thank+|thank you+|ty|thanks+|thankies)(\s|$|!|\?)/i;
-const compliment = /(you're|you are\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(pats|hugs|kisses|kiss|hug|pat|love|smooch|slaps|slap)\s*(you|tv|television|your show|tv time|your nose|your head|your face|your ass|your antennas|your antenna)|(big|huge)\s*fan|like you)/i;
+const compliment = /(you're|you are\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall)|(kiss|kisses|kissing|hug|hugs|hugging|pat|pats|patting|love|slap|slaps|slapping|glomp|glomps|glomping|smooch|smooches|smooching)\s*(you|tv|television|your show|tv time|your nose|your head|your face|your ass|your antennas|your antenna)|(big|huge)\s*fan|like you)/i;
 const loveFans = /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i;
 
 const userFeelingGood = /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i;
@@ -57,7 +57,7 @@ const lancerMention = /(lancer|prancer|dancer|mr. generosity|chaos king|king win
 const queenMention = /(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)/i;
 const whoMention = /(rouxls|battat|jongler|pluey|defernull|gaster)/i;
 
-const insult = /(trash heap|i hate you|fuck you|kill yourself|you're a bitch|you suck|you're lame|you're annoying|boring)/i;
+const insult = /(tiny nose|small nose|trash heap|i hate you|fuck you|kill yourself|you're a bitch|you suck|you're lame|you're annoying|boring)/i;
 const insultOld = /(you're old|you're so old|old tv|obsolete|old)/i;
 const insultShutUp = /(shut up|go away|leave me alone|nobody asked|who asked)/i;
 
