@@ -51,7 +51,6 @@ bot.on("ready", () => {
   console.info(`🔓 Logged in as ${bot.user.tag}`);
   console.info(`✅ Loaded ${bot.commands.size} commands`);
   require('./features/scheduled/ilovetvcheck.js')(bot);
-  require('./features/scheduled/serverintro.js')(bot);
 });
 
 bot.on("interactionCreate", async (interaction) => {
