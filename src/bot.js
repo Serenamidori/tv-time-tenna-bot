@@ -50,7 +50,7 @@ mongoose.connect(process.env.MONGO_URI)
 bot.on("ready", () => {
   console.info(`🔓 Logged in as ${bot.user.tag}`);
   console.info(`✅ Loaded ${bot.commands.size} commands`);
-  require('./features/scheduled/ilovetvcheck.js')(bot);
+  utils.scheduler.runDailyTasks(bot);
 });
 
 bot.on("interactionCreate", async (interaction) => {
