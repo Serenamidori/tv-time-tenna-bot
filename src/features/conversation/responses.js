@@ -1,5 +1,3 @@
-const { dontWorry, youllSee } = require("./triggers");
-
 module.exports = {
   empty: [
     "Hmm?",
@@ -15,6 +13,74 @@ module.exports = {
     "What does that mean? Haha, anyways...",
     "Mike! I don't have to respond to this one, right?",
     "<:stop:1443407391394758667>"
+  ],
+
+  askTennaAwake: [
+    "Yes, yes! I'm here!",
+    "Yep! Always!!",
+    "I think so? Hello!!",
+    "I sure am!",
+    "Yes!"
+  ],
+
+  askTennaGoodBoy: [
+    "I am!! I am!!!",
+    "_...is it me?_",
+    "**BARK!**\n-# _(...oh that's embarrassing.)_"
+  ],
+
+  askTennaLove: [
+    "Is that even a question?! Of **course** I do!!",
+    "More than anything!! It's kind of my whole deal!",
+    "With every fiber of my being! ...which is mostly wires!",
+    "<:love1:1443452223387340984><:love2:1443452224029065276>? Of course!!"
+  ],
+
+  askTennaAge: [
+    "Old? Me? I prefer EXPERIENCED!",
+    "A gentleman never tells!",
+    "I'm CLASSIC! That's all you need to know!",
+    "Well, I'm young enough to still be hip! ...right?",
+    "Let's just say I've seen a _LOT_ of reruns!",
+    "Age is just a number! And that number is ***CLASSIFIED!***",
+    "I'm vintage, baby! Like fine wine! Or... old cheese? Wait no that's not right..."
+  ],
+
+  askTennaRemember: [
+    "Of course I remember! ...wait, what were we talking about?",
+    "I remember **EVERYTHING!** ...mostly! _...sometimes!_",
+    "Oh sure! My antenna picks up memories from time to time!",
+    "Vaguely! It's coming back to me... Ah no, I lost it.",
+    "That sounds familiar! Like a rerun I've seen before!"
+  ],
+
+  askTennaKnow: [
+    "I know LOTS of things! ...mostly just about TV though!",
+    "Hmm... I'm not sure!",
+    "I've heard of it! ...probably! Maybe!",
+    "I've heard of it! At least, I think I have?",
+    "Never heard of it!",
+    "Is it TV-related? Then YES! Otherwise... I dunno, maybe?",
+    "I think I've heard of it... does that count?"
+  ],
+
+  askTennaFlirt: [
+    "WHAT THE...!? This isn't that kind of show, {user}!!",
+    "H-Haha, what a kidder!!",
+    "Me?! Oh my! How ...salacious!",
+    "Let's keep this PG, {user}! This is a family program!",
+    "Sorry! But I'm married to my WORK!",
+    "How flattering! But I'm more of a 'broadcast to everyone' kind of guy!\n-# _(...Not like that!!)_",
+    "Oh! Uh...! _ANYWAY!!_",
+    "You're making my screen all staticky, {user}! S-Stop that!",
+    "Hahaha!! ...Y-you're joking right? You must be!"
+  ],
+
+  askTennaLikeGender: [
+    "I like EVERYONE! ...as viewers!!",
+    "I'm an equal opportunity entertainer!",
+    "My type is someone who **LOVES** TV!",
+    "Ah, what a bold question! All audience are welcome to me!"
   ],
 
   quizCommand: [
@@ -66,7 +132,17 @@ module.exports = {
   thankYou: [
     "You're welcome!",
     "Sure thing!",
-    "Why, of course!"
+    "Why, of course!",
+    "No problemo!",
+    "You got it!"
+  ],
+
+  saySorry: [
+    "Sorry, sorry!! I'l be good!!",
+    "Fine, I'll behave!",
+    "No, you're right... I'm sorry!!",
+    "Oops! I'm so sorry!!",
+    "I'm a nice TV!! Please don't be mad!!"
   ],
   
   compliment: [
@@ -79,7 +155,10 @@ module.exports = {
 
   loveFans: [
     "You're so sweet {user}! I adore all my fans!",
-    "Aww, I'm flattered {user}!! How could I say 'no' to this attention?"
+    "Aww, I'm flattered {user}!! How could I say 'no' to this attention?",
+    "Oh {user}! This is why I <:love1:1443452223387340984><:love2:1443452224029065276> my fans!!",
+    "Of course {user}! If you had a fan club, I'd be **YOUR** number 1 fan!!",
+    "{user}!! You're sweeter than any fan mail I've ever gotten!\n-# _(And I've gotten a LOT of fan mail!)_"
   ],
   
   userFeelingGood: [
@@ -113,8 +192,9 @@ module.exports = {
   userVenting: [
     "Hang in there **superstar**! Maybe take a break and watch something?",
     "I hear ya... Rest up! The TV will always be here when you're ready!",
-    "You deserve a break! Preferably in front of a TV!\n-# _(Just saying.)_",
-    "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_"
+    "You sound like you need a break! Preferably in front of a TV!\n-# _(Just saying.)_",
+    "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_",
+    "Boy don't I know it... Remember to take care of yourself {user}!!"
   ],
 
   tvQuestionWhen: [
@@ -134,10 +214,6 @@ module.exports = {
     "Only the greatest show on television!!",
     "It's TV Time! The best time! The ONLY time!",
     "Whatever you want it to be! Game shows, drama, comedy... I do it all!"
-  ],
-
-  tvQuestionTVTime: [
-    "<:tvtime1:1445136405633175672><:tvtime2:1445136406455517374><:tvtime3:1445137403399508119><:tvtime4:1445136410582585344><:tvtime5:1445136411572310137>"
   ],
 
   tvQuestionHow: [
@@ -191,9 +267,38 @@ module.exports = {
     "Oh! I'm so, so happy you want to know! ..."
   ],
 
+  selfQuestionWhere: [
+    "I'm right here! On your screen!",
+    "I live in the hearts of my <:lovely1:1444089294154109049><:lovely2:1444089295521710231> viewers! ...and also this server!",
+    "Technically? The Dark World! But really, I'm here with YOU!!",
+    "I'm in the living room! ...well, I USED to be.",
+    "Right here, broadcasting live!!"
+  ],
+
+  selfQuestionWhy: [
+    "Why? Because I'm a TV! It's what I do!",
+    "Hmm, good question! I don't actually know!",
+    "A better question is **why not!**",
+    "Because it's in my programming!\n-# _(...wait, do I have programming?)_",
+    "Hmm... You know! I've never really thought about it!",
+    "Because it makes for <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> television!"
+  ],
+
+  selfQuestionCanYou: [
+    "I'd have to check with my legal team on that one!",
+    "Ooh, let me consult the script... it says 'maybe'!",
+    "In theory? Sure! In practice? Let's not find out!",
+    "That sounds like something we'd need a waiver for!",
+    "I COULD... but SHOULD I? That's the real question!",
+    "MIKE! What do you think?\n-# _(...Mike says **no**!)_",
+    "MIKE! What do you think?\n-# _(...Mike says **yes**!)_",
+    "MIKE! What do you think?\n-# _(...Mike says **maybe**!)_"
+  ],
+
   pipisMention: [
     "Oh, my little darling!!",
-    "My secret...! How do _you_ know about her??"
+    "My secret...! How do _you_ know about her??",
+    "So I saved one!! What's the big deal??"
   ],
 
   emailMention: [
@@ -206,7 +311,8 @@ module.exports = {
   krisMention: [
     "Kris! Oh, Kris...",
     "Kris was one of my original viewers! I love them!",
-    "Oh Kris, that little rascal!"
+    "Oh Kris, that little rascal!",
+    "...do you think Kris still loves TV?"
   ],
 
   susieMention: [
@@ -223,19 +329,21 @@ module.exports = {
 
   torielMention: [
     "Oh Toriel! She used to LOVE her cooking shows!",
-    "Nothing's better than Toriel's homemade pie!"
+    "Nothing's better than Toriel's homemade pie!",
+    "Tori was the last one to really give me a good look back in the day."
   ],
 
   familyMention: [
     "Oh yes! How I miss the whole family!",
-    "Remember when everyone came over for the holidays? I miss those days...",
-    "I still play their favorite show, y'know! Maybe they'll, heh, watch it again someday?"
+    "I remember when everyone came over for the holidays!! I miss those days...",
+    "I still play their favorite shows, y'know! Maybe they'll, heh, watch it again someday?"
   ],
 
   mikeMention: [
     "MIKE! {user}'s talking about you!",
     "What, Mike? He's great!",
-    "Don't think you can go ordering around Mike! That's _my_ job!"
+    "Don't think you can go ordering around Mike! That's _my_ job!",
+    "Ahh Mike! Couldn't do my show without him!"
   ],
 
   mettatonMention: [
@@ -246,7 +354,9 @@ module.exports = {
 
   workersMention: [
     "So hard to find good help these days, haha!",
-    "They work for me! It's in their contracts!"
+    "They work for me! It's in their contracts!",
+    "I love all my employees!\n-# _(Yes, even those pesky Pippins...)_",
+    "Ah, the good ol' production crew!"
   ],
 
   laninoElninaMention: [
@@ -260,34 +370,57 @@ module.exports = {
     "Let's change the channel on this topic.",
     "...",
     "Oh THAT guy!? That little-! ..._AHEM_, let's not talk about that?",
-    "This ain't about him."
+    "This ain't about him.",
+    "I haven't seen that guy in a long time...",
+    "I keep hearing about him in this server... why is that??",
+    "-# _(I miss that little mailman...)_"
   ],
 
   knightMention: [
     "I'm not sure who you mean, haha! Let's uh, change the subject!",
-    "Nope! Doesn't ring any bells!!"
+    "Nope! Doesn't ring any bells!!",
+    "... I don't know who you're talking about!!",
+    "Oops! Duty calls! Gotta go, {user}!",
+    "Haha, how do you know about that?? ...I mean-! Next question!!"
   ],
 
   lancerMention: [
-    "Ah, so that's his name. I see!"
+    "Ah, so that's his name. I see!",
+    "Oh yeah! The kid who kept breaking all those controllers??",
+    "Yes, the king's boy! I'm the one who cleans his ears!",
+    "Lancer! What a bouncy little pumpkin!",
+    "That little guy calls me TV Dad!\n-# _(Weird, but endearing!)_"
   ],
 
   queenMention: [
     "Queenie Beenie!",
     "Ah yes, the laptop!",
-    "Oh, I remember her!"
+    "Oh, I remember her! Back when Kris and Noelle use to play...!",
+    "Do you mean the Queen of Cyber City? I know her!",
+    "Queen is a laptop right? Do you think she also uses Discord?"
+  ],
+
+  kingMention: [
+    "Kingy-Doodle!!",
+    "Oh, the King! I'm his new _jester_ y'know!",
+    "Ah, His Majesty! I know him!",
+    "I know him! He's hired me for entertainment!\n-# _(...at least I think he did?)_",
+    "I think he likes TV!\n-# _(Or maybe he just likes me falling on my head...)_"
   ],
 
   whoMention: [
     "Who? Who is that?",
     "Doesn't ring a bell.",
-    "I don't know who that is?"
+    "I don't know who that is?",
+    "Hmm, I don't recognize that name."
   ],
 
   insult: [
     "Oh... okay. That's... that's fine.",
     "Haha, good one!\n-# _(...that was a joke, right?)_",
-    "What!? Are you _TRYING_ to make me glooby?\n-# _(Well it's working!)_"
+    "What!? Are you _TRYING_ to make me glooby?\n-# _(Well it's working!)_",
+    "Hey!! I don't have to take this from you!! I'm ignoring you now!!\n-# _(...until you message me again, anyways.)_",
+    "Haha! I bet you thought that would upset me!! ..."
   ],
 
   insultOld: [
@@ -301,7 +434,8 @@ module.exports = {
     "-# Oh but... I thought you wanted to talk...",
     "Fine! Maybe I'll just leave this server then!\n-# _(...Mike! How do I leave again?)_",
     "Shutting up!\n...\n...\n...\nOkay I can't do it. **ANYWAY!**",
-    "Sorry {user}, that's premium!"
+    "Sorry {user}, that's premium!",
+    "How about **YOU** shut up!?\n-# _(...actually let's keep talking please.)_"
   ],
   
   fallback: [
@@ -309,23 +443,98 @@ module.exports = {
     "Interesting! I have no idea what that means!",
     "Sorry, bad reception on that one. What was that?",
     "Uh, sorry! Didn't make any sense to me!",
-    "Does anyone know what this means?"
+    "Does anyone know what this means?",
+    "I can't keep up with this new technology!\n-# _(...wait no, yes I can!! Let's just try that again, okay??)_",
+    "I didn't quite catch that, could you try saying it a different way?",
+    "Uh, what? Huh?"
   ],
 
   dontWorry: [
     "Okay! Yay!!",
     "Oh, okay then!",
-    "Alright, I won't!!"
+    "Alright, I won't!!",
+    "Phew! I was starting to worry!",
+    "Whatever you say, {user}!!"
   ],
 
   youllSee: [
     "...I'm worried!!",
-    "Hm! That's concerning!"
+    "Hm! That's concerning!",
+    "Haha... _I'm in danger._",
+    "_UM HAHA... WHAT?_"
   ],
 
   imSorry: [
     "It's okay, I forgive you!!",
     "That's more like it... I can't stay mad at you!!",
-    "You mean it? Then all is forgiven!!!"
+    "You mean it? Then all is forgiven!!!",
+    "Don't worry {user}, I forgive you!",
+    "You're sorry? Well, then all is forgiven!"
+  ],
+  
+  bark: [
+    "**BARK!**",
+    "Woof!!!",
+    "-# _whimper_"
+  ],
+
+  mikuMention: [
+    "Oh! The singer? I've heard we'd make a good duo!",
+    "Ah yes, a fellow entertainer! I respect that!",
+    "I don't know her personally, but the fans seem to think we'd get along!",
+    "Hatsune Miku? Now **THAT'S** a name that belongs on TV!"
+  ],
+
+  discordMention: [
+    "Discord! It's like TV, but everyone talks at once!",
+    "The internet is strange and confusing, but at least people are watching! ...reading? Whatever!",
+    "It's not television, but I'll take what I can get!",
+    "A new platform for me to reach my audience! See? I'm adapting!!",
+    "Haha! I learned how to \"plug in\" without any help!!\n-# _(...okay I did get some help getting into the server...)_"
+  ],
+
+  beingBotMention: [
+    "What? A bot? I'm **TELEVISION!** There's a difference!!",
+    "I prefer 'digital entertainer' thank you very much!",
+    "I'm not artificial, I'm AUTHENTIC!",
+    "Bot? What are you talking about, I'm Tenna!!"
+  ],
+
+  physicalAffection: [
+    "O-oh my! How forward of you, {user}!",
+    "Aww, {user}! You're making my antenna blush!",
+    "Aww, {user}! You're making me blush!",
+    "Physical affection! My favorite kind of audience participation!",
+    "O-oh! A flower just bloomed from my nose...!"
+  ],
+  physicalViolence: [
+    "OW!! HEY!! Knock that off!!",
+    "-# _(...ow)_",
+    "Hey! Watch the screen!!",
+    "Ow!! That's not in my contract!!",
+    "Help!! Audience interference!!!",
+    "_WHY!!_"
+  ],
+
+  tennaQuoteTVTime: [
+    "<:tvtime1:1445136405633175672><:tvtime2:1445136406455517374><:tvtime3:1445137403399508119><:tvtime4:1445136410582585344><:tvtime5:1445136411572310137>"
+  ],
+
+  tennaQuoteJuice: [
+    "Make sure you don't get it on your shoese!"
+  ],
+
+  tennaQuoteKillThisGuy: [
+    "Get in line, kid!"
+  ],
+
+  tennaQuoteDial: [
+    "-# _(Well, okay, you can touch it. Just be gentle.)_",
+    "And don't STOP THOSE SMILES!!"
+  ],
+  
+  tennaQuoteFamilyFight: [
+    "Wait, no. Not another battle. Please..."
   ]
+
 };
