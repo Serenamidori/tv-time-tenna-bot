@@ -15,6 +15,20 @@ module.exports = {
     "<:stop:1443407391394758667>"
   ],
 
+  askTennaAwake: [
+    "Yes, yes! I'm here!",
+    "Yep! Always!!",
+    "I think so? Hello!!",
+    "I sure am!",
+    "Yes!"
+  ],
+
+  askTennaGoodBoy: [
+    "I am!! I am!!!",
+    "_...is it me?_",
+    "**BARK!**\n-# _(...oh that's embarrassing.)_"
+  ],
+
   askTennaLove: [
     "Is that even a question?! Of **course** I do!!",
     "More than anything!! It's kind of my whole deal!",
@@ -60,6 +74,13 @@ module.exports = {
     "Oh! Uh...! _ANYWAY!!_",
     "You're making my screen all staticky, {user}! S-Stop that!",
     "Hahaha!! ...Y-you're joking right? You must be!"
+  ],
+
+  askTennaLikeGender: [
+    "I like EVERYONE! ...as viewers!!",
+    "I'm an equal opportunity entertainer!",
+    "My type is someone who **LOVES** TV!",
+    "Ah, what a bold question! All audience are welcome to me!"
   ],
 
   quizCommand: [
@@ -171,8 +192,9 @@ module.exports = {
   userVenting: [
     "Hang in there **superstar**! Maybe take a break and watch something?",
     "I hear ya... Rest up! The TV will always be here when you're ready!",
-    "You deserve a break! Preferably in front of a TV!\n-# _(Just saying.)_",
-    "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_"
+    "You sound like you need a break! Preferably in front of a TV!\n-# _(Just saying.)_",
+    "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_",
+    "Boy don't I know it... Remember to take care of yourself {user}!!"
   ],
 
   tvQuestionWhen: [
@@ -192,10 +214,6 @@ module.exports = {
     "Only the greatest show on television!!",
     "It's TV Time! The best time! The ONLY time!",
     "Whatever you want it to be! Game shows, drama, comedy... I do it all!"
-  ],
-
-  tvQuestionTVTime: [
-    "<:tvtime1:1445136405633175672><:tvtime2:1445136406455517374><:tvtime3:1445137403399508119><:tvtime4:1445136410582585344><:tvtime5:1445136411572310137>"
   ],
 
   tvQuestionHow: [
@@ -402,7 +420,7 @@ module.exports = {
     "Haha, good one!\n-# _(...that was a joke, right?)_",
     "What!? Are you _TRYING_ to make me glooby?\n-# _(Well it's working!)_",
     "Hey!! I don't have to take this from you!! I'm ignoring you now!!\n-# _(...until you message me again, anyways.)_",
-    "Haha! Oh I bet you thought that would upset me!!..."
+    "Haha! I bet you thought that would upset me!! ..."
   ],
 
   insultOld: [
@@ -426,7 +444,7 @@ module.exports = {
     "Sorry, bad reception on that one. What was that?",
     "Uh, sorry! Didn't make any sense to me!",
     "Does anyone know what this means?",
-    "I can't keep up with this new technology! ...wait no, yes I can!! Let's just try that again, okay??",
+    "I can't keep up with this new technology!\n-# _(...wait no, yes I can!! Let's just try that again, okay??)_",
     "I didn't quite catch that, could you try saying it a different way?",
     "Uh, what? Huh?"
   ],
@@ -452,6 +470,12 @@ module.exports = {
     "You mean it? Then all is forgiven!!!",
     "Don't worry {user}, I forgive you!",
     "You're sorry? Well, then all is forgiven!"
+  ],
+  
+  bark: [
+    "**BARK!**",
+    "Woof!!!",
+    "-# _whimper_"
   ],
 
   mikuMention: [
@@ -482,5 +506,35 @@ module.exports = {
     "Aww, {user}! You're making me blush!",
     "Physical affection! My favorite kind of audience participation!",
     "O-oh! A flower just bloomed from my nose...!"
+  ],
+  physicalViolence: [
+    "OW!! HEY!! Knock that off!!",
+    "-# _(...ow)_",
+    "Hey! Watch the screen!!",
+    "Ow!! That's not in my contract!!",
+    "Help!! Audience interference!!!",
+    "_WHY!!_"
+  ],
+
+  tennaQuoteTVTime: [
+    "<:tvtime1:1445136405633175672><:tvtime2:1445136406455517374><:tvtime3:1445137403399508119><:tvtime4:1445136410582585344><:tvtime5:1445136411572310137>"
+  ],
+
+  tennaQuoteJuice: [
+    "Make sure you don't get it on your shoese!"
+  ],
+
+  tennaQuoteKillThisGuy: [
+    "Get in line, kid!"
+  ],
+
+  tennaQuoteDial: [
+    "-# _(Well, okay, you can touch it. Just be gentle.)_",
+    "And don't STOP THOSE SMILES!!"
+  ],
+  
+  tennaQuoteFamilyFight: [
+    "Wait, no. Not another battle. Please..."
   ]
+
 };

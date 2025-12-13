@@ -1,12 +1,21 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /\b(fuck me|have sex|sex with me|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|booty|r34|wireplay|bussy|eggnant)\b/i
+    pattern: /((gonna|i will|going to|want to) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|booty|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|fucks me)/i
   }
 };
 
 const tier2_questionsToTenna = {
+  askTennaAwake: {
+    pattern: /((are you|r u|are u|r you|you|u) (awake|there|here|up))/i
+  },
+  askTennaGoodBoy: {
+    pattern: /((?:who(?:'s|s| is) a )?good (?:boy|tv))/i
+  },
+  askTennaLikeGender: {
+    pattern: /(do you like|are you into|you like|you into)\s+(enbies|nonbinary|nb|men|women|boys|girls|guys|gals|dudes|ladies|gentlemen)\b/i
+  },
   askTennaFlirt: {
-    pattern: /(are you single|you single|are you taken|got a girlfriend|got a boyfriend|got a partner|are you dating|you dating|are you married|do you like (someone|anyone|me)|do you have a crush|are you interested in (me|anyone)|wanna go out|want to go out|be my boyfriend|be my girlfriend|date me|marry me|kiss me)/i
+    pattern: /(are you single|you single|are you taken|got a girlfriend|got a boyfriend|got a partner|are you dating|you dating|are you married|do you like (someone|anyone|me)\b|do you have a crush|are you interested in (me|anyone)\b|((wanna go|want to go|let's go) (out|on a date))|be my boyfriend|be my girlfriend|date me|marry me|kiss me)|(touch|touches|touching|caress|caresses|caressing|lick|licks|licking)(\*?)\s*((your\s*)?(dials|dial|buttons|antenna|nose|screen)|you)/i
   },
   askTennaLove: {
     pattern: /(do you|don't you|dont you|you really|do u)\s+(love|like|enjoy|hate|watch)\s+(tv|television|me|us|your (show|job|fans|audience))/i
@@ -38,8 +47,23 @@ const tier3_commands = {
 };
 
 const tier4_conversational = {
+  tennaQuoteTVTime: {
+    pattern: /(what).*(time is it|tv time)|say it with him folks/i
+  },
+  tennaQuoteJuice: {
+    pattern: /((turn up|fresh from) the juice)/i
+  },
+  tennaQuoteKillThisGuy: {
+    pattern: /(kill this guy)/i
+  },
+  tennaQuoteDial: {
+    pattern: /((don't|dont) touch (that|the|this|my|your) (dial|dials))/i
+  },
+  tennaQuoteFamilyFight: {
+    pattern: /((family's|family is) fighting again)/i
+  },
   saySorry: {
-    pattern: /\b(be nice|be nicer|say (you're |you are |ur |youre)?(sorry|something nice|nice thing|psyche|you didn't mean it)|apologize|say something nice)\b/i
+    pattern: /\b(knock (it|that) off|mad at you|(don't|dont) do that|stop (that|it|doing that)|be (nice|nicer)|say (you're |you are |ur |youre)?(sorry|something nice|nice thing|psyche|you didn't mean it)|apologize|say something nice)\b/i
   },
   imSorry: {
     pattern: /(sorry|sowwy|i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i
@@ -48,16 +72,22 @@ const tier4_conversational = {
     pattern: /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i
   },
   youllSee: {
-    pattern: /(you'll see|you'll find out|you will|you will soon)/i
+    pattern: /((you'll|youll|you will) (find out|see|soon)|you will)/i
+  },
+  getYou: {
+    pattern: /(gonna|going to|i will|i'll)\s*(fucking\s*)?(get you|find you)|(when i|me when i)\s*(get you|find you|catch you)|(gets you)|(when i get|when i put)\s*(my hands on you|ahold of you)/i
   },
   thankYou: {
     pattern: /^(thank+|thank you+|ty|thanks+|thankies|thx)(\s|$|!|\?)/i
+  },
+  bark: {
+    pattern: /\b(command you to bark|bark for me|bark now|(you're |your )(a dog|dog|a puppy|puppy)|puppy|dog|walkies)\b/i
   }
 };
 
 const tier5_characters = {
   spamtonMention: {
-    pattern: /\b(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)\b/i
+    pattern: /(spampog|spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)/i
   },
   mikeMention: {
     pattern: /\b(mike)\b/i
@@ -89,8 +119,8 @@ const tier5_characters = {
   lancerMention: {
     pattern: /\b(lancer|prancer|dancer|mr\. generosity)\b/i
   },
-  kingrMention: {
-    pattern: /\b(king|chaos king|king wingy)\b/i
+  kingMention: {
+    pattern: /\b(king|chaos king|king wingy|kingy-doodle)\b/i
   },
   mettatonMention: {
     pattern: /\b(mettaton|mtt|metta)\b/i
@@ -99,10 +129,10 @@ const tier5_characters = {
     pattern: /\b(lanino|elnina|the weather|weather duo|weather news team)\b/i
   },
   workersMention: {
-    pattern: /\b(pippins|ramb|zapper|shadowguy|shuttah|battat|jongler|pluey)\b/i
+    pattern: /\b(workers|coworkers|pippins|ramb|zapper|shadowguy|shuttah|battat|jongler|pluey)\b/i
   },
   whoMention: {
-    pattern: /\b(rouxls|rouxls kaard|defernull|gaster)\b/i
+    pattern: /\b(rouxls|rouxls kaard|defernull|gaster|annoying white dog|toby fox)\b/i
   }
 };
 
@@ -117,11 +147,23 @@ const tier6_otherMentions = {
     pattern: /(discord|this server|the server|chat room|online|the internet)/i
   },
   beingBotMention: {
-    pattern: /(are you a bot|you're a bot|you a bot|are you real|are you ai|are you artificial)/i
+    pattern: /(you are a bot|are you a bot|you're a bot|you a bot|are you real|are you ai|are you artificial)/i
   }
 };
 
-const tier7_insults = {
+const tier7_compliments = {
+  loveFans: {
+    pattern: /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i
+  },
+  compliment: {
+    pattern: /(you're|you are|ur|youre|you look|lookin|looking)\s*(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we|i really|we really)?\s*(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)/i
+  },
+  physicalAffection: {
+    pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*(you|tenna|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*(your\s*)?(ass|butt|booty)/i
+  }
+};
+
+const tier8_insults = {
   insultOld: {
     pattern: /(you're\s*(so\s*)?old|old tv|obsolete|ok boomer|boomer|ancient|outdated)/i
   },
@@ -129,37 +171,28 @@ const tier7_insults = {
     pattern: /(shut up|go away|leave me alone|nobody asked|who asked|be quiet|stfu)/i
   },
   insult: {
-    pattern: /(tiny nose|small nose|trash heap|i hate you|fuck you|kill yourself|you're a bitch|you suck|you're lame|you're annoying|boring|you stink)/i
-  }
-};
-
-const tier8_compliments = {
-  loveFans: {
-    pattern: /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i
+    pattern: /(stinky|dumb fuck|idiot|tennafuckyou|fuckyou|bitch|tiny nose|small nose|trash heap|i hate you|fuck you|kills you|kills u|kill yourself|you suck|you're lame|you're annoying|boring|you stink)/i
   },
-  compliment: {
-    pattern: /(you're|you are|ur|youre|you look|lookin|looking)\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)/i
-  },
-  physicalAffection: {
-    pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pat|pats|patting|slap|slaps|slapping|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*(you|tenna|tv|your)/i
+  physicalViolence: {
+    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*(you|tenna|tv|your)|(\*?)(steal|steals|stealing)|(\*?)\s*(your\s*)?(nose|money|mike)/i
   }
 };
 
 const tier9_userState = {
+  userVenting: {
+    pattern: /\b(cries|(i'm|im|i am|am) (tired|sleepy|crying|dead|exhausted|stressed)|(long|rough|bad) day|ough+|ugh+|bleh+|meh+|weh+|help me|help pls|help plz|i need help|save me|rescue me)\b|^OTL$/i
+  },
   userFeelingGood: {
-    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i
+    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm|i am)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i
   },
   userFeelingBad: {
-    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby)/i
+    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm|i am)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby|mad)/i
   },
   userDayGood: {
-    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i
+    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i
   },
   userDayBad: {
-    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i
-  },
-  userVenting: {
-    pattern: /\b(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ugh+|bleh|meh|exhausted|stressed out|weh|help me|help pls|help plz|i need help)\b|^OTL$/i
+    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|very\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i
   }
 };
 
@@ -194,9 +227,6 @@ const tier10_selfQuestions = {
 };
 
 const tier11_tvQuestions = {
-  tvQuestionTVTime: {
-    pattern: /(what).*(time is it|tv time)/i
-  },
   tvQuestionWhen: {
     pattern: /(when|what time).*(show|episode|broadcast|air|start|next|tv time)/i
   },
@@ -233,8 +263,8 @@ const tiers = [
   tier4_conversational,
   tier5_characters,
   tier6_otherMentions,
-  tier7_insults,
-  tier8_compliments,
+  tier7_compliments,
+  tier8_insults,
   tier9_userState,
   tier10_selfQuestions,
   tier11_tvQuestions,
