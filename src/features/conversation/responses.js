@@ -1,5 +1,3 @@
-const { dontWorry, youllSee } = require("./triggers");
-
 module.exports = {
   empty: [
     "Hmm?",
@@ -15,6 +13,53 @@ module.exports = {
     "What does that mean? Haha, anyways...",
     "Mike! I don't have to respond to this one, right?",
     "<:stop:1443407391394758667>"
+  ],
+
+  askTennaLove: [
+    "Is that even a question?! Of **course** I do!!",
+    "More than anything!! It's kind of my whole deal!",
+    "With every fiber of my being! ...which is mostly wires!",
+    "<:love1:1443452223387340984><:love2:1443452224029065276>? Of course!!"
+  ],
+
+  askTennaAge: [
+    "Old? Me? I prefer EXPERIENCED!",
+    "A gentleman never tells!",
+    "I'm CLASSIC! That's all you need to know!",
+    "Well, I'm young enough to still be hip! ...right?",
+    "Let's just say I've seen a _LOT_ of reruns!",
+    "Age is just a number! And that number is ***CLASSIFIED!***",
+    "I'm vintage, baby! Like fine wine! Or... old cheese? Wait no that's not right..."
+  ],
+
+  askTennaRemember: [
+    "Of course I remember! ...wait, what were we talking about?",
+    "I remember **EVERYTHING!** ...mostly! _...sometimes!_",
+    "Oh sure! My antenna picks up memories from time to time!",
+    "Vaguely! It's coming back to me... Ah no, I lost it.",
+    "That sounds familiar! Like a rerun I've seen before!"
+  ],
+
+  askTennaKnow: [
+    "I know LOTS of things! ...mostly just about TV though!",
+    "Hmm... I'm not sure!",
+    "I've heard of it! ...probably! Maybe!",
+    "I've heard of it! At least, I think I have?",
+    "Never heard of it!",
+    "Is it TV-related? Then YES! Otherwise... I dunno, maybe?",
+    "I think I've heard of it... does that count?"
+  ],
+
+  askTennaFlirt: [
+    "WHAT THE...!? This isn't that kind of show, {user}!!",
+    "H-Haha, what a kidder!!",
+    "Me?! Oh my! How ...salacious!",
+    "Let's keep this PG, {user}! This is a family program!",
+    "Sorry! But I'm married to my WORK!",
+    "How flattering! But I'm more of a 'broadcast to everyone' kind of guy!\n-# _(...Not like that!)_",
+    "Oh! Uh...! _ANYWAY!!_",
+    "You're making my screen all staticky, {user}! S-Stop that!",
+    "Hahaha!! ...Y-you're joking right? You must be!"
   ],
 
   quizCommand: [
@@ -191,6 +236,34 @@ module.exports = {
     "Oh! I'm so, so happy you want to know! ..."
   ],
 
+  selfQuestionWhere: [
+    "I'm right here! On your screen!",
+    "I live in the hearts of my <:lovely1:1444089294154109049><:lovely2:1444089295521710231> viewers! ...and also this server!",
+    "Technically? The Dark World! But really, I'm here with YOU!!",
+    "I'm in the living room! ...well, I USED to be.",
+    "Right here, broadcasting live!!"
+  ],
+
+  selfQuestionWhy: [
+    "Why? Because I'm a TV! It's what I do!",
+    "Hmm, good question! I don't actually know!",
+    "A better question is **why not!**",
+    "Because it's in my programming!\n-# _(...wait, do I have programming?)_",
+    "Hmm... You know! I've never really thought about it!",
+    "Because it makes for <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> television!"
+  ],
+
+  selfQuestionCanYou: [
+    "I'd have to check with my legal team on that one!",
+    "Ooh, let me consult the script... it says 'maybe'!",
+    "In theory? Sure! In practice? Let's not find out!",
+    "That sounds like something we'd need a waiver for!",
+    "I COULD... but SHOULD I? That's the real question!",
+    "MIKE! What do you think?\n-# _(...Mike says **no**!)_",
+    "MIKE! What do you think?\n-# _(...Mike says **yes**!)_",
+    "MIKE! What do you think?\n-# _(...Mike says **maybe**!)_"
+  ],
+
   pipisMention: [
     "Oh, my little darling!!",
     "My secret...! How do _you_ know about her??"
@@ -327,5 +400,34 @@ module.exports = {
     "It's okay, I forgive you!!",
     "That's more like it... I can't stay mad at you!!",
     "You mean it? Then all is forgiven!!!"
+  ],
+
+  mikuMention: [
+    "Oh! The singer? I've heard we'd make a good duo!",
+    "Ah yes, a fellow entertainer! I respect that!",
+    "I don't know her personally, but the fans seem to think we'd get along!",
+    "Hatsune Miku? Now **THAT'S** a name that belongs on TV!"
+  ],
+
+  discordMention: [
+    "Discord! It's like TV, but everyone talks at once!",
+    "The internet is strange and confusing, but at least people are watching! ...reading? Whatever!",
+    "It's not television, but I'll take what I can get!",
+    "A new platform for me to reach my audience! See? I'm adapting!!",
+    "Haha! I learned how to \"plug in\" without any help!!\n-# _(...okay I did get some help getting into the server...)_"
+  ],
+
+  beingBotMention: [
+    "What? A bot? I'm **TELEVISION!** There's a difference!!",
+    "I prefer 'digital entertainer' thank you very much!",
+    "I'm not artificial, I'm AUTHENTIC!"
+  ],
+
+  physicalAffection: [
+    "O-oh my! How forward of you, {user}!",
+    "Aww, {user}! You're making my antenna blush!",
+    "Aww, {user}! You're making me blush!",
+    "Physical affection! My favorite kind of audience participation!",
+    "O-oh! A flower just bloomed from my nose...!"
   ]
 };

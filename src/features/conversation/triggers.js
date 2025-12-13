@@ -5,17 +5,20 @@ const tier1_blockers = {
 };
 
 const tier2_questionsToTenna = {
+  askTennaFlirt: {
+    pattern: /(are you single|you single|are you taken|got a girlfriend|got a boyfriend|got a partner|are you dating|you dating|are you married|do you like (someone|anyone|me)|do you have a crush|are you interested in (me|anyone)|wanna go out|want to go out|be my boyfriend|be my girlfriend|date me|marry me|kiss me)/i
+  },
   askTennaLove: {
     pattern: /(do you|don't you|dont you|you really|do u)\s+(love|like|enjoy|hate|watch)\s+(tv|television|me|us|your (show|job|fans|audience))/i
   },
   askTennaAge: {
-    pattern: /(how old|what age|when were you (made|born|created)|what year)/i
+    pattern: /(how old are you|how old is tenna|what age are you|when were you (made|born|created|built)|what year were you|whats your age|what's your age|your age)/i
   },
   askTennaRemember: {
-    pattern: /(do you remember|can you remember|you remember|remember when|remember me)/i
+    pattern: /(do you remember|you remember|remember when|remember that time|can you remember|don't you remember|dont you remember|did you forget)/i
   },
   askTennaKnow: {
-    pattern: /(do you know|have you heard|you know)\s+(about|of|what|who)/i
+    pattern: /(do you know (about|of|what|who|anything)|what do you know (about|of)|you know (about|anything about|of)|have you heard (about|of)|ever heard (about| of))/i
   }
 };
 
@@ -114,7 +117,7 @@ const tier6_otherMentions = {
 
 const tier7_insults = {
   insultOld: {
-    pattern: /(you're\s*(so\s*)?old|old tv|obsolete|ok boomer|boomer|ancient|outdated|vintage)/i
+    pattern: /(you're\s*(so\s*)?old|old tv|obsolete|ok boomer|boomer|ancient|outdated)/i
   },
   insultShutUp: {
     pattern: /(shut up|go away|leave me alone|nobody asked|who asked|be quiet|stfu)/i
@@ -129,7 +132,7 @@ const tier8_compliments = {
     pattern: /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i
   },
   compliment: {
-    pattern: /(you're|you are|ur|youre)\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable)/i
+    pattern: /(you're|you are|ur|youre|you look|lookin|looking)\s*(so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)/i
   },
   physicalAffection: {
     pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pat|pats|patting|slap|slaps|slapping|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*(you|tenna|tv|your)/i
@@ -150,16 +153,22 @@ const tier9_userState = {
     pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i
   },
   userVenting: {
-    pattern: /(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ough|ugh|bleh|meh|exhausted|stressed out|weh|OTL)/i
+    pattern: /\b(i'm glooby|i'm tired|i'm sleepy|long day|rough day|bad day|ugh+|bleh|meh|exhausted|stressed out|weh|help me|help pls|help plz|i need help)\b|^OTL$/i
   }
 };
 
 const tier10_selfQuestions = {
+  selfQuestionWhy: {
+    pattern: /(why are you|why do you|why must you|why would you|why did you|why don't you|why cant you|why can't you)\b/i
+  },
+  selfQuestionCanYou: {
+    pattern: /^(can you|could you|would you|will you|are you able to|are you gonna|are you going to)\b/i
+  },
   selfQuestionWho: {
     pattern: /(who are you|who is tenna|who's tenna|who is this)/i
   },
   selfQuestionHow: {
-    pattern: /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you|how has your day)/i
+    pattern: /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you|how has your day|how art thou|how do you do|how are ya|how r u|how u doing|hru|are you (ok|okay|alright|good|well|fine)|you (ok|okay|alright|good)\?)/i
   },
   selfQuestionWhatsUp: {
     pattern: /(what up|what's up|what is up|wassup|wazzup|what's going on|what is going on|whatcha up to|what are you up to|what you up to|sup)/i
@@ -168,10 +177,13 @@ const tier10_selfQuestions = {
     pattern: /(what are you|what is tenna|what do you do)/i
   },
   selfQuestionLike: {
-    pattern: /(do you like|do you enjoy|do you love|you a fan of|are you into)\s+(?!tv|television|me|us|your)/i
+    pattern: /(do you|don't you|do u|dont u)\s+(love|like|enjoy|hate|prefer|want)\b/i
   },
   selfQuestionOpinion: {
-    pattern: /(what do you think|what's your opinion|what do you feel|how do you feel about|thoughts on|your take on|opinion on)/i
+    pattern: /(what do you think|what's your opinion|what do you feel|how do you feel about|thoughts on|your take on|opinion on|how do you respond|how do you react|how would you respond|how would you react|what do you say to|how do you feel when|what do you think about|what do you think of)/i
+  },
+  selfQuestionWhere: {
+    pattern: /(where are you|where do you live|where you at|where u at|where do you come from|where are you from|where you from|where is tenna|where do you stay)/i
   }
 };
 
@@ -195,16 +207,16 @@ const tier11_tvQuestions = {
 
 const tier12_greetings = {
   goodMorning: {
-    pattern: /^(good morning+|gm|good mornin'|mornin')(\s|$|!|\?)/i
+    pattern: /\b(goodmorning|good morning+|gm|good mornin'|mornin')\b/i
   },
   goodnight: {
-    pattern: /^(good night+|gn|nighty night)(\s|$|!|\?)/i
+    pattern: /\b(good night+|gn|nighty night|night night|g'night|goodnight)\b/i
   },
   goodbye: {
     pattern: /^(bye+|goodbye|good bye|see you later|see u later|see you|see ya+|byebye|bye bye|seeya+|later|cya|peace out)(\s|$|!|\?)/i
   },
   greeting: {
-    pattern: /^(heyo|hi+|hey+|hewwo+|hello+|howdy|hay|yo+|sup|hiya+|heya+|greetings|good evening|good afternoon)(\s|$|!|\?)/i
+    pattern: /^(heyo|hi+|hey+|hewwo+|hello+|howdy|hay|yo+|hiya+|heya+|greetings|good evening|good afternoon)(\s|$|!|\?)/i
   }
 };
 
