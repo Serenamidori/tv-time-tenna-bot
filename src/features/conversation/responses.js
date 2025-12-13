@@ -56,7 +56,7 @@ module.exports = {
     "Me?! Oh my! How ...salacious!",
     "Let's keep this PG, {user}! This is a family program!",
     "Sorry! But I'm married to my WORK!",
-    "How flattering! But I'm more of a 'broadcast to everyone' kind of guy!\n-# _(...Not like that!)_",
+    "How flattering! But I'm more of a 'broadcast to everyone' kind of guy!\n-# _(...Not like that!!)_",
     "Oh! Uh...! _ANYWAY!!_",
     "You're making my screen all staticky, {user}! S-Stop that!",
     "Hahaha!! ...Y-you're joking right? You must be!"
@@ -111,7 +111,17 @@ module.exports = {
   thankYou: [
     "You're welcome!",
     "Sure thing!",
-    "Why, of course!"
+    "Why, of course!",
+    "No problemo!",
+    "You got it!"
+  ],
+
+  saySorry: [
+    "Sorry, sorry!! I'l be good!!",
+    "Fine, I'll behave!",
+    "No, you're right... I'm sorry!!",
+    "Oops! I'm so sorry!!",
+    "I'm a nice TV!! Please don't be mad!!"
   ],
   
   compliment: [
@@ -124,7 +134,10 @@ module.exports = {
 
   loveFans: [
     "You're so sweet {user}! I adore all my fans!",
-    "Aww, I'm flattered {user}!! How could I say 'no' to this attention?"
+    "Aww, I'm flattered {user}!! How could I say 'no' to this attention?",
+    "Oh {user}! This is why I <:love1:1443452223387340984><:love2:1443452224029065276> my fans!!",
+    "Of course {user}! If you had a fan club, I'd be **YOUR** number 1 fan!!",
+    "{user}!! You're sweeter than any fan mail I've ever gotten!\n-# _(And I've gotten a LOT of fan mail!)_"
   ],
   
   userFeelingGood: [
@@ -266,7 +279,8 @@ module.exports = {
 
   pipisMention: [
     "Oh, my little darling!!",
-    "My secret...! How do _you_ know about her??"
+    "My secret...! How do _you_ know about her??",
+    "So I saved one!! What's the big deal??"
   ],
 
   emailMention: [
@@ -279,7 +293,8 @@ module.exports = {
   krisMention: [
     "Kris! Oh, Kris...",
     "Kris was one of my original viewers! I love them!",
-    "Oh Kris, that little rascal!"
+    "Oh Kris, that little rascal!",
+    "...do you think Kris still loves TV?"
   ],
 
   susieMention: [
@@ -296,19 +311,21 @@ module.exports = {
 
   torielMention: [
     "Oh Toriel! She used to LOVE her cooking shows!",
-    "Nothing's better than Toriel's homemade pie!"
+    "Nothing's better than Toriel's homemade pie!",
+    "Tori was the last one to really give me a good look back in the day."
   ],
 
   familyMention: [
     "Oh yes! How I miss the whole family!",
-    "Remember when everyone came over for the holidays? I miss those days...",
-    "I still play their favorite show, y'know! Maybe they'll, heh, watch it again someday?"
+    "I remember when everyone came over for the holidays!! I miss those days...",
+    "I still play their favorite shows, y'know! Maybe they'll, heh, watch it again someday?"
   ],
 
   mikeMention: [
     "MIKE! {user}'s talking about you!",
     "What, Mike? He's great!",
-    "Don't think you can go ordering around Mike! That's _my_ job!"
+    "Don't think you can go ordering around Mike! That's _my_ job!",
+    "Ahh Mike! Couldn't do my show without him!"
   ],
 
   mettatonMention: [
@@ -319,7 +336,9 @@ module.exports = {
 
   workersMention: [
     "So hard to find good help these days, haha!",
-    "They work for me! It's in their contracts!"
+    "They work for me! It's in their contracts!",
+    "I love all my employees!\n-# _(Yes, even those pesky Pippins...)_",
+    "Ah, the good ol' production crew!"
   ],
 
   laninoElninaMention: [
@@ -333,34 +352,57 @@ module.exports = {
     "Let's change the channel on this topic.",
     "...",
     "Oh THAT guy!? That little-! ..._AHEM_, let's not talk about that?",
-    "This ain't about him."
+    "This ain't about him.",
+    "I haven't seen that guy in a long time...",
+    "I keep hearing about him in this server... why is that??",
+    "-# _(I miss that little mailman...)_"
   ],
 
   knightMention: [
     "I'm not sure who you mean, haha! Let's uh, change the subject!",
-    "Nope! Doesn't ring any bells!!"
+    "Nope! Doesn't ring any bells!!",
+    "... I don't know who you're talking about!!",
+    "Oops! Duty calls! Gotta go, {user}!",
+    "Haha, how do you know about that?? ...I mean-! Next question!!"
   ],
 
   lancerMention: [
-    "Ah, so that's his name. I see!"
+    "Ah, so that's his name. I see!",
+    "Oh yeah! The kid who kept breaking all those controllers??",
+    "Yes, the king's boy! I'm the one who cleans his ears!",
+    "Lancer! What a bouncy little pumpkin!",
+    "That little guy calls me TV Dad!\n-# _(Weird, but endearing!)_"
   ],
 
   queenMention: [
     "Queenie Beenie!",
     "Ah yes, the laptop!",
-    "Oh, I remember her!"
+    "Oh, I remember her! Back when Kris and Noelle use to play...!",
+    "Do you mean the Queen of Cyber City? I know her!",
+    "Queen is a laptop right? Do you think she also uses Discord?"
+  ],
+
+  kingMention: [
+    "Kingy-Doodle!!",
+    "Oh, the King! I'm his new _jester_ y'know!",
+    "Ah, His Majesty! I know him!",
+    "I know him! He's hired me for entertainment!\n-# _(...at least I think he did?)_",
+    "I think he likes TV!\n-# _(Or maybe he just likes me falling on my head...)_"
   ],
 
   whoMention: [
     "Who? Who is that?",
     "Doesn't ring a bell.",
-    "I don't know who that is?"
+    "I don't know who that is?",
+    "Hmm, I don't recognize that name."
   ],
 
   insult: [
     "Oh... okay. That's... that's fine.",
     "Haha, good one!\n-# _(...that was a joke, right?)_",
-    "What!? Are you _TRYING_ to make me glooby?\n-# _(Well it's working!)_"
+    "What!? Are you _TRYING_ to make me glooby?\n-# _(Well it's working!)_",
+    "Hey!! I don't have to take this from you!! I'm ignoring you now!!\n-# _(...until you message me again, anyways.)_",
+    "Haha! Oh I bet you thought that would upset me!!..."
   ],
 
   insultOld: [
@@ -374,7 +416,8 @@ module.exports = {
     "-# Oh but... I thought you wanted to talk...",
     "Fine! Maybe I'll just leave this server then!\n-# _(...Mike! How do I leave again?)_",
     "Shutting up!\n...\n...\n...\nOkay I can't do it. **ANYWAY!**",
-    "Sorry {user}, that's premium!"
+    "Sorry {user}, that's premium!",
+    "How about **YOU** shut up!?\n-# _(...actually let's keep talking please.)_"
   ],
   
   fallback: [
@@ -382,24 +425,33 @@ module.exports = {
     "Interesting! I have no idea what that means!",
     "Sorry, bad reception on that one. What was that?",
     "Uh, sorry! Didn't make any sense to me!",
-    "Does anyone know what this means?"
+    "Does anyone know what this means?",
+    "I can't keep up with this new technology! ...wait no, yes I can!! Let's just try that again, okay??",
+    "I didn't quite catch that, could you try saying it a different way?",
+    "Uh, what? Huh?"
   ],
 
   dontWorry: [
     "Okay! Yay!!",
     "Oh, okay then!",
-    "Alright, I won't!!"
+    "Alright, I won't!!",
+    "Phew! I was starting to worry!",
+    "Whatever you say, {user}!!"
   ],
 
   youllSee: [
     "...I'm worried!!",
-    "Hm! That's concerning!"
+    "Hm! That's concerning!",
+    "Haha... _I'm in danger._",
+    "_UM HAHA... WHAT?_"
   ],
 
   imSorry: [
     "It's okay, I forgive you!!",
     "That's more like it... I can't stay mad at you!!",
-    "You mean it? Then all is forgiven!!!"
+    "You mean it? Then all is forgiven!!!",
+    "Don't worry {user}, I forgive you!",
+    "You're sorry? Well, then all is forgiven!"
   ],
 
   mikuMention: [
@@ -420,7 +472,8 @@ module.exports = {
   beingBotMention: [
     "What? A bot? I'm **TELEVISION!** There's a difference!!",
     "I prefer 'digital entertainer' thank you very much!",
-    "I'm not artificial, I'm AUTHENTIC!"
+    "I'm not artificial, I'm AUTHENTIC!",
+    "Bot? What are you talking about, I'm Tenna!!"
   ],
 
   physicalAffection: [

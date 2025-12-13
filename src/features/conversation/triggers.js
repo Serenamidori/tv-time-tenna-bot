@@ -38,8 +38,11 @@ const tier3_commands = {
 };
 
 const tier4_conversational = {
+  saySorry: {
+    pattern: /\b(be nice|be nicer|say (you're |you are |ur |youre)?(sorry|something nice|nice thing|psyche|you didn't mean it)|apologize|say something nice)\b/i
+  },
   imSorry: {
-    pattern: /(sowwy|i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i
+    pattern: /(sorry|sowwy|i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i
   },
   dontWorry: {
     pattern: /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i
@@ -54,49 +57,52 @@ const tier4_conversational = {
 
 const tier5_characters = {
   spamtonMention: {
-    pattern: /(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton)/i
+    pattern: /\b(spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)\b/i
   },
   mikeMention: {
     pattern: /\b(mike)\b/i
   },
   pipisMention: {
-    pattern: /(pipis|little darling)/i
+    pattern: /\b(pipis|little darling)\b/i
   },
   krisMention: {
     pattern: /\b(kris|krissy)\b/i
   },
   susieMention: {
-    pattern: /(susie|susiezilla|snoozie)/i
+    pattern: /\b(susie|susiezilla|snoozie)\b/i
   },
   ralseiMention: {
-    pattern: /(ralsei|fluffy boy|toothpaste boy)/i
+    pattern: /\b(ralsei|fluffy boy|toothpaste boy)\b/i
   },
   torielMention: {
     pattern: /\b(toriel|tori)\b/i
   },
   familyMention: {
-    pattern: /(asgore|asriel|dess|december|noel|noelle|dreemurr|dreemurrs|the holidays)/i
+    pattern: /\b(asgore|asriel|dess|december|noel|noelle|dreemurr|dreemurrs|the holidays)\b/i
   },
   knightMention: {
-    pattern: /(the knight|roaring knight)/i
+    pattern: /\b(the knight|roaring knight)\b/i
   },
   queenMention: {
-    pattern: /(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)/i
+    pattern: /\b(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)\b/i
   },
   lancerMention: {
-    pattern: /(lancer|prancer|dancer|mr\. generosity|chaos king|king wingy)/i
+    pattern: /\b(lancer|prancer|dancer|mr\. generosity)\b/i
+  },
+  kingrMention: {
+    pattern: /\b(king|chaos king|king wingy)\b/i
   },
   mettatonMention: {
-    pattern: /(mettaton|mtt|metta)/i
+    pattern: /\b(mettaton|mtt|metta)\b/i
   },
   laninoElninaMention: {
-    pattern: /(lanino|elnina|the weather|weather duo|weather news team)/i
+    pattern: /\b(lanino|elnina|the weather|weather duo|weather news team)\b/i
   },
   workersMention: {
-    pattern: /(pippins|ramb|zapper|shadowguy|shuttah)/i
+    pattern: /\b(pippins|ramb|zapper|shadowguy|shuttah|battat|jongler|pluey)\b/i
   },
   whoMention: {
-    pattern: /(rouxls|battat|jongler|pluey|defernull|gaster)/i
+    pattern: /\b(rouxls|rouxls kaard|defernull|gaster)\b/i
   }
 };
 
@@ -105,7 +111,7 @@ const tier6_otherMentions = {
     pattern: /\b(email|e-mail)\b/i
   },
   mikuMention: {
-    pattern: /(miku|hatsune|vocaloid)/i
+    pattern: /\b(miku|hatsune|vocaloid)\b/i
   },
   discordMention: {
     pattern: /(discord|this server|the server|chat room|online|the internet)/i

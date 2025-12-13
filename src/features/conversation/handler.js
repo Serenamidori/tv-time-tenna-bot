@@ -1,5 +1,5 @@
 const { setTimeout } = require('timers/promises');
-const triggers = require('./triggers');
+const { triggers } = require('./triggers');
 const responses = require('./responses');
 const utils = require("../../utils");
 const { getDailyMessageId } = require('../scheduled/ilovetvcheck');
@@ -34,10 +34,10 @@ async function isReplyToTenna(message, bot) {
 function detectIntent(content) {
   if (content.length === 0) return 'empty';
   
-  for (const tier of tiers) {
-    for (const [intentName, config] of Object.entries(tier)) {
+  for (const tier of triggers) {
+    for (const [intent, config] of Object.entries(tier)) {
       if (config.pattern.test(content)) {
-        return intentName;
+        return intent;
       }
     }
   }
