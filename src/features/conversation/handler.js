@@ -56,4 +56,4 @@ function getRandomResponse(intent, name) {
 }
 
 
-module.exports = { handleDialogue };
+module.exports = { detectIntent, handleDialogue };
