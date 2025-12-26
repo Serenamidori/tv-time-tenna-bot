@@ -243,16 +243,16 @@ const tier11_tvQuestions = {
 
 const tier12_greetings = {
   goodMorning: {
-    pattern: /\b(goodmorning|good morning+|gm|good mornin'|mornin')\b/i
+    pattern: /\b(goo+dmo+rning+|goo+d mo+rning+|gm|goo+d mo+rnin'|mo+rnin|g'mo+rning+|g'mo+rnin|mo+rning+|ri+se and shi+ne)\b/i
   },
   goodnight: {
-    pattern: /\b(good night+|gn|nighty night|night night|g'night|goodnight)\b/i
+    pattern: /\b(goo+d ni+ght+|gn|ni+ghty ni+ght+|ni+ght+|g'ni+ght+|goodni+ght+|slee+p+ ti+ght+|nini)\b/i
   },
   goodbye: {
-    pattern: /^(bye+|goodbye|good bye|see you later|see u later|see you|see ya+|byebye|bye bye|seeya+|later|cya|peace out)(\s|$|!|\?)/i
+    pattern: /^(by+e+|goodby+e+|good by+e+|see you later|see u later|see you+|see ya+|byebye|by+e+ by+e+|see+y+a+|later+|cya|peace out)(\s|$|!|\?)/i
   },
   greeting: {
-    pattern: /^(heyo|hi+|hey+|hewwo+|hello+|howdy|hay|yo+|hiya+|heya+|greetings|good evening|good afternoon)(\s|$|!|\?)/i
+    pattern: /^(hey+o+|hi+|hey+|heww+o+|hell+o+|howdy+|hay+|yo+|hiy+a+|hey+a+|greetings|good evening|good afternoon)(\s|$|!|\?)/i
   }
 };
 
