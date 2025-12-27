@@ -1,33 +1,42 @@
 const handler = require('../../src/features/conversation/handler.js'); 
+const examples = [
+  ['goodMorning', 'good morning!!'],
+  ['goodMorning', 'morning tenna!!'],
+  ['goodMorning', "g'morning tenna"],
+  ['goodMorning', 'morning'],
+  ['goodMorning', "mornin'"],
+  ['goodMorning', 'morning'],
+  ['goodMorning', 'gm'],
+  ['goodMorning', 'rise and shine tenna!'],
+  ['goodnight', 'nighty night'],
+  ['goodnight', 'good night'],
+  ['goodnight', "g'night tenna!"],
+  ['goodnight', 'nighttttt'],
+  ['goodnight', 'niiiiight'],
+  ['goodnight', 'sleep tight tenna!'],
+  ['goodnight', 'have a good night tenna!'],
+  ['goodnight', 'night night!'],
+  ['goodnight', 'nini!'],
+  ['goodbye', 'byeee tennaaaa'],
+  ['goodbye', 'byyyeee'],
+  ['goodbye', 'good bye'],
+  ['goodbye', 'goodbye'],
+  ['goodbye', 'seeyaa'],
+  ['goodbye', 'bye byeee'],
+  ['greeting', 'Hi Tenna!!'],
+  ['greeting', 'Hello'],
+  ['greeting', 'Yoooo Tenna!!!'],
+  ['greeting', 'yo'],
+  ['greeting', 'heyyyyyaa'],
+  ['greeting', 'Heyyyy'],
+  ['greeting', 'hiiii mr tenna'],
+  ['greeting', 'hewwo']
+]
 
 describe('Dialogue Handler Tests', () => {
-  describe('Tier 12 Regex Pattern Matching', () => {
-    it('should correctly detect greetings', () => {
-      const examples = ['Hi Tenna!!', 'Hello', 'Yoooo Tenna!!!', 'yo', 'heyyyyyaa', 'Heyyyy', 'hiiii mr tenna', 'hewwo'];
-      for (const content of examples) {
-        expect(handler.detectIntent(content)).toBe('greeting');
-      }
+  for (const content of examples) {
+    it(`should correctly detect "${content[1]}" as ${content[0]}`, () => {
+      expect(handler.detectIntent(content[1])).toBe(content[0]);
     });
-
-    it('should correctly detect goodbyes', () => {
-      const examples = ['byeee tennaaaa', 'byyyeee', 'good bye', 'seeyaa', 'bye byeee'];
-      for (const content of examples) {
-        expect(handler.detectIntent(content)).toBe('goodbye');
-      }
-    });
-
-    it('should correctly detect goodnights', () => {
-      const examples = ['nighty night', 'good night', "g'night tenna!", 'nighttttt', 'niiiiight', 'sleep tight tenna!', 'have a good night tenna!', 'night night!', 'nini!'];
-      for (const content of examples) {
-        expect(handler.detectIntent(content)).toBe('goodnight');
-      }
-    });
-
-    it('should correctly detect goodMorning', () => {
-      const examples = ['good morning!!', 'morning tenna!!', "g'morning tenna", "mornin'", 'morning', 'gm', 'rise and shine tenna!'];
-      for (const content of examples) {
-        expect(handler.detectIntent(content)).toBe('goodMorning');
-      }
-    });
-  });
+  }
 });
