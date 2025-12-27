@@ -12,22 +12,22 @@ const tier2_questionsToTenna = {
     pattern: /((who('s|s| is)? a )?good (boy|tv))/i
   },
   askTennaLikeGender: {
-    pattern: /((do)?\s?(you|u) like|(are|r)?\s?(you|u) into) (enbies|nonbinary|nb|men|women|boys|girls|guys|gals|dudes|ladies|gentlemen)/i
+    pattern: /((do)?\s?(you+|u) like|(are|r)?\s?(you+|u) into) (enbies|nonbinary|nb|men|women|boys|girls|guys|gals|dudes|ladies|gentlemen)/i
   },
   askTennaFlirt: {
-    pattern: /(are|r)?\s?(you|u) (interested in (someone|anyone|anybody|me)|single|taken|in a relationship|seeing (someone|anyone|anybody)|dating|married)|(do (you|u))?\s?(got|have) a (gf|bf|girlfriend|boyfriend|partner|husband|wife|spouse)|do (you|u) (have a crush|like (someone|anyone|anybody|me))|((wanna go|want to go|let's go) (out|on a date))|be my (boyfriend|girlfriend|wife|husband|spouse|partner)|(date|marry|kiss) me|(touch|touches|touching|caress|caresses|caressing|lick|licks|licking|grab|grabs|grabbing|grope|gropes|groping)(\*?)\s*((your|ur\s*)?(dial|dial|button|antenna|nose|screen)|(you|u))/i
+    pattern: /(are|r)?\s?(you+|u) (interested in (someone|anyone|anybody|me)|single|taken|in a relationship|seeing (someone|anyone|anybody)|dating|married)|(do (you+|u))?\s?(got|have) a (gf|bf|girlfriend|boyfriend|partner|husband|wife|spouse)|do (you+|u) (have a crush|like (someone|anyone|anybody|me))|((wanna go|want to go|let's go) (out|on a date))|be my (boyfriend|girlfriend|wife|husband|spouse|partner)|(date|marry|kiss) me|(touch|touches|touching|caress|caresses|caressing|lick|licks|licking|grab|grabs|grabbing|grope|gropes|groping)(\*?)\s*((your|ur\s*)?(dial|dial|button|antenna|nose|screen)|(you+|u))/i
   },
   askTennaLove: {
-    pattern: /(do you|don't you|dont you|you really|do u)\s+(love|like|enjoy|hate|watch)\s+(tv|television|me|us|your (show|job|fans|audience))/i
+    pattern: /^(?!.*can\s*you)((do|dont|don't)?\s?(you+|u)\s?(really|rly)?)\s+(love|like|enjoy)\s+(tv|television|me|us|your (show|job|fans|audience))/i
   },
   askTennaAge: {
-    pattern: /(how old are you|how old is tenna|what age are you|when were you (made|born|created|built)|what year were you|whats your age|what's your age|your age)/i
+    pattern: /(how old ((are|r) (you+|u)|is tenna)|what age (are|r) you|when were (you+|u) (made|born|created|built)|what year were (you+|u)|(what is|whats|what's)?\s?(your|ur) age|(((are|r) (you+|u))|is tenna) old)/i
   },
   askTennaRemember: {
-    pattern: /(do you remember|you remember|remember when|remember that time|can you remember|don't you remember|dont you remember|did you forget)/i
+    pattern: /((do|can|don't|dont)?\s?(you+|u)?\s?remember\s?(that time|when)?|did (you+|u) forget)/i
   },
   askTennaKnow: {
-    pattern: /(do you know (about|of|what|who|anything)|what do you know (about|of)|you know (about|anything about|of)|have you heard (about|of)|ever heard (about| of))/i
+    pattern: /((what do|do|have|ever)?\s?(you+|u)?\s?(heard|hear|learned|learn|know) (about|of|what|who|anything))/i
   }
 };
 
@@ -177,7 +177,7 @@ const tier8_insults = {
     pattern: /(stinky|dumb fuck|idiot|tennafuckyou|fuckyou|bitch|tiny nose|small nose|trash heap|i hate you|fuck you|kills you|kills u|kill yourself|you suck|you're lame|you're annoying|boring|you stink)/i
   },
   physicalViolence: {
-    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*((you|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|money|mike)/i
+    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|money|mike)/i
   }
 };
 
@@ -201,31 +201,31 @@ const tier9_userState = {
 
 const tier10_selfQuestions = {
   selfQuestionWhy: {
-    pattern: /(why+|why+ ((are|r)|do|did|would|must|don't|dont|can't|cant) (you|u))\b/i
+    pattern: /(why+|why+ ((are|r)|do|did|would|must|don't|dont|can't|cant) (you+|u))\b/i
   },
   selfQuestionCanYou: {
-    pattern: /^((can|could|would|will) (you|u)|(are|r) (you|u) (able to|gonna|going to))\b/i
+    pattern: /^((can|could|would|will) (you+|u)|(are|r) (you+|u) (able to|gonna|going to))\b/i
   },
   selfQuestionWho: {
     pattern: /((who.*(are|r)|who're) (you+|u)|(who.* is|who's) (tenna+|this))/i
   },
   selfQuestionHow: {
-    pattern: /(how ((are|r) (you+|ya+|u)|do you feel(?! about)|(you+|u) (doing|doin)|about (you+|u)|art thou|do (you+|u) do)|how're (you|u)|(how's|how( is)?) (it (going+|hanging+|hangin))|hru|(are|r) (you+|u) (doing )?(ok|okay|alright|good|well|fine|groovy|awesome|great)|(has|was|is) your day)/i
+    pattern: /(how ((are|r) (you+|ya+|u)|do you feel(?! about)|(you+|u) (doing|doin)|about (you+|u)|art thou|do (you+|u) do)|how're (you+|u)|(how's|how( is)?) (it (going+|hanging+|hangin))|hru|(are|r) (you+|u) (doing )?(ok|okay|alright|good|well|fine|groovy|awesome|great)|(has|was|is) your day)/i
   },
   selfQuestionWhatsUp: {
     pattern: /((what( is)?|what's) (up|going (on|down)|happenin+|new)|wa+s+u+p|wa+z+u+p|(watcha|whatcha|(what (are|r)|what're) (you+|u)) (up to|doin+)|su+p)/i
   },
   selfQuestionWhat: {
-    pattern: /(what ((the|da) (hell|fuck|shit)|even)?\s?)((are|r) (you|u)|is (a)?\s?tenna|do you.*do)/i
+    pattern: /(what ((the|da) (hell|fuck|shit)|even)?\s?)((are|r) (you+|u)|is (a)?\s?tenna|do you.*do)/i
   },
   selfQuestionLike: {
-    pattern: /(do (you|u)|don't (you|u))\s+(love|like|enjoy|hate|prefer|want)\b/i
+    pattern: /(do (you+|u)|don't (you+|u))\s+(love|like|enjoy|hate|prefer|want)\b/i
   },
   selfQuestionOpinion: {
-    pattern: /((how|what) (do|would) (you|u) (think|feel|respond|react|say)|(what's|whats|what is) (your|ur) opinion|(thoughts|(your|ur) take|opinion) on)/i
+    pattern: /((how|what) (do|would) (you+|u) (think|feel|respond|react|say)|(what's|whats|what is) (your|ur) opinion|(thoughts|(your|ur) take|opinion) on)/i
   },
   selfQuestionWhere: {
-    pattern: /((where( are| r)?|where're) (you|u)| where ((are|r) ((you|u) (living|staying)))|(do ((you|u) (live|come from|stay)))|is tenna)/i
+    pattern: /((where( are| r)?|where're) (you+|u)| where ((are|r) ((you+|u) (living|staying)))|(do ((you+|u) (live|come from|stay)))|is tenna)/i
   }
 };
 

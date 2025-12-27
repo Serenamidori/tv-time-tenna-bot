@@ -25,14 +25,16 @@ module.exports = {
 
   askTennaGoodBoy: [
     "I am!! I am!!!",
+    "Yes! I **AM** a good boy!!",
     "_...is it me?_",
     "**BARK!**\n-# _(...oh that's embarrassing.)_"
   ],
 
   askTennaLove: [
     "Is that even a question?! Of **course** I do!!",
-    "More than anything!! It's kind of my whole deal!",
-    "With every fiber of my being! ...which is mostly wires!",
+    "More than anything in the world!!",
+    "Why, of course! It's kind of my whole deal!",
+    "With every fiber of my being!\n-# _(And I don't mean Fiber Optics!!)_",
     "<:love1:1443452223387340984><:love2:1443452224029065276>? Of course!!"
   ],
 
@@ -138,7 +140,7 @@ module.exports = {
   ],
 
   saySorry: [
-    "Sorry, sorry!! I'l be good!!",
+    "Sorry, sorry!! I'll be good!!",
     "Fine, I'll behave!",
     "No, you're right... I'm sorry!!",
     "Oops! I'm so sorry!!",
