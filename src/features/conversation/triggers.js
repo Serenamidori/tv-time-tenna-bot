@@ -6,7 +6,7 @@ const tier1_blockers = {
 
 const tier2_questionsToTenna = {
   askTennaAwake: {
-    pattern: /((are you|r u|are u|r you|you|u) (awake|there|here|up))/i
+    pattern: /((are |r )?(you+|u) (awake|there|here|up(?! to)))/i
   },
   askTennaGoodBoy: {
     pattern: /((?:who(?:'s|s| is) a )?good (?:boy|tv))/i
@@ -207,25 +207,25 @@ const tier10_selfQuestions = {
     pattern: /^((can|could|would|will) you|are you (able to|gonna|going to))\b/i
   },
   selfQuestionWho: {
-    pattern: /(who are you|who is tenna|who's tenna|who is this)/i
+    pattern: /((who.*are|who're) you+|(who.* is|who's) (tenna+|this))/i
   },
   selfQuestionHow: {
-    pattern: /(how are you|how do you feel|how you doing|how're you|how's it going|how's it hanging|how's it hangin|how about you|what about you|how has your day|how art thou|how do you do|how are ya|how r u|how u doing|hru|are you (ok|okay|alright|good|well|fine)|you (ok|okay|alright|good)\?)/i
+    pattern: /(how ((are|r) (you+|ya+|u)|do you feel(?! about)|(you+|u) (doing|doin)|about (you+|u)|art thou|do (you+|u) do)|how're you|(how's|how( is)?) (it (going+|hanging+|hangin))|hru|(are|r) (you+|u) (doing )?(ok|okay|alright|good|well|fine|groovy|awesome|great)|(has|was|is) your day)/i
   },
   selfQuestionWhatsUp: {
-    pattern: /(what up|what's up|what is up|wassup|wazzup|what's going on|what is going on|whatcha up to|what are you up to|what you up to|sup)/i
+    pattern: /((what( is)?|what's) (up|going (on|down)|happenin+|new)|wa+s+u+p|wa+z+u+p|(watcha|whatcha|(what are|what're) (you+|u)) (up to|doin+)|su+p)/i
   },
   selfQuestionWhat: {
-    pattern: /(what are you|what is tenna|what do you do)/i
+    pattern: /(what ((the|da) (hell|fuck|shit)|even)?\s?)(are you|is (a)?\s?tenna|do you.*do)/i
   },
   selfQuestionLike: {
     pattern: /(do you|don't you|do u|dont u)\s+(love|like|enjoy|hate|prefer|want)\b/i
   },
   selfQuestionOpinion: {
-    pattern: /(what do you think|what's your opinion|what do you feel|how do you feel about|thoughts on|your take on|opinion on|how do you respond|how do you react|how would you respond|how would you react|what do you say to|how do you feel when|what do you think about|what do you think of)/i
+    pattern: /((how|what) (do|would) (you|u) (think|feel|respond|react|say)|(what's|whats|what is) (your|ur) opinion|(thoughts|your take|opinion) on)/i
   },
   selfQuestionWhere: {
-    pattern: /(where are you|where do you live|where you at|where u at|where do you come from|where are you from|where you from|where is tenna|where do you stay)/i
+    pattern: /((where( are| r)?|where're) (you|u)| where (are (you living|you staying))|(do (you live|you come from|you stay))|is tenna)/i
   }
 };
 
