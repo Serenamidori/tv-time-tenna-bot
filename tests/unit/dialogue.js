@@ -1,9 +1,45 @@
 const handler = require('../../src/features/conversation/handler.js'); 
 const examples = [
+  // empty
+  ['empty', ''],
+
+  // fallback
+  ['fallback', 'sdkfjdshfsd'],
+  ['fallback', 'lalalalalalala'],
+
   // tier1_blockers
+  ['offLimits', 'wireplay'],
 
   // tier2_questionsToTenna
   ['askTennaAwake', 'are you up'],
+  ['askTennaAwake', 'you awake?'],
+  ['askTennaAwake', 'are u there'],
+  ['askTennaAwake', 'are you here???'],
+  ['askTennaGoodBoy', 'who is a good boy'],
+  ['askTennaGoodBoy', "who's a good boy???"],
+  ['askTennaGoodBoy', 'good boy!!'],
+  ['askTennaGoodBoy', 'who is a good tv'],
+  ['askTennaLikeGender', 'are you into dudes?'],
+  ['askTennaLikeGender', 'do you like enbies??'],
+  ['askTennaLikeGender', 'you into women?'],
+  ['askTennaLikeGender', 'you like boys?'],
+  ['askTennaFlirt', 'do you have a boyfriend?'],
+  ['askTennaFlirt', 'got a gf?'],
+  ['askTennaFlirt', 'do you wanna go out?'],
+  ['askTennaFlirt', 'wanna date me??'],
+  ['askTennaFlirt', 'touches your nose'],
+  ['askTennaFlirt', 'gropes your dials'],
+  ['askTennaFlirt', 'kiss me!!!'],
+  ['askTennaFlirt', 'can you kiss me'],
+  ['askTennaFlirt', 'licking your screen'],
+  ['askTennaFlirt', 'are you interested in anyone?'],
+  ['askTennaFlirt', 'are you taken'],
+  ['askTennaFlirt', 'will you marry me?'],
+  ['askTennaFlirt', 'do you have a crush on someone?'],
+  ['askTennaFlirt', 'do you like someone?'],
+  ['askTennaFlirt', 'are you seeing anyone?'],
+  ['askTennaFlirt', 'caress your buttons'],
+  ['askTennaFlirt', 'wanna be my boyfriend?'],
 
   // tier3_commands
 
