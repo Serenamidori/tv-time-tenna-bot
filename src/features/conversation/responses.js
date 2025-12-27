@@ -160,6 +160,13 @@ module.exports = {
     "Of course {user}! If you had a fan club, I'd be **YOUR** number 1 fan!!",
     "{user}!! You're sweeter than any fan mail I've ever gotten!\n-# _(And I've gotten a LOT of fan mail!)_"
   ],
+  
+  hugFans: [
+    "Of course I will {user}!! :heart:",
+    "I would <:love1:1443452223387340984><:love2:1443452224029065276> to, {user}!!",
+    "I'd never say no to you, {user}! :heart:",
+    "I can only type, but I would if I could!! I hope that's enough, {user}!!"
+  ],
 
   getYou: [
     "Oh no!!",

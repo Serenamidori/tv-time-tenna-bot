@@ -1,6 +1,6 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|booty|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|fucks me)/i
+    pattern: /((gonna|i will|going to|want to) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|booty|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|fucks me|your boner)/i
   }
 };
 
@@ -48,7 +48,7 @@ const tier3_commands = {
 
 const tier4_conversational = {
   tennaQuoteTVTime: {
-    pattern: /(what).*(time is it|tv time)|say it with him folks/i
+    pattern: /(what time is it|(it's|its) tv time|say it with him folks)/i
   },
   tennaQuoteJuice: {
     pattern: /((turn up|fresh from) the juice)/i
@@ -153,7 +153,10 @@ const tier6_otherMentions = {
 
 const tier7_compliments = {
   loveFans: {
-    pattern: /\b(do|would|can|could)\s*(?:you)?\s*(love|kiss|hug|pat|say\s*(?:that\s*)?you\s*love)\s*(me|us|your\s*fans)\b/i
+    pattern: /\b(will|do|would|can|could) (you)?.* (say (that)? you|love)\s*(me|us|(your)? fans)\b/i
+  },
+  hugFans: {
+    pattern: /\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
     pattern: /(you're|you are|ur|youre|you look|lookin|looking)\s*(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we|i really|we really)?\s*(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)/i
@@ -198,10 +201,10 @@ const tier9_userState = {
 
 const tier10_selfQuestions = {
   selfQuestionWhy: {
-    pattern: /(why are you|why do you|why must you|why would you|why did you|why don't you|why cant you|why can't you)\b/i
+    pattern: /(why+|why+ (are|do|did|would|must|don't|dont|can't|cant) you)\b/i
   },
   selfQuestionCanYou: {
-    pattern: /^(can you|could you|would you|will you|are you able to|are you gonna|are you going to)\b/i
+    pattern: /^((can|could|would|will) you|are you (able to|gonna|going to))\b/i
   },
   selfQuestionWho: {
     pattern: /(who are you|who is tenna|who's tenna|who is this)/i
@@ -231,7 +234,7 @@ const tier11_tvQuestions = {
     pattern: /(when|what time).*(show|episode|broadcast|air|start|next|tv time)/i
   },
   tvQuestionRating: {
-    pattern: /(rating|ratings|popular|viewers|how many|how well)/i
+    pattern: /(rating|ratings|popular|viewers|how many|how well|(how is|how's).*(show|tv time|episode|broadcast))/i
   },
   tvQuestionWhat: {
     pattern: /(what|which).*(show|episode|channel|program|watch|on tv|tv time)/i
