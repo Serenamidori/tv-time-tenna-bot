@@ -25,14 +25,16 @@ module.exports = {
 
   askTennaGoodBoy: [
     "I am!! I am!!!",
+    "Yes! I **AM** a good boy!!",
     "_...is it me?_",
     "**BARK!**\n-# _(...oh that's embarrassing.)_"
   ],
 
   askTennaLove: [
     "Is that even a question?! Of **course** I do!!",
-    "More than anything!! It's kind of my whole deal!",
-    "With every fiber of my being! ...which is mostly wires!",
+    "More than anything in the world!!",
+    "Why, of course! It's kind of my whole deal!",
+    "With every fiber of my being!\n-# _(And I don't mean Fiber Optics!!)_",
     "<:love1:1443452223387340984><:love2:1443452224029065276>? Of course!!"
   ],
 
@@ -138,7 +140,7 @@ module.exports = {
   ],
 
   saySorry: [
-    "Sorry, sorry!! I'l be good!!",
+    "Sorry, sorry!! I'll be good!!",
     "Fine, I'll behave!",
     "No, you're right... I'm sorry!!",
     "Oops! I'm so sorry!!",
@@ -159,6 +161,13 @@ module.exports = {
     "Oh {user}! This is why I <:love1:1443452223387340984><:love2:1443452224029065276> my fans!!",
     "Of course {user}! If you had a fan club, I'd be **YOUR** number 1 fan!!",
     "{user}!! You're sweeter than any fan mail I've ever gotten!\n-# _(And I've gotten a LOT of fan mail!)_"
+  ],
+  
+  hugFans: [
+    "Of course I will {user}!! :heart:",
+    "I would <:love1:1443452223387340984><:love2:1443452224029065276> to, {user}!!",
+    "I'd never say no to you, {user}! :heart:",
+    "I can only type, but I would if I could!! I hope that's enough, {user}!!"
   ],
 
   getYou: [
@@ -199,10 +208,18 @@ module.exports = {
 
   userVenting: [
     "Hang in there **superstar**! Maybe take a break and watch something?",
-    "I hear ya... Rest up! The TV will always be here when you're ready!",
+    "I hear ya, {user}... Rest up! The TV will always be here when you're ready!",
     "You sound like you need a break! Preferably in front of a TV!\n-# _(Just saying.)_",
     "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_",
-    "Boy don't I know it... Remember to take care of yourself {user}!!"
+    "Boy don't I know it... Remember to take care of yourself {user}!!",
+    "I think I know how you feel, {user}. I know you'll be okay! A TV always knows!!"
+  ],
+
+  userHelp: [
+    "I'm here to help, {user}! I'm not sure what to do, but I'm here for you!!",
+    "I'll do my best to help! Everyone needs a little help now and then!!",
+    "{user}! How can I help you? Free toy ball voucher!? Refreshments!? Lifetime supply of NON-GLOOBY slime?",
+    "Ah, let me help, {user}! Maybe I can do something to help out..."
   ],
 
   tvQuestionWhen: [
@@ -431,6 +448,13 @@ module.exports = {
     "Haha! I bet you thought that would upset me!! ..."
   ],
 
+  insultBoo: [
+    "WHAT!? You're **BOOING** me?? You have no taste!!",
+    "Mike! They're booing me! Make them stop!!",
+    "No!! Please don't throw tomatoes at me!!",
+    "Why are you booing me?? TV is never wrong!!",
+  ],
+
   insultOld: [
     "I'm not OLD, I'm **CLASSIC**! There's a _difference!_",
     "_Old?!_ I prefer vintage! Retro! Timeless!!",
@@ -533,7 +557,8 @@ module.exports = {
   ],
 
   tennaQuoteKillThisGuy: [
-    "Get in line, kid!"
+    "Get in line, kid!",
+    "Get in line, {user}!"
   ],
 
   tennaQuoteDial: [
