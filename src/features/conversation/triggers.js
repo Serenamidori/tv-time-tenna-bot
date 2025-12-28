@@ -1,12 +1,12 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|booty|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|fucks me|your boner)/i
+    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls))/i
   }
 };
 
 const tier2_questionsToTenna = {
   askTennaAwake: {
-    pattern: /((are|r)?\s?(you+|u) (awake|there|here|up(?! to)))/i
+    pattern: /\b((are|r)?\s?(you+|u) (awake|there|here|online)|(are|r) (you+|u) up)\b/i
   },
   askTennaGoodBoy: {
     pattern: /((who('s|s| is)? a )?good (boy|tv))/i
@@ -87,7 +87,7 @@ const tier4_conversational = {
 
 const tier5_characters = {
   spamtonMention: {
-    pattern: /(spampog|spamton|email guy|old partner|ex partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)/i
+    pattern: /(spampog|spamton|email guy|(old|ex) partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)/i
   },
   mikeMention: {
     pattern: /\b(mike)\b/i
@@ -120,13 +120,13 @@ const tier5_characters = {
     pattern: /\b(lancer|prancer|dancer|mr\. generosity)\b/i
   },
   kingMention: {
-    pattern: /\b(king|chaos king|king wingy|kingy-doodle)\b/i
+    pattern: /\b(king|chaos king|king wingy|kingy(-|\s)doodle)\b/i
   },
   mettatonMention: {
     pattern: /\b(mettaton|mtt|metta)\b/i
   },
   laninoElninaMention: {
-    pattern: /\b(lanino|elnina|the weather|weather duo|weather news team)\b/i
+    pattern: /\b(lanino|elnina|weather (news team|duo))\b/i
   },
   workersMention: {
     pattern: /\b(workers|coworkers|pippins|ramb|zapper|shadowguy|shuttah|battat|jongler|pluey)\b/i
@@ -144,10 +144,10 @@ const tier6_otherMentions = {
     pattern: /\b(miku|hatsune|vocaloid)\b/i
   },
   discordMention: {
-    pattern: /(discord|this server|the server|chat room|online|the internet)/i
+    pattern: /\b(discord|this server|the server|chat room|online|the internet)\b/i
   },
   beingBotMention: {
-    pattern: /(you are a bot|are you a bot|you're a bot|you a bot|are you real|are you ai|are you artificial)/i
+    pattern: /\b(((you+|u) (are|r)|(you+|u)|you're|your|youre|ur|) (a\s)?(bot|ai|computer|real|fake|artificial))\b/i
   }
 };
 
@@ -159,25 +159,25 @@ const tier7_compliments = {
     pattern: /\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you're|you are|ur|youre|you look|lookin|looking)\s*(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we|i really|we really)?\s*(lo+ve|lu+v|like|enjoy)\s+(tv|television|watching tv)/i
+    pattern: /(you're|(you+|u)\s?(are|r)?|ur|youre)\s*(look\s*|lookin\s*|looking\s*)?(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna)/i
   },
   physicalAffection: {
-    pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*(you|tenna|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*(your\s*)?(ass|butt|booty)/i
+    pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)/i
   }
 };
 
 const tier8_insults = {
   insultOld: {
-    pattern: /(you're\s*(so\s*)?old|old tv|obsolete|ok boomer|boomer|ancient|outdated)/i
+    pattern: /((you're|your|youre|ur|(you+|u)\s?(are|r)?)\s*(a\s|an\s|so\s)?(old|obsolete|boomer|ancient|outdated)|old (man|tv|bitch|guy|dude|tenna)|(okay|ok|k) boomer)/i
   },
   insultShutUp: {
-    pattern: /(shut up|go away|leave me alone|nobody asked|who asked|be quiet|stfu)/i
+    pattern: /(shut (the\s(fuck|hell|shit|bitch)\s)?up|go away|leave (me|them|us|her|him) alone|(nobody|who) asked|be quiet|stfu|stop (talking|typing|yapping|bitching)|what (is bro|(are|r) (you+|u)) yapping about)/i
   },
   insult: {
-    pattern: /(stinky|dumb fuck|idiot|tennafuckyou|fuckyou|bitch|tiny nose|small nose|trash heap|i hate you|fuck you|kills you|kills u|kill yourself|you suck|you're lame|you're annoying|boring|you stink)/i
+    pattern: /(tennafuckyou|fuckyou|(tiny|small) nose|trash heap|i.*(hate|loathe|dispise|detest) (you+|u)|(fuck|kills) (you+|u)|kill (yourself|urself)|(you+|u|you're|your|ur|youre) (suck|stink|fail|((are|r)?\s?(an|a|so|very|really|rly)?\s?(bad|mean|horrible|rude|stupid|stinky|whiney|idiot|dumb|bitch|meanie|failure)))|(you're|ur|youre|your) (lame|annoying|boring))/i
   },
   physicalViolence: {
-    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|money|mike)/i
+    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|credit|debit|money|mike)/i
   }
 };
 

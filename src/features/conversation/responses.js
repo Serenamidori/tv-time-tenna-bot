@@ -542,7 +542,8 @@ module.exports = {
   ],
 
   tennaQuoteKillThisGuy: [
-    "Get in line, kid!"
+    "Get in line, kid!",
+    "Get in line, {user}!"
   ],
 
   tennaQuoteDial: [
