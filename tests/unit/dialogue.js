@@ -249,6 +249,11 @@ const examples = [
   ['physicalAffection', 'slapping ur booty'],
 
   // tier8_insults
+  ['insultBoo', 'BOO YOU SUCK'],
+  ['insultBoo', 'BOOO'],
+  ['insultBoo', 'booooo stinky'],
+  ['insultBoo', 'BOO UR BORING'],
+  ['insultBoo', 'GET OFF THE STAGE'],
   ['insultOld', 'you are SO OLD'],
   ['insultOld', 'you are an old tv!!'],
   ['insultOld', "you're ancient!!!"],

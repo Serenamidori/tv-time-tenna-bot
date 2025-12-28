@@ -1,6 +1,6 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls))/i
+    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
   }
 };
 
@@ -21,7 +21,7 @@ const tier2_questionsToTenna = {
     pattern: /^(?!.*can\s*you)((do|dont|don't)?\s?(you+|u)\s?(really|rly)?)\s+(love|like|enjoy)\s+(tv|television|me|us|your (show|job|fans|audience))/i
   },
   askTennaAge: {
-    pattern: /(how old ((are|r) (you+|u)|is tenna)|what age (are|r) you|when were (you+|u) (made|born|created|built)|what year were (you+|u)|(what is|whats|what's)?\s?(your|ur) age|(((are|r) (you+|u))|is tenna) old)/i
+    pattern: /(how old ((are|r) (you+|u)|is tenna)|what age (are|r) (you+|u)|when were (you+|u) (made|born|created|built)|what year were (you+|u)|(what is|whats|what's)?\s?(your|ur) age|(((are|r) (you+|u))|is tenna) old)/i
   },
   askTennaRemember: {
     pattern: /((do|can|don't|dont)?\s?(you+|u)?\s?remember\s?(that time|when)?|did (you+|u) forget)/i
@@ -63,7 +63,7 @@ const tier4_conversational = {
     pattern: /((familys|family's|family is) fighting again)/i
   },
   saySorry: {
-    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i'm|im|they're|theyre|they are|she is|she's|shes|he is|he's|hes)?\s?mad at you|(don't|dont) do that|be (nice|nicer|kind)|say (you're|you are|ur|youre|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn't|didnt|don't|dont) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
+    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i'm|im|they're|theyre|they are|she is|she's|shes|he is|he's|hes)?\s?mad at (you+|u)|(don't|dont) do that|be (nice|nicer|kind)|say (you're|you are|ur|youre|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn't|didnt|don't|dont) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
   },
   imSorry: {
     pattern: /((i am|i'm|im|they're|theyre|they are|she is|she's|shes|he is|he's|hes)?.*(sorr+y+|soww+y+)|forgi+ve+ (me+|u+s+|them+|her+|him+))/i
@@ -75,13 +75,13 @@ const tier4_conversational = {
     pattern: /((you'll|youll|you will) (find out|see+|soo+n+)|you+ w+ill+)/i
   },
   getYou: {
-    pattern: /(gonna|going to|i will|i'll|ill|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you|u)/i
+    pattern: /(gonna|going to|i will|i'll|ill|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you+|u)/i
   },
   thankYou: {
     pattern: /^((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)/i
   },
   bark: {
-    pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you're|your|youre)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
+    pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you're|your|youre|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
   }
 };
 
@@ -147,13 +147,13 @@ const tier6_otherMentions = {
     pattern: /\b(discord|this server|the server|chat room|online|the internet)\b/i
   },
   beingBotMention: {
-    pattern: /\b(((you+|u) (are|r)|(you+|u)|you're|your|youre|ur|) (a\s)?(bot|ai|computer|real|fake|artificial))\b/i
+    pattern: /\b(((you+|u) (are|r)|(you+|u)|you're|your|youre|ur) (a\s)?((chat\s)?bot|ai|computer|real|fake|artificial))\b/i
   }
 };
 
 const tier7_compliments = {
   loveFans: {
-    pattern: /\b(will|do|would|can|could) (you)?.* (say (that)? you|love)\s*(me|us|(your)? fans)\b/i
+    pattern: /\b(will|do|would|can|could) (you)?.* (say (that)? (you+|u)|love)\s*(me|us|(your|ur)? fans)\b/i
   },
   hugFans: {
     pattern: /\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
@@ -167,6 +167,9 @@ const tier7_compliments = {
 };
 
 const tier8_insults = {
+  insultBoo: {
+    pattern: /\b(boo+(\s(you|u|you're|youre|your|ur)?\s?(are|r)?\s?(su+ck+|sti+nk+|ba+d|bo+ri+ng+|stu+pi+d))?|(get\s)?off (the\s)?stage)\b/i
+  },
   insultOld: {
     pattern: /((you're|your|youre|ur|(you+|u)\s?(are|r)?)\s*(a\s|an\s|so\s)?(old|obsolete|boomer|ancient|outdated)|old (man|tv|bitch|guy|dude|tenna)|(okay|ok|k) boomer)/i
   },

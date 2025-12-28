@@ -448,6 +448,13 @@ module.exports = {
     "Haha! I bet you thought that would upset me!! ..."
   ],
 
+  insultBoo: [
+    "WHAT!? You're **BOOING** me?? You have no taste!!",
+    "Mike! They're booing me! Make them stop!!",
+    "No!! Please don't throw tomatoes at me!!",
+    "Why are you booing me?? TV is never wrong!!",
+  ],
+
   insultOld: [
     "I'm not OLD, I'm **CLASSIC**! There's a _difference!_",
     "_Old?!_ I prefer vintage! Retro! Timeless!!",
