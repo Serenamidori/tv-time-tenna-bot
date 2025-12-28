@@ -99,7 +99,7 @@ const quotes = [
   `What? What? We have a budget to keep in mind you know!!!`,
   `H-HEY!!`,
   `HEY!!`,
-  `Wait! That's *MYsecret bonus zone!`,
+  `Wait! That's *MY* secret bonus zone!`,
   `Well, haha, good luck reaching those!`,
   `I keep my investments SHORT-proof!`,
   `W-wait!`,
