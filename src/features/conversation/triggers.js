@@ -33,55 +33,55 @@ const tier2_questionsToTenna = {
 
 const tier3_commands = {
   quizCommand: {
-    pattern: /(give me a quiz|quiz me|can i get a quiz|can i have a quiz|want a quiz|do a quiz|start a quiz|quiz time)/i
+    pattern: /(quiz (me|us|him|her|them|time)|(can i (get|have|try|do)\s?(a)?|(want|do|start|give\s?(me)?)\s?(a)?) quiz)/i
   },
   balanceCommand: {
-    pattern: /(what is my balance|what's my balance|how many points|check my points|how much do i have|where are my points|show balance|show my balance|points balance|point balance)/i
+    pattern: /((what\s?(is)?|what's|whats) (my|their) balance|(how many|check my|where are my) points|how (much|many) (do|does) (i|they|he|she) have|show (my)?\s?(balance|points)|(points|point) balance)/i
   },
   introduceCommand: {
-    pattern: /(my name is|my birthday is|my pronouns are|introduce myself|my nickname is)/i
+    pattern: /(my (name|nickname|birthday|pronouns) (is|are)|introduce myself|(would (you+|u)|want to|wanna) (know|learn|hear) my (name|nickname|birthday|pronouns))/i
   },
   scheduleCommand: {
-    pattern: /(create an event|make an event|plan an event|schedule a)/i
+    pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party))/i
   }
 };
 
 const tier4_conversational = {
   tennaQuoteTVTime: {
-    pattern: /(what time is it|(it's|its) tv time|say it with him folks)/i
+    pattern: /(what time is it|(it's|its) (tv|t! v!|tv!) time|say it with him folks)/i
   },
   tennaQuoteJuice: {
     pattern: /((turn up|fresh from) the juice)/i
   },
   tennaQuoteKillThisGuy: {
-    pattern: /(kill this guy)/i
+    pattern: /((how do (i|we|you+|u))?\s?kill (((this|that) guy)|tenna))/i
   },
   tennaQuoteDial: {
-    pattern: /((don't|dont) touch (that|the|this|my|your) (dial|dials))/i
+    pattern: /((don't|dont) touch (that|the|this) (dial|dials))/i
   },
   tennaQuoteFamilyFight: {
-    pattern: /((family's|family is) fighting again)/i
+    pattern: /((familys|family's|family is) fighting again)/i
   },
   saySorry: {
-    pattern: /\b(knock (it|that) off|mad at you|(don't|dont) do that|stop (that|it|doing that)|be (nice|nicer)|say (you're |you are |ur |youre)?(sorry|something nice|nice thing|psyche|you didn't mean it)|apologize|say something nice)\b/i
+    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i'm|im|they're|theyre|they are|she is|she's|shes|he is|he's|hes)?\s?mad at you|(don't|dont) do that|be (nice|nicer|kind)|say (you're|you are|ur|youre|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn't|didnt|don't|dont) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
   },
   imSorry: {
-    pattern: /(sorry|sowwy|i'm sorry+|im sorry+|i'm so sorry+|im so sorry+|forgive me+|please forgive me+)/i
+    pattern: /((i am|i'm|im|they're|theyre|they are|she is|she's|shes|he is|he's|hes)?.*(sorr+y+|soww+y+)|forgi+ve+ (me+|u+s+|them+|her+|him+))/i
   },
   dontWorry: {
-    pattern: /(don't worry about it|it's not important|no worries|it's okay|it's ok|don't worry|dont worry|do not worry|its okay|ignore that)/i
+    pattern: /((don't|dont|do not) worry\s?(about it)?|(it's|its|it is) (okay|ok|not important|alright|all (good|right|okay|ok))|no worries|(ignore|forget\s?(about)?) (that|me|us|them|him|her|it))/i
   },
   youllSee: {
-    pattern: /((you'll|youll|you will) (find out|see|soon)|you will)/i
+    pattern: /((you'll|youll|you will) (find out|see+|soo+n+)|you+ w+ill+)/i
   },
   getYou: {
-    pattern: /(gonna|going to|i will|i'll)\s*(fucking\s*)?(get you|find you)|(when i|me when i)\s*(get you|find you|catch you)|(gets you)|(when i get|when i put)\s*(my hands on you|ahold of you)/i
+    pattern: /(gonna|going to|i will|i'll|ill|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you|u)/i
   },
   thankYou: {
-    pattern: /^(thank+|thank you+|ty|thanks+|thankies|thx)(\s|$|!|\?)/i
+    pattern: /^((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)/i
   },
   bark: {
-    pattern: /\b(command you to bark|bark for me|bark now|(you're |your )(a dog|dog|a puppy|puppy)|puppy|dog|walkies)\b/i
+    pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you're|your|youre)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
   }
 };
 
