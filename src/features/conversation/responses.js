@@ -208,10 +208,18 @@ module.exports = {
 
   userVenting: [
     "Hang in there **superstar**! Maybe take a break and watch something?",
-    "I hear ya... Rest up! The TV will always be here when you're ready!",
+    "I hear ya, {user}... Rest up! The TV will always be here when you're ready!",
     "You sound like you need a break! Preferably in front of a TV!\n-# _(Just saying.)_",
     "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_",
-    "Boy don't I know it... Remember to take care of yourself {user}!!"
+    "Boy don't I know it... Remember to take care of yourself {user}!!",
+    "I think I know how you feel, {user}. I know you'll be okay! A TV always knows!!"
+  ],
+
+  userHelp: [
+    "I'm here to help, {user}! I'm not sure what to do, but I'm here for you!!",
+    "I'll do my best to help! Everyone needs a little help now and then!!",
+    "{user}! How can I help you? Free toy ball voucher!? Refreshments!? Lifetime supply of NON-GLOOBY slime?",
+    "Ah, let me help, {user}! Maybe I can do something to help out..."
   ],
 
   tvQuestionWhen: [

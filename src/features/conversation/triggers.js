@@ -183,19 +183,22 @@ const tier8_insults = {
 
 const tier9_userState = {
   userVenting: {
-    pattern: /\b(cries|(i'm|im|i am|am) (tired|sleepy|crying|dead|exhausted|stressed)|(long|rough|bad) day|ough+|ugh+|bleh+|meh+|weh+|help me|help pls|help plz|i need help|save me|rescue me)\b|^OTL$/i
+    pattern: /\b(spamtoncry|tennacry|catto_sad_cry|tennaglooby|tennadead|cri+es+|(i'm|im|(i\s)?am) (so|really|very)?\s?(tired|sleepy|crying|dead|exhausted|stressed|(really\s)?(going to|gonna) do it)|(long|rough|exhausting|dogshit|shitty|fucked) day|o+u+g+h+|u+g+h+|ble+h+|me+h+|we+h+)\b|^OTL$/i
+  },
+  userHelp: {
+    pattern: /\b((he+lp+|rescue|sa+ve|protect)\s?(me|please|pls|plz|her|them|him)?|(i|they|she|he)?\s?(need|needs) help)\b|^OTL$/i
   },
   userFeelingGood: {
-    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm|i am)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i
+    pattern: /(i'm|i am|i|im)\s*(feeling|feelin|feel|doing|doin)?\s?((a\s)?(lil|bit|little)|so|very|really|pretty|also|all)?\s?(good|great|amazing|awesome|fantastic|wonderful|happy|excited|better|well|fine|okay|ok|alright)/i
   },
   userFeelingBad: {
-    pattern: /(i'm doing|i am doing|i'm feeling|i am feeling|i feel|i'm|i am)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|not great|not good|not well|not okay|rough|lousy|crappy|like shit|like crap|glooby|mad)/i
+    pattern: /(i'm|i am|i|im)\s*(feeling|feelin|feel|doing|doin)?\s?((a\s)?(lil|bit|little)|so|very|really|pretty|also)?\s?(bad|awful|terrible|sad|tired|exhausted|stressed|depressed|down|upset|anxious|rough|lousy|crappy|glooby|mad|not (feeling|feelin|feel|doing|doin)?\s?(great|good|well|okay|ok)|like (shit|crap))/i
   },
   userDayGood: {
-    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|very\s*|pretty\s*|also\s*)?(good|great|amazing|awesome|fantastic|wonderful|nice)/i
+    pattern: /((my|their|his|her)?\s?((day|today) (was|is|has been)|(day's|days|today's|todays) been)|(having|havin) (a|an))\s*((a\s)?(lil|bit|little)|so|very|really|pretty)?\s?(fucking|fuckin)?\s?(?!not )(good|great|amazing|awesome|fantastic|wonderful|nice|fun|fine)/i
   },
   userDayBad: {
-    pattern: /(my day was|my day is|my day's been|today was|today is|today's been|having a)\s*(a little\s*|so\s*|very\s*|pretty\s*|fucking\s*|also\s*)?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i
+    pattern: /((my|their|his|her)?\s?((day|today) (was|is|has been)|(day's|days|today's|todays) been)|(having|havin) (a|an))\s*((a\s)?(lil|bit|little)|so|very|really|pretty)?\s?(fucking|fuckin)?\s?(bad|awful|terrible|rough|hard|long|stressful|exhausting|crappy|not great|not good|horrible|glooby|fucked up)/i
   }
 };
 
