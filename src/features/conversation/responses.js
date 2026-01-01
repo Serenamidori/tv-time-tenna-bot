@@ -478,7 +478,10 @@ module.exports = {
     "Does anyone know what this means?",
     "I can't keep up with this new technology!\n-# _(...wait no, yes I can!! Let's just try that again, okay??)_",
     "I didn't quite catch that, could you try saying it a different way?",
-    "Uh, what? Huh?"
+    "Uh, what? Huh?",
+    "-# _(Is this another Internet reference I don't understand??)_",
+    "Hm? What was that?",
+    "-# _(I swear, I only understand maybe half of what you fans say!)_"
   ],
 
   dontWorry: [
