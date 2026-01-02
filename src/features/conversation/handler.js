@@ -2,7 +2,7 @@ const { setTimeout } = require('timers/promises');
 const { tiers } = require('./triggers');
 const responses = require('./responses');
 const utils = require("../../utils");
-const { getDailyMessageId } = require('../scheduled/ilovetvcheck');
+const { getDailyMessageId } = require('../../utils/scheduler');
 
 async function handleDialogue(message, bot) {
   const profile = await utils.profile.find(message.author.id);

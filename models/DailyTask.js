@@ -20,7 +20,6 @@ const dailyTask = new mongoose.Schema({
   }
 }, { timestamps: true });
 
-// Ensure unique index on taskType to prevent duplicates
 dailyTask.index({ taskType: 1 }, { unique: true });
 
 module.exports = mongoose.model('DailyTask', dailyTask);
