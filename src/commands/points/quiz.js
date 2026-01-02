@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, } = require("discord.js");
 const utils = require("../../utils");
 const api = require("../../api");
+const quizHelpers = require("../../utils/quizHelpers");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -20,9 +21,10 @@ module.exports = {
   async execute(interaction) {
     const profile = await utils.profile.find(interaction.user.id);
     const name = utils.profile.getName(interaction, profile);
-    const count = quizCount(profile);
+    const count = quizHelpers.quizCount(profile);
     if (count >= 6) {
-      await interaction.reply(`Whoops! Sorry ${name}, but you've already done 6 quizzes today! Try again tomorrow, superstar!`);
+      const waitMessage = quizHelpers.getWaitMessage(name, profile.lastQuizAt);
+      await interaction.reply(waitMessage);
     } else {
       const difficulty = interaction.options.getString("difficulty") || 2;
       const question = await getQuestion(difficulty);
@@ -76,10 +78,10 @@ module.exports = {
 
         collector.on("collect", async (selection) => {
           if (selection.customId == "correct") {
-            await selection.reply(randomCorrectLine() + ` [+${points} POINTS]`);
+            await selection.reply(quizHelpers.randomCorrectLine() + ` [+${points} POINTS]`);
             utils.points.give(selection.user.id, points);
           } else {
-            await selection.reply(randomIncorrectLine());
+            await selection.reply(quizHelpers.randomIncorrectLine());
           }
 
           profile.quizCount = count + 1;
@@ -108,10 +110,10 @@ module.exports = {
 async function getQuestion(difficulty) {
   let questions = await api.trivia.getQuestion(difficulty);
 
-  if (answersTooLong(questions[0])) {
+  if (quizHelpers.answersTooLong(questions[0])) {
     for (let i = 0; i < 3; i++) {
       questions = await api.trivia.getQuestion(difficulty);
-      if (!answersTooLong(questions[0])) {
+      if (!quizHelpers.answersTooLong(questions[0])) {
         return questions[0];
       }
     }
@@ -131,51 +133,3 @@ function formatAnswers(question) {
 
   return utils.random.shuffle(answers);
 }
-
-function quizCount(profile) {
-  if (profile.quizCount != null) {
-    if (profile.lastQuizAt != null && isToday(profile.lastQuizAt)) {
-      return profile.quizCount;
-    }
-  }
-  return 0;
-}
-
-function isToday(someDate) {
-  const today = new Date();
-  return (
-    someDate.getDate() === today.getDate() &&
-    someDate.getMonth() === today.getMonth() &&
-    someDate.getFullYear() === today.getFullYear()
-  );
-}
-
-function answersTooLong(question) {
-  return (
-    question.correctAnswer.length > 80 ||
-    question.incorrectAnswers[0].length > 80 ||
-    question.incorrectAnswers[1].length > 80 ||
-    question.incorrectAnswers[2].length > 80
-  );
-}
-
-function randomCorrectLine() {
-  return correctLines[utils.random.rand(correctLines.length)-1];
-}
-
-function randomIncorrectLine() {
-  return incorrectLines[utils.random.rand(incorrectLines.length)-1];
-}
-
-// dialogue
-const correctLines = [
-  `That's exactly right!`,
-  `That's correct!`,
-  `Haha, that's right!`,
-];
-
-const incorrectLines = [
-  `Aaand that's the wrong answer. Let's hear some boo's, folks!\n-# _(Just kidding! Force of habit!)_`,
-  `Sorry, that's the wrong answer. Try again next time!`,
-  `Seems you've chosen the wrong answer. You'll get 'em next time!`
-];
