@@ -21,8 +21,8 @@ module.exports = {
     const profile = await utils.profile.find(interaction.user.id);
     const name = utils.profile.getName(interaction, profile);
     const count = quizCount(profile);
-    if (count >= 3) {
-      await interaction.reply(`Whoops! Sorry ${name}, but you've already done 3 quizzes today! Try again tomorrow, superstar!`);
+    if (count >= 6) {
+      await interaction.reply(`Whoops! Sorry ${name}, but you've already done 6 quizzes today! Try again tomorrow, superstar!`);
     } else {
       const difficulty = interaction.options.getString("difficulty") || 2;
       const question = await getQuestion(difficulty);
