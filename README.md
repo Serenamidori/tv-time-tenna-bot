@@ -29,7 +29,7 @@ A Discord bot featuring Mr. (Ant) Tenna from Deltarune Chapter 3, bringing the c
 - **`/schedule <type> <day> <time> <timezone>`**
   - Quickly create simple Discord server events
   - Supports multiple timezones (US, UK, Spain, Newfoundland)
-  - Event types: Art Party, Gaming Session, Watch Party
+  - Event types: Art Party, Gaming Session, Watch Party, Drawing/Writing Sprint
 
 ### Interactive Dialogue
 

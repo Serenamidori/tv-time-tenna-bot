@@ -42,7 +42,7 @@ const tier3_commands = {
     pattern: /(my (name|nickname|birthday|pronouns) (is|are)|introduce myself|(would (you+|u)|want to|wanna) (know|learn|hear) my (name|nickname|birthday|pronouns))/i
   },
   scheduleCommand: {
-    pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party))/i
+    pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party|sprint))/i
   }
 };
 
