@@ -101,6 +101,7 @@ const examples = [
   ['introduceCommand', 'wanna hear my nickname?'],
   ['scheduleCommand', 'schedule an event please!'],
   ['scheduleCommand', 'tenna can you make a watch party for us'],
+  ['scheduleCommand', 'tenna can you make a writing sprint for us'],
   ['scheduleCommand', 'start the event'],
   ['scheduleCommand', 'plan a party for meeee'],
   ['scheduleCommand', 'set my party!!'],

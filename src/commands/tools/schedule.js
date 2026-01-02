@@ -12,7 +12,10 @@ module.exports = {
         .addChoices(
           { name: 'Art Party', value: 'Art Party' },
           { name: 'Gaming Session', value: 'Gaming Session' },
-          { name: 'Watch Party', value: 'Watch Party' }
+          { name: 'Watch Party', value: 'Watch Party' },
+          { name: 'Drawing Sprint', value: 'Drawing Sprint' },
+          { name: 'Writing Sprint', value: 'Writing Sprint' },
+
         )
     )
     .addIntegerOption((option) =>
