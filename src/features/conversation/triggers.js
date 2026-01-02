@@ -78,7 +78,7 @@ const tier4_conversational = {
     pattern: /(gonna|going to|i will|i('|’)?ll|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you+|u)/i
   },
   thankYou: {
-    pattern: /^((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)/i
+    pattern: /\b((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)\b/i
   },
   bark: {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
