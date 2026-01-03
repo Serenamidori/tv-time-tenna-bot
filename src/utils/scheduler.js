@@ -2,7 +2,6 @@ const utils = require("./");
 const helper = require("./schedulerHelpers");
 const { setTimeout } = require('timers/promises');
 const DailyTask = require('../../models/DailyTask');
-let dailyMessageId = null;
 let respondedUsers = new Set();
 
 class ScheduledTasks {
@@ -50,7 +49,7 @@ class ScheduledTasks {
     };
 
     try {
-      const task =  await this.getTask(taskType);
+      const task = await this.getTask(taskType);
       if (!task || task.executionDay !== todayString) {
         console.log(`📋 [${taskType}] task is available to run today!`);
         return true;
@@ -105,14 +104,13 @@ class ScheduledTasks {
         await setTimeout(3000);
         const sentMessage = await channel.send(helper.iLoveTVMessage());
         console.log(`📋 [ilovetv] message was sent on ${today.toDateString()} at ${helper.toCST(today)}`);
-        dailyMessageId = sentMessage.id;
         respondedUsers.clear();
-        await this.updateTask(task, today, todayString, dailyMessageId);
+        await this.updateTask(task, today, todayString, sentMessage.id);
 
         bot.on('messageCreate', async (message) => {
           if (message.author.bot) return;
           
-          if (message.reference?.messageId === dailyMessageId) {
+          if (message.reference?.messageId === sentMessage.id) {
             let response = null
       
             if (lovesTvPattern.test(message.content)) {
@@ -135,6 +133,11 @@ class ScheduledTasks {
       }
     }
   }
+
+  static async getDailyMessageId(taskType = 'ilovetv') {
+    const task = await this.getTask(taskType);
+    return task.messageId;
+  }
 }
 
-module.exports = { ScheduledTasks, getDailyMessageId: () => dailyMessageId };
+module.exports = { ScheduledTasks };

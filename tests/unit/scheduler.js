@@ -31,9 +31,9 @@ describe('Post Scheduler Tests', () => {
         yesterday.setDate(yesterday.getDate() - 1)
         const yesterdayString = yesterday.toISOString().split('T')[0];
 
-        DailyTask.findOneAndUpdate.mockResolvedValue([
+        DailyTask.findOneAndUpdate.mockResolvedValue(
           { taskType: 'ilovetv', lastExecuted: yesterday, executionDay: yesterdayString }
-        ]);
+        );
 
         const res = await ScheduledTasks.shouldRunToday('ilovetv');
         expect(res).toBeTruthy();
@@ -45,12 +45,30 @@ describe('Post Scheduler Tests', () => {
         yesterday.setDate(yesterday.getDate() - 1)
         const yesterdayString = yesterday.toISOString().split('T')[0];
         
-        DailyTask.findOneAndUpdate.mockResolvedValue([
+        DailyTask.findOneAndUpdate.mockResolvedValue(
           { taskType: 'ilovetv', lastExecuted: yesterday, executionDay: yesterdayString }
-        ]);
+        );
 
         const res = await ScheduledTasks.shouldRunToday('ilovetv');
         expect(res).toBeFalsy();
+      });
+    });
+
+    describe('getDailyMessageId', () => {
+      it('should return the correct messageId for default value', async () => {
+        DailyTask.findOneAndUpdate.mockResolvedValue(
+          { taskType: 'ilovetv', messageId: "123" }
+        );
+        const messageId = await ScheduledTasks.getDailyMessageId();
+        expect(messageId).toEqual("123");
+      });
+
+      it('should return null messageId if none exists', async () => {
+        DailyTask.findOneAndUpdate.mockResolvedValue(
+          { taskType: 'birthday', messageId: null }
+        );
+        const messageId = await ScheduledTasks.getDailyMessageId('birthday');
+        expect(messageId).toEqual(null);
       });
     });
   });
