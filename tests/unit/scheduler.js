@@ -47,6 +47,8 @@ describe('Post Scheduler Tests', () => {
     });
   });
 
+  // TODO: Find a way to mock Discord message send to test runTVChatMessage()
+  // TODO: OR pull out functionality into helper functions to test individual parts
   // describe('runTVChatMessage', () => {
   //   it('should return true when within range 16:00 to 4:00 UTC', async () => {
   //     jest.useFakeTimers().setSystemTime(new Date(Date.UTC(2024, 0, 15, 17, 30, 0, 0)));
