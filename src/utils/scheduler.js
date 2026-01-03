@@ -2,7 +2,6 @@ const utils = require("./");
 const helper = require("./schedulerHelpers");
 const { setTimeout } = require('timers/promises');
 const DailyTask = require('../../models/DailyTask');
-
 let dailyMessageId = null;
 let respondedUsers = new Set();
 
@@ -72,7 +71,7 @@ class ScheduledTasks {
       const task = await this.getTask('birthday');
 
       try {
-        const birthdays = await this.getTodaysBirthdays(today);
+        const birthdays = await helper.getTodaysBirthdays(today);
         let sentMessageID = null;
         if (birthdays.length > 0) {
           await channel.sendTyping();

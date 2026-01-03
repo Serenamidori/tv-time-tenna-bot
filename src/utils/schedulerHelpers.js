@@ -1,3 +1,5 @@
+const utils = require("./");
+
 function iLoveTVMessage() {
   const lines = [
     'Hey folks! Just popping in to ask, do you _love_ TV?',
@@ -81,6 +83,13 @@ async function getTodaysBirthdays(today) {
 }
 
 function sameMonthAndDay(date1, date2) {
+  const validDates =
+    date1 instanceof Date &&
+    !isNaN(date1.getTime()) &&
+    date2 instanceof Date &&
+    !isNaN(date2.getTime());
+  if (!validDates) { return false }
+
   const month1 = date1.getMonth();
   const day1 = date1.getDate();
   const month2 = date2.getMonth();
