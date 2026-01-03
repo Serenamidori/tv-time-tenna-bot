@@ -2,22 +2,23 @@ const { setTimeout } = require('timers/promises');
 const { tiers } = require('./triggers');
 const responses = require('./responses');
 const utils = require("../../utils");
-const { getDailyMessageId } = require('../scheduled/ilovetvcheck');
+const { ScheduledTasks } = require('../../utils/scheduler');
 
 async function handleDialogue(message, bot) {
   const profile = await utils.profile.find(message.author.id);
   const name = utils.profile.getName(message, profile);
   const isMention = message.mentions.has(bot.user.id);
   const isReply = await isReplyToTenna(message, bot);
+  const dailyMessageId = await ScheduledTasks.getDailyMessageId();
 
   if (!isMention && !isReply) return;
-  if (message.reference?.messageId === getDailyMessageId()) return;
+  if (message.reference?.messageId === dailyMessageId) return;
   
   const content = message.content.replace(/<@!?(\d+)>/g, '').trim();
   const intent = detectIntent(content);
   const response = getRandomResponse(intent, name);
   const typingDelay = Math.min(response.length * 50, 4000);
-
+  
   await message.channel.sendTyping();
   await setTimeout(typingDelay);
   await message.reply(response);
@@ -54,6 +55,5 @@ function getRandomResponse(intent, name) {
   let line = pool[Math.floor(Math.random() * pool.length)];
   return line.replace('{user}', name);
 }
-
 
 module.exports = { detectIntent, handleDialogue };

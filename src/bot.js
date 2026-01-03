@@ -5,6 +5,7 @@ const path = require("node:path");
 const { Client, Collection, GatewayIntentBits, MessageFlags } = require("discord.js");
 const { handleDialogue } = require('./features/conversation/handler');
 const utils = require("./utils");
+const { ScheduledTasks } = require('./utils/scheduler');
 
 const bot = new Client({
   intents: [
@@ -44,13 +45,12 @@ loadCommands();
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('✅ Connected to database'))
-.then(() => require('./features/scheduled/birthday.js')(bot))
+.then(() => ScheduledTasks.runDailyTasks(bot))
 .catch(err => console.error('MongoDB connection error:', err));
 
 bot.on("ready", () => {
   console.info(`🔓 Logged in as ${bot.user.tag}`);
   console.info(`✅ Loaded ${bot.commands.size} commands`);
-  require('./features/scheduled/ilovetvcheck.js')(bot);
 });
 
 bot.on("interactionCreate", async (interaction) => {
