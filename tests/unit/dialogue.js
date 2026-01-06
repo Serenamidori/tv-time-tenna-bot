@@ -1,4 +1,4 @@
-const handler = require('../../src/features/conversation/handler.js'); 
+ const handler = require('../../src/features/conversation/handler.js'); 
 const examples = [
   // empty
   ['empty', ''],
@@ -465,6 +465,7 @@ const examples = [
   ['greeting', 'yo'],
   ['greeting', 'heyyyyyaa'],
   ['greeting', 'Heyyyy'],
+  ['greeting', 'Heyy, babygirl :too_silly:'],
   ['greeting', 'hiiii mr tenna'],
   ['greeting', 'hewwo'],
 ]

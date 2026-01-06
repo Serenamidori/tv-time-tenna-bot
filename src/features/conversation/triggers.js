@@ -258,10 +258,10 @@ const tier12_greetings = {
     pattern: /\b(goo+d ni+ght+|gn|ni+ghty ni+ght+|ni+ght+|g('|’)ni+ght+|goodni+ght+|slee+p+ ti+ght+|nini)\b/i
   },
   goodbye: {
-    pattern: /^(by+e+|goodby+e+|good by+e+|see (ya+|you+|u)( later)?|byebye|by+e+ by+e+|see+y+a+|later+|cya|peace out)(\s|$|!|\?)/i
+    pattern: /(by+e+|goodby+e+|good by+e+|see (ya+|you+|u)( later)?|byebye|by+e+ by+e+|see+y+a+|later+|cya|peace out)/i
   },
   greeting: {
-    pattern: /^(hey+o+|hi+|hey+|heww+o+|hell+o+|howdy+|hay+|yo+|hiy+a+|hey+a+|greetings|good evening|good afternoon)(\s|$|!|\?)/i
+    pattern: /(hey+o+|hi+|hey+|heww+o+|hell+o+|howdy+|hay+|yo+|hiy+a+|hey+a+|greetings|good evening|good afternoon)/i
   }
 };
 
