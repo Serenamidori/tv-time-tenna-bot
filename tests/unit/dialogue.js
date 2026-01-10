@@ -468,6 +468,16 @@ const examples = [
   ['greeting', 'Heyy, babygirl :too_silly:'],
   ['greeting', 'hiiii mr tenna'],
   ['greeting', 'hewwo'],
+
+  // tier13_emotes
+  ['haterMention', ':spampog:'],
+  ['queenMention', ':queenlmao:'],
+  ['whoMention', ':fellpipis:'],
+  ['whoMention', ':whuh_dfn:'],
+  ['tennaEmotePositive', ':tennalol:'],
+  ['tennaEmotePositive', ':tenna_Whisper:'],
+  ['tennaEmoteNegative', ':tennaevil:'],
+  ['tennaEmoteNegative', ':whuh:']
 ]
 
 describe('Dialogue Handler Tests', () => {
