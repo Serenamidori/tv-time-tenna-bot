@@ -389,7 +389,24 @@ module.exports = {
     "The weather always sticks together!",
     "My second-in-commands! Nothing can stop the weather!!"
   ],
+
+  tennaEmotePositive: [
+    "Hey! That's me!!",
+    "What a cute emoticon! I can do that too!! 8>[^D]",
+    "That's an <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> e-moji!!"
+  ],
+
+  tennaEmoteNegative: [
+    "What the-!! I don't look like that, do I??",
+    "What the HECK is that??",
+    "This picture does not get my good side..."
+  ],
   
+  haterMention: [
+    "Oh no!!! In paper mache!!! It's my worst hater!!!",
+    "Look how small and disgusting his nose is!!! Yuck!!!"
+  ],
+
   spamtonMention: [
     "... _Next question, please!_",
     "Let's change the channel on this topic.",

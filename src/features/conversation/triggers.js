@@ -86,14 +86,17 @@ const tier4_conversational = {
 };
 
 const tier5_characters = {
+  haterMention: {
+    pattern: /(:spampog:)/i
+  },
   spamtonMention: {
-    pattern: /(spampog|spamton|email guy|(old|ex) partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex)/i
+    pattern: /(spamton|email guy|(old|ex) partner|big shot|mail man|mailman|mail guy|spammy|shrimpton|your ex|damb)/i
   },
   mikeMention: {
     pattern: /\b(mike)\b/i
   },
   pipisMention: {
-    pattern: /\b(pipis|little darling)\b/i
+    pattern: /\b(pipis|little darling|mspipis)\b/i
   },
   krisMention: {
     pattern: /\b(kris|krissy)\b/i
@@ -114,10 +117,10 @@ const tier5_characters = {
     pattern: /\b(the knight|roaring knight)\b/i
   },
   queenMention: {
-    pattern: /\b(queen|queenie|Q5U4EX7YY2E9N|queenie beanie)\b/i
+    pattern: /\b(queen|queenie|Q5U4EX7YY2E9N|queenie beanie|queenlmao)\b/i
   },
   lancerMention: {
-    pattern: /\b(lancer|prancer|dancer|mr\. generosity)\b/i
+    pattern: /\b(lancer|lancerbleh|prancer|dancer|mr\. generosity)\b/i
   },
   kingMention: {
     pattern: /\b(king|chaos king|king wingy|kingy(-|\s)doodle)\b/i
@@ -132,7 +135,7 @@ const tier5_characters = {
     pattern: /\b(workers|coworkers|pippins|ramb|zapper|shadowguy|shuttah|battat|jongler|pluey)\b/i
   },
   whoMention: {
-    pattern: /\b(rouxls|rouxls kaard|defernull|gaster|annoying white dog|toby fox)\b/i
+    pattern: /\b(rouxls|rouxls kaard|defernull|gaster|annoying white dog|toby fox|fellpipis|whuh_dfn)\b/i
   }
 };
 
@@ -265,6 +268,15 @@ const tier12_greetings = {
   }
 };
 
+const tier13_emotes = {
+  tennaEmotePositive: {
+    pattern: /(:(tenna(laugh|dance|tpose|kick|teehee|lol|blush|orly|mic|smol|pog|split|spray|_whisper+|_flower|sleep)|pinktenna):)/i
+  },
+  tennaEmoteNegative: {
+    pattern: /(:(tenna(dead|sad|evil|grab|fuckyou|scream|cry)|whuh):)/i
+  },
+};
+
 const tiers = [
   tier1_blockers,
   tier2_questionsToTenna,
@@ -277,7 +289,8 @@ const tiers = [
   tier9_userState,
   tier10_selfQuestions,
   tier11_tvQuestions,
-  tier12_greetings
+  tier12_greetings,
+  tier13_emotes
 ];
 
 module.exports = { tiers };
