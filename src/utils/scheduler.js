@@ -1,4 +1,4 @@
-const utils = require("./");
+const pointsService = require('./pointsService');
 const helper = require("./schedulerHelpers");
 const { setTimeout } = require('timers/promises');
 const DailyTask = require('../../models/DailyTask');
@@ -118,7 +118,7 @@ class ScheduledTasks {
       
               if (!respondedUsers.has(message.author.id)) {
                 response += " [+15 POINTS]"
-                utils.points.give(message.author.id, 15)
+                pointsService.give(message.author.id, 15)
                 respondedUsers.add(message.author.id);
               };
       

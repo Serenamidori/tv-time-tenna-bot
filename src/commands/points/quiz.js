@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder, ButtonBuilder, ButtonStyle, ActionRowBuilder, ComponentType, } = require("discord.js");
-const utils = require("../../utils");
+const { profileService, pointsService, randomizer } = require("../../utils");
 const api = require("../../api");
 const quizHelpers = require("../../utils/quizHelpers");
 
@@ -19,8 +19,8 @@ module.exports = {
         )
     ),
   async execute(interaction) {
-    const profile = await utils.profile.find(interaction.user.id);
-    const name = utils.profile.getName(interaction, profile);
+    const profile = await profileService.find(interaction.user.id);
+    const name = profileService.getName(interaction, profile);
     const count = quizHelpers.quizCount(profile);
     if (count >= 6) {
       const waitMessage = quizHelpers.getWaitMessage(name, profile.lastQuizAt);
@@ -79,7 +79,7 @@ module.exports = {
         collector.on("collect", async (selection) => {
           if (selection.customId == "correct") {
             await selection.reply(quizHelpers.randomCorrectLine() + ` [+${points} POINTS]`);
-            utils.points.give(selection.user.id, points);
+            pointsService.give(selection.user.id, points);
           } else {
             await selection.reply(quizHelpers.randomIncorrectLine());
           }
@@ -131,5 +131,5 @@ function formatAnswers(question) {
     { text: question.incorrectAnswers[2], correct: "incorrect2" },
   ];
 
-  return utils.random.shuffle(answers);
+  return randomizer.shuffle(answers);
 }

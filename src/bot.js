@@ -4,8 +4,7 @@ const fs = require("node:fs");
 const path = require("node:path");
 const { Client, Collection, GatewayIntentBits, MessageFlags } = require("discord.js");
 const { handleDialogue } = require('./features/conversation/handler');
-const utils = require("./utils");
-const { ScheduledTasks } = require('./utils/scheduler');
+const { mikeService, ScheduledTasks } = require("./utils");
 
 const bot = new Client({
   intents: [
@@ -63,7 +62,7 @@ bot.on("interactionCreate", async (interaction) => {
   ];
 
   if (!allowedChannels.includes(interaction.channelId)) {
-    const mike = utils.mike.getMikeMessage("error", `Hey! Stop that!!`, `Tenna ain't allowed in this channel! Don't go calling for him in here!`);
+    const mike = mikeService.getMikeMessage("error", `Hey! Stop that!!`, `Tenna ain't allowed in this channel! Don't go calling for him in here!`);
     await interaction.reply({
       embeds: mike.embeds,
       files: mike.files,
@@ -85,7 +84,7 @@ bot.on("interactionCreate", async (interaction) => {
   } catch (error) {
     console.error(`Error executing '${commandName}' by ${interaction.user.tag}:`, error);
 
-    const mike = utils.mike.getMikeMessage("error", `Whoops!`, `Looks like "${commandName}" got its wires crossed!! Looks like we got the ol' "${error} error. Why don'tcha try again?`);
+    const mike = mikeService.getMikeMessage("error", `Whoops!`, `Looks like "${commandName}" got its wires crossed!! Looks like we got the ol' "${error} error. Why don'tcha try again?`);
     const errorContent = {
       embeds: mike.embeds,
       files: mike.files,

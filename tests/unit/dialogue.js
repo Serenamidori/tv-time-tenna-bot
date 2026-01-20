@@ -1,4 +1,4 @@
- const handler = require('../../src/features/conversation/handler.js'); 
+const handler = require('../../src/features/conversation/handler.js'); 
 const examples = [
   // empty
   ['empty', ''],

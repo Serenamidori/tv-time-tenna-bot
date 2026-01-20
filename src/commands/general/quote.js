@@ -1,12 +1,12 @@
 const { SlashCommandBuilder } = require("discord.js");
-const utils = require("../../utils");
+const { randomizer } = require("../../utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("quote")
     .setDescription("Want to hear one of my CLASSIC lines?"),
   async execute(interaction) {
-    await interaction.reply(quotes[utils.random.rand(quotes.length)-1]);
+    await interaction.reply(quotes[randomizer.random(quotes.length)-1]);
   },
 };
 

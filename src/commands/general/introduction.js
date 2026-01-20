@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("discord.js");
-const utils = require("../../utils");
+const { profileService } = require("../../utils");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -28,7 +28,7 @@ module.exports = {
     ),
   async execute(interaction) {
     try {
-      const profile = await utils.profile.find(interaction.user.id);
+      const profile = await profileService.find(interaction.user.id);
       if (anyOptions(interaction.options)) {
         if (interaction.options.getString("birthday") && !validBirthday(interaction.options)) {
           await interaction.reply(`Sorry, didn't quite catch that birthday! Want to give it another go?`);
