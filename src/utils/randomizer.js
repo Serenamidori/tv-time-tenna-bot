@@ -1,4 +1,4 @@
-function rand(max) {
+function random(max) {
 	return Math.ceil(Math.random() * max);	
 };
 
@@ -15,5 +15,5 @@ function shuffle(array) {
 }
 
 module.exports = {
-	rand, shuffle
+	random, shuffle
 }

@@ -1,6 +1,6 @@
 const { AttachmentBuilder, EmbedBuilder } = require("discord.js");
 const path = require('path');
-const random = require('./random');
+const randomizer = require('./randomizer');
 const quotes = [
   "You got it, Tenna!!",
   "Comin' right up!!",
@@ -18,7 +18,7 @@ async function getPoints(interaction, profile, name) {
 }
 
 function randomMikeIndex() {
-  return random.rand(quotes.length) - 1;
+  return randomizer.random(quotes.length) - 1;
 }
 
 function getMikeMessage(i, title = null, description = null, fields = null) {

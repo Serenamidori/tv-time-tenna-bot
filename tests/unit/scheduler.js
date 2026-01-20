@@ -1,5 +1,4 @@
-const { ScheduledTasks } = require('../../src/utils/scheduler'); 
-const schedulerHelpers = require("../../src/utils/schedulerHelpers");
+const { ScheduledTasks, schedulerHelpers } = require('../../src/utils');
 const DailyTask = require('../../models/DailyTask');
 const Profile = require('../../models/Profile');
 

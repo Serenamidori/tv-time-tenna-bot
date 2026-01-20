@@ -1,4 +1,4 @@
-const quizHelpers = require('../../src/utils/quizHelpers.js'); 
+const { quizHelpers } = require('../../src/utils');
 
 jest.useFakeTimers();
 

@@ -1,12 +1,12 @@
 const { setTimeout } = require('timers/promises');
 const { tiers } = require('./triggers');
 const responses = require('./responses');
-const utils = require("../../utils");
+const { profileService } = require("../../utils");
 const { ScheduledTasks } = require('../../utils/scheduler');
 
 async function handleDialogue(message, bot) {
-  const profile = await utils.profile.find(message.author.id);
-  const name = utils.profile.getName(message, profile);
+  const profile = await profileService.find(message.author.id);
+  const name = profileService.getName(message, profile);
   const isMention = message.mentions.has(bot.user.id);
   const isReply = await isReplyToTenna(message, bot);
   const dailyMessageId = await ScheduledTasks.getDailyMessageId();

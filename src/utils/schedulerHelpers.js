@@ -1,4 +1,5 @@
-const utils = require("./");
+const randomizer = require('./randomizer');
+const profileService = require('./profileService');
 
 function iLoveTVMessage() {
   const lines = [
@@ -13,7 +14,7 @@ function iLoveTVMessage() {
     `Let's all shout "I Love TV"! Don't be shy now!`
   ];
 
-  return lines[utils.random.rand(lines.length)-1];
+  return lines[randomizer.random(lines.length)-1];
 }
 
 function tennaThankYouMessage() {
@@ -26,7 +27,7 @@ function tennaThankYouMessage() {
     'You really <:love1:1443452223387340984><:love2:1443452224029065276> TV? I knew it!'
   ];
 
-  return lines[utils.random.rand(lines.length)-1];
+  return lines[randomizer.random(lines.length)-1];
 }
 
 function tennaNopeMessage() {
@@ -38,7 +39,7 @@ function tennaNopeMessage() {
     'Ooh, so close. But, not really. Try again!'
   ];
 
-  return lines[utils.random.rand(lines.length)-1];
+  return lines[randomizer.random(lines.length)-1];
 }
 
 function happyBirthdayMessage(birthdays) {
@@ -59,9 +60,9 @@ function happyBirthdayMessage(birthdays) {
   let line = "";
 
   if (userIds.length > 1) {
-    line = linesPlural[utils.random.rand(linesPlural.length)-1]
+    line = linesPlural[randomizer.random(linesPlural.length)-1]
   } else {
-    line = lines[utils.random.rand(lines.length)-1]
+    line = lines[randomizer.random(lines.length)-1]
   }
 
   return line.replace('{users}', userIds.join(' '));
@@ -78,7 +79,7 @@ function toCST(today) {
 }
 
 async function getTodaysBirthdays(today) {
-  const all = await utils.profile.all();
+  const all = await profileService.all();
   return all.filter(profile => profile.birthday != null && this.sameMonthAndDay(profile.birthday, today));
 }
 
