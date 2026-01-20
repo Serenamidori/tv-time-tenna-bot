@@ -21,10 +21,6 @@ const Profile = new Schema({
         required: true
       },
       description: String,
-      thumbnail: {
-        type: String, 
-        required: true
-      },
       image: {
         type: String, 
         required: true
