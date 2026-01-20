@@ -1,11 +1,106 @@
 {
   "prizes": [
     {
-      "name": "",
-      "description": "",
-      "thumbnail": "",
-      "image": "",
-      "rarity": ""
+      "name": "Golden Tenna Statue",
+      "description": "A statue for your room.",
+      "image": "gold_tenna_statue.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "TennaTie",
+      "description": "A giant, heavy-duty, bullet-proof tie.",
+      "image": "tenna_tie.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Ralsei Plush",
+      "description": "\"Ralsei plush! Fill him with liquid, throw him against the wall!\"",
+      "image": "ralsei_plush.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Spam Cannon",
+      "description": "\"In paper mache!!! It's my worst hater!!!\"",
+      "image": "spam_cannon.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "ButtsPie Slice",
+      "description": "Butterscotch-cinnamon pie, one slice.",
+      "image": "Butterscotch_Pie_item_slice.png",
+      "rarity": "common"
+    },
+    {
+      "name": "ButtsPie",
+      "description": "A full butterscotch-cinnamon pie",
+      "image": "Butterscotch_Pie_item_full.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "Dess's Guitar",
+      "description": "It's a red guitar.",
+      "image": "dess_guitar.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Banana",
+      "description": "Potassium.",
+      "image": "banana.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Pipis",
+      "description": "A certain person's special \"???\"",
+      "image": "Pipis.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Ms. Pipis",
+      "description": "A certain person's special \"???\"",
+      "image": "Ms_Pipis.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "TV Time Poster",
+      "description": "It's a poster for TV TIME!",
+      "image": "tv_time_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Cooking Challenge Poster",
+      "description": "It's a poster for the COOKING CHALLENGE!",
+      "image": "cooking_game_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Rock Video Poster",
+      "description": "It's a poster for the ROCK VIDEO!",
+      "image": "rock_n_roll_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Suziezilla Poster",
+      "description": "It's a poster for the MONSTER MOVIE!",
+      "image": "suziezilla_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Lancer Controller",
+      "description": "It's a controller that lets you play as Lancer.",
+      "image": "controller.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Shadow Crystal",
+      "description": "A sharp shadow moves like water in the hand.",
+      "image": "Shadow_Crystal_item.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Rare Jongler Card",
+      "description": "A commemorative card for rare Jongler sightings.",
+      "image": "rare_jongler.png",
+      "rarity": "legendary"
     }
   ]
 }

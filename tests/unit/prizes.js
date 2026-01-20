@@ -1,16 +1,25 @@
-const PrizeManager = require('../../src/utils/prizeManager.js');
+const PrizeService = require('../../src/utils/prizeService.js');
 
-describe('PrizeManager', () => {
-  let prizeManager;
+describe('PrizeService', () => {
+  let prizeService;
 
   beforeEach(() => {
-    prizeManager = new PrizeManager();
+    prizeService = new PrizeService();
   });
 
-  test('should load prizes successfully', () => {
-    expect(prizeManager.prizes).toBeInstanceOf(Array);
-    expect(prizeManager.prizes.length).toBeGreaterThan(0);
+  it('should load prizes successfully', () => {
+    expect(prizeService.prizes).toBeInstanceOf(Array);
+    expect(prizeService.prizes.length).toBeGreaterThan(0);
   });
 
-  
+  it('should returns expected number of entries per rarity', () => {
+    expect(prizeService.getPrizesByRarity('common').length).toBeGreaterThan(0);
+    expect(prizeService.getPrizesByRarity('not used').length).toEqual(0);
+  });
+
+  it('should return a random prize for a given rarity, defaulting to common', () => {
+    const randomPrize = prizeService.getRandomPrize('not used');
+    expect(randomPrize).not.toBeNull();
+    expect(randomPrize.rarity).toBe('common');
+  });
 });
