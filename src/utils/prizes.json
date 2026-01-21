@@ -1,0 +1,235 @@
+{
+  "prizes": [
+    {
+      "name": "Golden Tenna Statue",
+      "description": "A statue for your room.",
+      "icon": ":gold_tenna_statue:",
+      "image": "gold_tenna_statue.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "TennaTie",
+      "description": "A giant, heavy-duty, bullet-proof tie.",
+      "icon": ":tenna_tie:",
+      "image": "tenna_tie.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Ralsei Plush",
+      "description": "\"Ralsei plush! Fill him with liquid, throw him against the wall!\"",
+      "icon": ":ralsei_plush:",
+      "image": "ralsei_plush.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Spam Cannon",
+      "description": "\"In paper mache!!! It's my worst hater!!!\"",
+      "icon": ":spam_cannon:",
+      "image": "spam_cannon.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "ButtsPie Slice",
+      "description": "Butterscotch-cinnamon pie, one slice.",
+      "icon": ":butterscotch_pie_slice:",
+      "image": "butterscotch_pie_slice.png",
+      "rarity": "common"
+    },
+    {
+      "name": "ButtsPie",
+      "description": "A full butterscotch-cinnamon pie",
+      "icon": ":butterscotch_pie_full:",
+      "image": "butterscotch_pie_full.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "Dess's Guitar",
+      "description": "It's a red guitar.",
+      "icon": ":dess_guitar:",
+      "image": "dess_guitar.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Banana",
+      "description": "Potassium.",
+      "icon": ":banana:",
+      "image": "banana.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Pipis",
+      "description": "A certain person's special \"???\"",
+      "icon": ":pipis:",
+      "image": "pipis.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Ms. Pipis",
+      "description": "A certain person's special \"???\"",
+      "icon": ":ms_pipis:",
+      "image": "ms_pipis.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "TV Time Poster",
+      "description": "It's a poster for TV TIME!",
+      "icon": ":tv_time_poster:",
+      "image": "tv_time_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Cooking Challenge Poster",
+      "description": "It's a poster for the COOKING CHALLENGE!",
+      "icon": ":cooking_game_poster:",
+      "image": "cooking_game_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Rock Video Poster",
+      "description": "It's a poster for the ROCK VIDEO!",
+      "icon": ":rock_n_roll_poster:",
+      "image": "rock_n_roll_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Suziezilla Poster",
+      "description": "It's a poster for the MONSTER MOVIE!",
+      "icon": ":suziezilla_poster:",
+      "image": "suziezilla_poster.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Lancer Controller",
+      "description": "It's a controller that lets you play as Lancer.",
+      "icon": ":controller:",
+      "image": "controller.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Shadow Crystal",
+      "description": "A sharp shadow moves like water in the hand.",
+      "icon": ":shadow_crystal:",
+      "image": "shadow_crystal.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Rare Jongler Card",
+      "description": "A commemorative card for rare Jongler sightings.",
+      "icon": ":rare_jongler:",
+      "image": "rare_jongler.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Thorn Ring",
+      "description": "Wearer takes damage from pain. Reduces the TP cost of ice spells",
+      "icon": ":thorn_ring:",
+      "image": "thorn_ring.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Spamton Body Pillow",
+      "description": "LET YOUR [Unhealthy attachment] TO YOUR FAVORITE SALESMAN [Fester]. THE MORE YOU USE IT, THE MORE YOU'LL REALIZE [night sweats and rashes may occur. Call a doctor immediately]",
+      "icon": ":spamton_body_pillow:",
+      "image": "spamton_body_pillow.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Spamton Engraved Wedding Ring",
+      "description": "SHOW YOUR DEVOTION, YOUR [defication] TO THE ONE YOU LOVE MOST WITH THIS [Commemorative Ring]",
+      "icon": ":spamton_engraved_wedding_ring:",
+      "image": "spamton_engraved_wedding_ring.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "Queen Painting",
+      "description": "It's an authentic painting of Queen.",
+      "icon": ":queen_painting:",
+      "image": "queen_painting.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Spamton Painting",
+      "description": "THIS IS [History's First Fully Authentic] PAINTING, CREATED WITHOUT USING [Digital Assistance], BUT BY ACTUALLY USING [Oil] ON [Canvas]!!",
+      "icon": ":spamton_painting:",
+      "image": "spamton_painting.png",
+      "rarity": "very rare"
+    },
+    {
+      "name": "Annoying Dog",
+      "description": "A little white dog.",
+      "icon": ":annoying_dog:",
+      "image": "annoying_dog.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Dog Residue",
+      "description": "Slime trail naturally left by a dog.",
+      "icon": ":dog_residue:",
+      "image": "dog_residue.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Telephone",
+      "description": "But it doesn't seem to be working.",
+      "icon": ":telephone:",
+      "image": "telephone.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "ButJuice",
+      "description": "It's short for ButlerJuice. It changes color with temperature.",
+      "icon": ":butjuice:",
+      "image": "butjuice.png",
+      "rarity": "common"
+    },
+    {
+      "name": "TV Dinner",
+      "description": "A TV-shaped premade meal. Unfortunately, the vegan steak seems to be a normal shape.",
+      "icon": ":tv_dinner:",
+      "image": "tv_dinner.png",
+      "rarity": "common"
+    },
+    {
+      "name": "TV Dinner",
+      "description": "A TV-shaped premade meal. It even has a giant crumb of your favorite pie.",
+      "icon": ":tv_dinner:",
+      "image": "tv_dinner.png",
+      "rarity": "common"
+    },
+    {
+      "name": "TV Dinner",
+      "description": "A TV-shaped premade meal. The TV's pointy nose is used as a cone for the ice cream.",
+      "icon": ":tv_dinner:",
+      "image": "tv_dinner.png",
+      "rarity": "common"
+    },
+    {
+      "name": "Chairiel",
+      "description": "The beloved living room chair.",
+      "icon": ":chairiel:",
+      "image": "chairiel.png",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Mannequin",
+      "description": "It's a mannequin with a dress on it.",
+      "icon": ":mannequin:",
+      "image": "mannequin.png",
+      "rarity": "rare"
+    },
+    {
+      "name": "Empty Disk",
+      "description": "A data disk from a strange machine.",
+      "icon": ":empty_desk:",
+      "image": "empty_desk.png",
+      "rarity": "uncommon"
+    },
+    {
+      "name": "Spin Cake",
+      "description": "A pastry in the shape of a top.",
+      "icon": ":spin_cake:",
+      "image": "spin_cake.png",
+      "rarity": "uncommon"
+    }
+  ]
+}

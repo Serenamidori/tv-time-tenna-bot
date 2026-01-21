@@ -21,7 +21,7 @@ const Profile = new Schema({
         required: true
       },
       description: String,
-      thumbnail: {
+      icon: {
         type: String, 
         required: true
       },
