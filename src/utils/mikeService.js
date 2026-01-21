@@ -37,7 +37,7 @@ function randomMikeIndex() {
 }
 
 function formatInventory(inventory) {
-  return inventory.map(item => `* ${item.name}`).join('\n');
+  return inventory.map(item => `* ${item.icon} ${item.name}`).join('\n');
 }
 
 function getMikeMessage(i, title = null, description = null, fields = null) {
