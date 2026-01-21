@@ -21,6 +21,10 @@ const Profile = new Schema({
         required: true
       },
       description: String,
+      icon: {
+        type: String, 
+        required: true
+      },
       image: {
         type: String, 
         required: true
