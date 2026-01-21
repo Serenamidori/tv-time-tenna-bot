@@ -17,8 +17,27 @@ async function getPoints(interaction, profile, name) {
   await interaction.channel.send(getMikeMessage(i, null, null, fields));
 }
 
+async function getInventory(interaction, profile, name) {
+  const i = randomMikeIndex();
+  const inventory = profile.inventory;
+  let inventoryList;
+
+  if (inventory.length == 0) {
+    inventoryList = "You have nothing in your inventory yet!"
+  } else {
+    inventoryList = formatInventory(inventory);
+  }
+
+  const fields = { name: `${name.toUpperCase()}'S INVENTORY`, value: inventoryList }
+  await interaction.channel.send(getMikeMessage(i, null, null, fields));
+}
+
 function randomMikeIndex() {
   return randomizer.random(quotes.length) - 1;
+}
+
+function formatInventory(inventory) {
+  return inventory.map(item => `* ${item.name}`).join('\n');
 }
 
 function getMikeMessage(i, title = null, description = null, fields = null) {
@@ -38,5 +57,5 @@ function getMikeMessage(i, title = null, description = null, fields = null) {
 }
 
 module.exports = {
-  randomMikeIndex, getPoints, getMikeMessage
+  randomMikeIndex, getPoints, getInventory, getMikeMessage
 }
