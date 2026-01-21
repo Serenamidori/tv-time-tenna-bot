@@ -13,7 +13,11 @@ describe('PrizeService', () => {
   });
 
   it('should returns expected number of entries per rarity', () => {
-    expect(prizeService.getPrizesByRarity('common').length).toBeGreaterThan(0);
+    expect(prizeService.getPrizesByRarity('common').length).toEqual(8);
+    expect(prizeService.getPrizesByRarity('uncommon').length).toEqual(6);
+    expect(prizeService.getPrizesByRarity('rare').length).toEqual(6);
+    expect(prizeService.getPrizesByRarity('very rare').length).toEqual(4);
+    expect(prizeService.getPrizesByRarity('legendary').length).toEqual(9);
     expect(prizeService.getPrizesByRarity('not used').length).toEqual(0);
   });
 
