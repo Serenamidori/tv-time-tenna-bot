@@ -31,7 +31,7 @@ const Profile = new Schema({
       },
       rarity: {
         type: String,
-        enum: ['common', 'uncommon', 'rare', 'very rare', 'legendary'],
+        enum: ['common', 'uncommon', 'rare', 'veryRare', 'legendary'],
         default: 'common'
       },
       createdAt: {

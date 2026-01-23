@@ -16,7 +16,7 @@ describe('PrizeService', () => {
     expect(prizeService.getPrizesByRarity('common').length).toEqual(8);
     expect(prizeService.getPrizesByRarity('uncommon').length).toEqual(6);
     expect(prizeService.getPrizesByRarity('rare').length).toEqual(6);
-    expect(prizeService.getPrizesByRarity('very rare').length).toEqual(4);
+    expect(prizeService.getPrizesByRarity('veryRare').length).toEqual(4);
     expect(prizeService.getPrizesByRarity('legendary').length).toEqual(9);
     expect(prizeService.getPrizesByRarity('not used').length).toEqual(0);
   });

@@ -84,7 +84,7 @@ bot.on("interactionCreate", async (interaction) => {
   } catch (error) {
     console.error(`Error executing '${commandName}' by ${interaction.user.tag}:`, error);
 
-    const mike = mikeService.getMikeMessage("error", `Whoops!`, `Looks like "${commandName}" got its wires crossed!! Looks like we got the ol' "${error} error. Why don'tcha try again?`);
+    const mike = mikeService.getMikeMessage("error", `Whoops!`, `Looks like "${commandName}" got its wires crossed!! Looks like we got the ol' "${error}" error. Why don'tcha try again?`);
     const errorContent = {
       embeds: mike.embeds,
       files: mike.files,
