@@ -21,7 +21,7 @@ module.exports = {
       await interaction.reply(`Whoops! Not sure how you did that, but you have to insert at least 100 points!`);
       return;
     } else if (profile.points < points) {
-      await interaction.reply(`Uh oh! Looks like you don't have enough points for that!\n-# _(Have you done your quizzes today?)_`);
+      await interaction.reply(`Uh oh! Looks like you don't have enough points!\n-# _(Maybe check your balance to be sure?)_`);
       return;
     }
 
