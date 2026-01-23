@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const randomizer = require('./randomizer');
-const rarityEnum = ['common', 'uncommon', 'rare', 'very rare', 'legendary'];
+const rarityEnum = ['common', 'uncommon', 'rare', 'veryRare', 'legendary'];
 
 class PrizeService {
   constructor() {
@@ -21,7 +21,7 @@ class PrizeService {
   }
 
   getRandomPrize(rarity = 'common') {
-    rarityValidated = rarityEnum.includes(rarity) ? rarity : 'common';
+    const rarityValidated = rarityEnum.includes(rarity) ? rarity : 'common';
     const filteredPrizes = this.getPrizesByRarity(rarityValidated);
     const randomPrizeIndex = randomizer.random(filteredPrizes.length)-1
     return filteredPrizes[randomPrizeIndex];
@@ -32,4 +32,4 @@ class PrizeService {
   }
 }
 
-module.exports = PrizeService;
+module.exports = { PrizeService };
