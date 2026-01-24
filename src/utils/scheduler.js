@@ -42,7 +42,7 @@ class ScheduledTasks {
     const today = new Date();
     const todayString = today.toISOString().split('T')[0];
     const currentHourUTC = today.getUTCHours();
-    const isWithinTimeSlot = currentHourUTC >= 16 || currentHourUTC < 4;
+    const isWithinTimeSlot = currentHourUTC >= 16 || currentHourUTC < 0;
     if (!isWithinTimeSlot) {
       console.log(`📋 [${taskType}] currently outside allowed hours`);
       return false;
