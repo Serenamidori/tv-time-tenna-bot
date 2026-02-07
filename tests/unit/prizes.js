@@ -1,4 +1,4 @@
-const PrizeService = require('../../src/utils/prizeService.js');
+const { PrizeService } = require('../../src/utils/prizeService.js');
 
 describe('PrizeService', () => {
   let prizeService;
