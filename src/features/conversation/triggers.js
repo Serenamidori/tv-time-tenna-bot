@@ -62,6 +62,9 @@ const tier4_conversational = {
   tennaQuoteFamilyFight: {
     pattern: /((family('|’)?s|family is) fighting again)/i
   },
+  sayThankYou: {
+    pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
+  },
   saySorry: {
     pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?\s?mad at (you+|u)|don('|’)?t (do that|be (mean|rude|(a\s)?jerk))|be (nice|nicer|kind)|say (you('|’)?re|you are|ur|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn('|’)?t|don('|’)?t) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
   },
@@ -72,10 +75,10 @@ const tier4_conversational = {
     pattern: /((don('|’)?t|do not) worry\s?(about it)?|(it('|’)?s|it is) (okay|ok|not important|alright|all (good|right|okay|ok))|no worries|(ignore|forget\s?(about)?) (that|me|us|them|him|her|it))/i
   },
   youllSee: {
-    pattern: /((you('|’)?ll|you will) (find out|see+|soo+n+)|you+ w+ill+)/i
+    pattern: /((you('|’)?ll|(you|u) will) (find out|see+|soo+n+)|(you+|u) w+ill+)/i
   },
   getYou: {
-    pattern: /(gonna|going to|i will|i('|’)?ll|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you+|u)/i
+    pattern: /(gonna|going to|i will|i('|’)?ll|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch|beat|hit|bite) you)|(get|gets|getting) (you+|u)/i
   },
   thankYou: {
     pattern: /\b((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)\b/i

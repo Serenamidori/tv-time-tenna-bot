@@ -139,6 +139,17 @@ module.exports = {
     "You got it!"
   ],
 
+  sayThankYou: [
+    "Thank you so much, {user}!!",
+    "Oh, thank you!!",
+    "Thank you for saying that!",
+    "Thank you so so much!",
+    "Oh~! T-Thank you!",
+    "Why thank you, {user}!",
+    "{user}, thank you!",
+    "Goodness!! Thank you {user}!!"
+  ],  
+
   saySorry: [
     "Sorry, sorry!! I'll be good!!",
     "Fine, I'll behave!",
