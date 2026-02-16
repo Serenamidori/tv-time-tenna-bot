@@ -541,6 +541,15 @@ module.exports = {
     "-# _whimper_"
   ],
 
+  tellMeLockIn: [
+    "{user}, LOCK! THE! **HECK!** IN!!!",
+    "No distractions! I <:challenge1:1445924102388056256><:challenge2:1445924103201624094><:challenge3:1445924104187412571><:challenge4:1445924105051308192><:challenge5:1445924106569777173> you to focus, {user}!!",
+    "Are you procrastinating, {user}?? Well, <:stop:1443407391394758667>!! It's time to get back to whatever work you need to do!!",
+    "Consider this your **OFFICIAL ANT TENNA WAKE-UP CALL™**!! Go forth and LOCK IN!!",
+    "What!? Are you telling me you're slacking on the job?? GET BACK TO WORK!!!\n-# _(Please?)_",
+    "Oh {user}, I get it! Some days are easier than others, but I believe in you! Work first, then we can have fun and hang out later!!"
+  ],
+  
   mikuMention: [
     "Oh! The singer? I've heard we'd make a good duo!",
     "Ah yes, a fellow entertainer! I respect that!",

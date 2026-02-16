@@ -85,6 +85,9 @@ const tier4_conversational = {
   },
   bark: {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
+  },
+  tellMeLockIn: {
+    pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work)/i
   }
 };
 

@@ -194,6 +194,15 @@ const examples = [
   ['bark', 'BARK FOR ME'],
   ['bark', 'bark NOW'],
   ['bark', 'bark RIGHT NOW!!!'],
+  ['tellMeLockIn', 'Tenna, can you tell me to lock the fuck in?'],
+  ['tellMeLockIn', 'tell me to lock in'],
+  ['tellMeLockIn', 'can you help me focus'],
+  ['tellMeLockIn', 'tell me to focus please'],
+  ['tellMeLockIn', 'say I gotta lock in'],
+  ['tellMeLockIn', 'Do I need to lock in?'],
+  ['tellMeLockIn', 'I need to get back to work'],
+  ['tellMeLockIn', 'Tell me to go back to work'],
+  ['tellMeLockIn', "I can't concentrate"],
 
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],
