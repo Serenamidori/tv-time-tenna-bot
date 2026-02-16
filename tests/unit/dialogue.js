@@ -219,6 +219,7 @@ const examples = [
   ['canYouBonkMe', 'can you remove my brain'],
   ['canYouBonkMe', 'can you take my brain out'],
   ['canYouBonkMe', 'could you knock me out'],
+  ['canYouBonkMe', 'i want you to snap me in half please'],
   ['canYouBlowMeUp', 'my main goal is to blow up'],
   ['canYouBlowMeUp', 'can you blow me up'],
   ['canYouBlowMeUp', 'i need you to explode me'],
@@ -226,6 +227,7 @@ const examples = [
   ['canYouBlowMeUp', 'i need to explode'],
   ['canYouBlowMeUp', "I'm gonna blow up"],
   ['canYouBlowMeUp', 'im blowing up'],
+  ['canYouBlowMeUp', 'Can you make me explode'],
 
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],
@@ -299,6 +301,7 @@ const examples = [
   ['compliment', "you're very handsome"],
   ['compliment', "you're really sweet!"],
   ['compliment', "you're delightfully babygirl"],
+  ['compliment', "You're a baddie"],
   ['physicalAffection', 'kisses you'],
   ['physicalAffection', 'hugs you'],
   ['physicalAffection', 'im smooching u'],
@@ -306,6 +309,10 @@ const examples = [
   ['physicalAffection', 'cuddle tenna'],
   ['physicalAffection', 'slaps your ass'],
   ['physicalAffection', 'slapping ur booty'],
+  ['physicalAffection', 'MWAH'],
+  ['physicalAffection', 'MWAAAAAH'],
+  ['physicalAffection', 'MWA'],
+  ['physicalAffection', 'SMOOCH'],
 
   // tier8_insults
   ['insultBoo', 'BOO YOU SUCK'],
