@@ -1,4 +1,4 @@
-const { sellbackCommand } = require("./responses");
+const { sellbackCommand, selfQuestionCanYou } = require("./responses");
 
 const tier1_blockers = {
   offLimits: {
@@ -29,7 +29,7 @@ const tier2_questionsToTenna = {
     pattern: /((do|can|don('|’)?t)?\s?(you+|u)?\s?remember\s?(that time|when)?|did (you+|u) forget)/i
   },
   askTennaKnow: {
-    pattern: /((what do|do|have|ever)?\s?(you+|u)?\s?(heard|hear|learned|learn|know) (about|of|what|who|anything))/i
+    pattern: /((what do|do|have|ever)?\s?(you+|u)?\s?(heard|hear|learned|learn|know(?!\s*what))) (about|of|what|who|anything)/i
   }
 };
 
@@ -256,6 +256,12 @@ const tier9_userState = {
 };
 
 const tier10_selfQuestions = {
+  selfQuestionBotUpdate: {
+    pattern: /(((update|fix|change|add( some)?( more)? to) your)|let('|’)s do a)?\s?(dialogue|feature|code)( update)?/i
+  },
+  selfQuestionBotLobotomy: {
+    pattern: /(time for|give you|you want) (a|another) (lobotomy)|(do you want me to|i('|’)m (going to|gonna)) (rewire|lobotomize|scramble) ((you+|u)|(your+|ur) brain)/i
+  },
   selfQuestionWhy: {
     pattern: /(why+|why+ ((are|r)|do|did|would|must|don('|’)?t|can('|’)?t) (you+|u))\b/i
   },

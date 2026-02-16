@@ -454,6 +454,14 @@ const examples = [
   ['userDayBad', 'today is not good'],
 
   // tier10_selfQuestions
+  ['selfQuestionBotUpdate', "y'know what, let's do a dialogue update this weekend"],
+  ['selfQuestionBotUpdate', 'ready for a new feature update?'],
+  ['selfQuestionBotUpdate', 'I need to update your code, bud'],
+  ['selfQuestionBotUpdate', 'we gotta add some more to your dialogue soon'],
+  ['selfQuestionBotLobotomy', 'time for a lobotomy'],
+  ['selfQuestionBotLobotomy', 'do you want another lobotomy'],
+  ['selfQuestionBotLobotomy', 'do you want me to rewire you again'],
+  ['selfQuestionBotLobotomy', "I'm going to lobotomize your brain if you don't stop"],
   ['selfQuestionWhy', 'why are you like this'],
   ['selfQuestionWhy', 'why must you be like this'],
   ['selfQuestionWhy', 'why cant you understand me???'],
