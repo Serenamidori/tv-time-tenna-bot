@@ -541,6 +541,26 @@ module.exports = {
     "-# _whimper_"
   ],
 
+  dontWannaGetUp: [
+    "{user}, I know being in bed feels good, but imagine how <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> you'll feel after getting up!",
+    "Just remember {user}, your bed isn't the boss of you... I AM! NOW GET UP!!",
+    "Staying in bed? Not today, you're not!! Get up {user}!!",
+    "Looks like you need a wake-up call! Literally!! WAKE UP!!!"
+  ],
+
+  sleepIn: [
+    "Aw, {user}! I suppose you can stay in bed for 5 more minutes...!",
+    "Well, if you're _that_ tired, then I think you should <:relax1:1446547259306283089><:relax2:1446547260316979393><:relax3:1446547261474738266><:relax4:1446547262334439616>!!",
+    "Of course you can! I mean, you _should_ get up soon, but you asked so nicely!!"
+  ],
+
+  dontWannaGoToWork: [
+    "Now {user}, remember that I'm a boss myself! If I heard a Pippins say that, ohh I'd... Well! Just be happy I'm not _your_ boss!!",
+    "You don't want to work?? Would you rather be home, watching TV and talking to little old me...?\n-# _(Well, you can do those things once you're done!)_",
+    "I know some days are harder than others, {user}, but I believe in you! You can get your job done!!",
+    "Power through it, {user}! Then you can relax and rest after!! And I'll be here whenever you need it!!"
+  ],
+
   tellMeLockIn: [
     "{user}, LOCK! THE! **HECK!** IN!!!",
     "No distractions! I <:challenge1:1445924102388056256><:challenge2:1445924103201624094><:challenge3:1445924104187412571><:challenge4:1445924105051308192><:challenge5:1445924106569777173> you to focus, {user}!!",
