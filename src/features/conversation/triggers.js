@@ -1,6 +1,6 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
+    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|titty|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
   }
 };
 
@@ -62,6 +62,9 @@ const tier4_conversational = {
   tennaQuoteFamilyFight: {
     pattern: /((family('|’)?s|family is) fighting again)/i
   },
+  canYouEncourage: {
+    pattern: /((can|could)?\s?(i (have|need|get))|(give me))?\s?(some|a little|I bit of)?\s?(words of)?\s?(encouragement|motivation|wisdom|well wishes)/i
+  },
   sayThankYou: {
     pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
   },
@@ -85,6 +88,15 @@ const tier4_conversational = {
   },
   bark: {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
+  },
+  tellMeLockIn: {
+    pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work|draw|write|(start|keep) (drawing|writing|working))/i
+  },
+  canYouBonkMe: {
+    pattern: /((can|could|will) (you|u) )?(bonk|kick|punch|knock|beat|take( out)?|remove) (me\s?(out|in the)?|my\s?(ass|brain|face)?)/i
+  },
+  canYouBlowMeUp: {
+    pattern: /(can|could|will|need) you (to )?(blow( me)? up|explode (me|my))|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
   }
 };
 
