@@ -202,7 +202,16 @@ const examples = [
   ['tellMeLockIn', 'Do I need to lock in?'],
   ['tellMeLockIn', 'I need to get back to work'],
   ['tellMeLockIn', 'Tell me to go back to work'],
+  ['tellMeLockIn', 'can you kick my ass i need to start drawing'],
   ['tellMeLockIn', "I can't concentrate"],
+  ['canYouBonkMe', 'can you bonk me on the head'],
+  ['canYouBonkMe', 'can you kick my ass'],
+  ['canYouBonkMe', 'beat me up please'],
+  ['canYouBonkMe', 'punch me in the face'],
+  ['canYouBonkMe', 'dropkick me'],
+  ['canYouBonkMe', 'can you remove my brain'],
+  ['canYouBonkMe', 'can you take my brain out'],
+  ['canYouBonkMe', 'could you knock me out'],
 
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],

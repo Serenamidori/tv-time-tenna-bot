@@ -549,6 +549,13 @@ module.exports = {
     "What!? Are you telling me you're slacking on the job?? GET BACK TO WORK!!!\n-# _(Please?)_",
     "Oh {user}, I get it! Some days are easier than others, but I believe in you! Work first, then we can have fun and hang out later!!"
   ],
+
+  canYouBonkMe: [
+    "What?? No!! {user}, I don't want to hurt you!!",
+    "Why would you ask me that?? I would never hurt my fans!!",
+    "Now {user}, I'm not going to do any of that. But, I'm here if you wanna talk about it?",
+    "No! But I _can_ give you a hug or a little pat on the head instead?"
+  ],
   
   mikuMention: [
     "Oh! The singer? I've heard we'd make a good duo!",
