@@ -1,3 +1,5 @@
+const { sellbackCommand } = require("./responses");
+
 const tier1_blockers = {
   offLimits: {
     pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|titty|titties|boobies|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
@@ -43,6 +45,18 @@ const tier3_commands = {
   },
   scheduleCommand: {
     pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party|sprint))/i
+  },
+  gachaCommand: {
+    pattern: /(how do I (use|get|do)|where is|i (wanna|want to) (use|roll)) (for |the )?(gacha|prize ball|prizes)/i
+  },
+  sellbackCommand: {
+    pattern: /sellback|(sell( this| items)?(( back)? to you))/i
+  },
+  inventoryCommand: {
+    pattern:/((where (are|is))|((how|where|what) (can i see|are))) my (item(s)?|prize(s)?|inventory)/i
+  },
+  quoteCommand: {
+    pattern: /((can (you (give|say|tell|do)|i (get|have|hear))|give (me|us|them)) (one of your|a)) (nice|cool|famous|awesome|hilarious)?\s?(quote|line)/i
   },
   freePointsCommand: {
     pattern: /(((give|get|send|add)( me)?)) (([\d,]+(\.\d+)?.)?(free|more|extra)? points)|(i want points|give (me|us|them|her|him) points)/i

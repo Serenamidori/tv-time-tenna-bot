@@ -86,7 +86,7 @@ module.exports = {
   ],
 
   quizCommand: [
-    "You want one of my <:quizzes1:1443452224780111872><:quizzes2:1443452225593675819><:quizzes3:1443452226461896868>? Of course!\n\nAll you need to do is type `/quiz` in the server, select your difficulty, and I'll quiz you for points! The harder the difficulty you pick, the more points you can earn!\n\nBut remember, you can only do 3 quizzes every day! _Gotta leave some points for everyone else, y'know?_"
+    "You want one of my <:quizzes1:1443452224780111872><:quizzes2:1443452225593675819><:quizzes3:1443452226461896868>? Of course!\n\nAll you need to do is type `/quiz` in the server, select your difficulty, and I'll quiz you for points! The harder the difficulty you pick, the more points you can earn!\n\nBut remember, you can only do 6 quizzes every day! _Gotta leave some points for everyone else, y'know?_"
   ],
 
   balanceCommand: [
@@ -101,10 +101,26 @@ module.exports = {
     "Oh, you're having a shindig? And you want me to help plan it?? I'd <:love1:1443452223387340984><:love2:1443452224029065276> to!\n\nJust type `/schedule` and let me know ALL the details! I'll announce it to the server right after you do so, and even make you a nifty little event in the server itself!\n-# _(Just make sure that I get an invite too, okay?)_"
   ],
 
+  gachaCommand: [
+    "Ah yes, the Prize Ball Machine! Or \"Gacha\" as you call it. Yes, if you have at least 100 points in your balance, you can use the `/gacha` command to get a special prize! You can even enter more than 100 points for a chance at even rarer prizes!! You can check for those prizes in your inventory with `/inventory`!"
+  ],
+
+  sellbackCommand: [
+    "You aren't happy with your prizes? No problem!! Just sell them back to me using the `/sellback` command! It's a nifty little (private) interface where you choose what you want to sell, and I'll let you know how much I'll buy it back for! You can cancel at any time if you get seller's remorse!! But once you sell it, all sales are final!!"
+  ],
+
+  inventoryCommand: [
+    "You can see your all of your well-earned prizes by using the `/inventory` command! Whatever you win in the Gacha machine will show up here!"
+  ],
+
+  quoteCommand: [
+    "Oh, you want one of my _FAMOUS_ Tenna quotes?? I'd love to!! Just use the `/quote` command, and I'll give you one random quote of mine from the past!"
+  ],
+
   freePointsCommand: [
     "Now {user}, I can't just go giving out points for no reason! Think of the economy!!",
     "If I just gave points out for free, then no one would do my daily quizzes!!\n-# _(Or tell me they love TV in #general...)_",
-    "Haha! Good one, {user}!!",
+    "Haha! Good one, {user}!!\n-# _(...that _was_ a joke, right?)_",
     "But aren't points _SO_ much better when you earn them?? Let's just keep doing that!!",
     "What, am I MADE of points?? Go out and earn some!!",
     "Nope!"
