@@ -90,7 +90,7 @@ module.exports = {
   ],
 
   balanceCommand: [
-    "Oh, your points! Of course!\n\nJust type `/balance` in the server chat, and I'll have Mike go get your points for you!\n-# _(You can't do anything with them just yet, but hopefully soon!)_"
+    "Oh, your points! Of course!\n\nJust type `/balance` in the server chat, and I'll have Mike go get your points for you!"
   ],
 
   introduceCommand: [
@@ -99,6 +99,22 @@ module.exports = {
 
   scheduleCommand: [
     "Oh, you're having a shindig? And you want me to help plan it?? I'd <:love1:1443452223387340984><:love2:1443452224029065276> to!\n\nJust type `/schedule` and let me know ALL the details! I'll announce it to the server right after you do so, and even make you a nifty little event in the server itself!\n-# _(Just make sure that I get an invite too, okay?)_"
+  ],
+
+  freePointsCommand: [
+    "Now {user}, I can't just go giving out points for no reason! Think of the economy!!",
+    "If I just gave points out for free, then no one would do my daily quizzes!!\n-# _(Or tell me they love TV in #general...)_",
+    "Haha! Good one, {user}!!",
+    "But aren't points _SO_ much better when you earn them?? Let's just keep doing that!!",
+    "What, am I MADE of points?? Go out and earn some!!",
+    "Nope!"
+  ],
+
+  takePointsCommand: [
+    "I can't do that, {user}! Not the hard-earned points!!",
+    "I'm not going to do that! What do I look like, a bank?? I'm a TV!!",
+    "I would never!!",
+    "Nope!"
   ],
   
   greeting: [

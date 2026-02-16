@@ -91,6 +91,7 @@ const examples = [
   ['balanceCommand', 'what is my balance'],
   ['balanceCommand', 'what is my points balance'],
   ['balanceCommand', 'show my points'],
+  ['balanceCommand', 'how do I check my points?'],
   ['introduceCommand', 'my name is'],
   ['introduceCommand', 'my birthday is'],
   ['introduceCommand', 'my pronouns are'],
@@ -106,6 +107,15 @@ const examples = [
   ['scheduleCommand', 'plan a party for meeee'],
   ['scheduleCommand', 'set my party!!'],
   ['scheduleCommand', 'create an event tenna!!'],
+  ['freePointsCommand', 'can you give me points'],
+  ['freePointsCommand', 'can I get more points'],
+  ['freePointsCommand', 'give me free points'],
+  ['freePointsCommand', 'i want points'],
+  ['freePointsCommand', 'can you give me 15 more points for the gacha'],
+  ['freePointsCommand', 'add 100 points please'],
+  ['takePointsCommand', 'TENNA TAKE JAYS POINTS AWAY'],
+  ['takePointsCommand', 'can you steal 15 points from skittle'],
+  ['takePointsCommand', 'delete their points please'],
 
   // tier4_conversational
   ['tennaQuoteTVTime', 'what time is it??'],
