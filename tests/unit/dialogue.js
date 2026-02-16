@@ -228,6 +228,18 @@ const examples = [
   ['canYouBlowMeUp', "I'm gonna blow up"],
   ['canYouBlowMeUp', 'im blowing up'],
   ['canYouBlowMeUp', 'Can you make me explode'],
+  ['stopBeingHorny', 'Okay you need to chill with being so horny'],
+  ['stopBeingHorny', 'why are you always horny'],
+  ['stopBeingHorny', 'why are you so horny'],
+  ['stopBeingHorny', 'Are you being horny in gen again'],
+  ['stopBeingHorny', 'YOU GOT THE HORNY PASS'],
+  ['stopBeingHorny', 'STOP BEING HORNY'],
+  ['stopBeingHorny', 'ur being a pervert'],
+  ['stopBeingHorny', "you're a pervert!!"],
+  ['stopBeingHorny', "you're a perv!!"],
+  ['stopBeingHorny', "you're horny!!"],
+  ['stopBeingHorny', 'u horny'],
+  ['stopBeingHorny', 'you perv'],
 
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],
