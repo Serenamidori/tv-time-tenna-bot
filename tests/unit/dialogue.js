@@ -212,7 +212,14 @@ const examples = [
   ['canYouBonkMe', 'can you remove my brain'],
   ['canYouBonkMe', 'can you take my brain out'],
   ['canYouBonkMe', 'could you knock me out'],
-
+  ['canYouBlowMeUp', 'my main goal is to blow up'],
+  ['canYouBlowMeUp', 'can you blow me up'],
+  ['canYouBlowMeUp', 'i need you to explode me'],
+  ['canYouBlowMeUp', 'can you blow up my brain'],
+  ['canYouBlowMeUp', 'i need to explode'],
+  ['canYouBlowMeUp', "I'm gonna blow up"],
+  ['canYouBlowMeUp', 'im blowing up'],
+  
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],
   ['spamtonMention', 'do you miss your ex?'],

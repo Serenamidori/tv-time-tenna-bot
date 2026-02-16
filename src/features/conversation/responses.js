@@ -557,6 +557,13 @@ module.exports = {
     "No! But I _can_ give you a hug or a little pat on the head instead?"
   ],
   
+  canYouBlowMeUp: [
+    "Absolutely **NOT**, {user}. No detonating on my watch!!",
+    "{user}, blowing up is NOT a good solution! How about we just watch some good TV instead?",
+    "I can tell you, {user}, blowing up is NOT as fun as it sounds...",
+    "Please don't!! I like you better when you're NOT exploded!!"
+  ],
+
   mikuMention: [
     "Oh! The singer? I've heard we'd make a good duo!",
     "Ah yes, a fellow entertainer! I respect that!",
