@@ -165,7 +165,7 @@ const tier7_compliments = {
     pattern: /\b(kiss|hug|pat).*(me+|them+|her|him|ple+a+s+e+|pls+|plz+|no+w|soO+n)\b|\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
+    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
   },
   physicalAffection: {
     pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)/i
