@@ -62,6 +62,9 @@ const tier4_conversational = {
   tennaQuoteFamilyFight: {
     pattern: /((family('|’)?s|family is) fighting again)/i
   },
+  canYouEncourage: {
+    pattern: /((can|could)?\s?(i (have|need|get))|(give me))?\s?(some|a little|I bit of)?\s?(words of)?\s?(encouragement|motivation|wisdom|well wishes)/i
+  },
   sayThankYou: {
     pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
   },

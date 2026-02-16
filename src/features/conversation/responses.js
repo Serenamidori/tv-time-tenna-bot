@@ -564,6 +564,18 @@ module.exports = {
     "Please don't!! I like you better when you're NOT exploded!!"
   ],
 
+  canYouEncourage: [
+    "Hey {user}! You're a <:star1:1446248419545845872><:star2:1446248420871372821><:star3:1446248421726879854> and I **BELIEVE** in you!! Go get 'em!!",
+    "{user}, sometimes life feels tough, but **_YOU_** are tougher. Keep pushing forward!!",
+    "Whoa there, {user}! You've got more power and talent than you know!! Don't give up!!!",
+    "{user}, no matter how your day is going, remember that **YOU** are incredible!! You can trust me on that!!",
+    "{user}, remember that setbacks are just part of the journey. You're doing great, so don't give up!!",
+    "{user}, everyone has rough days, but **YOU** are resilient and wonderful!!",
+    "You are <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> just the way you are! Keep being YOU, {user}!!",
+    "Of course {user}, take a deep breath. You're doing awesome, and I'm always rooting for you!!",
+    "{user}, you are <:lovely1:1444089294154109049><:lovely2:1444089295521710231> and <:fun1:1444090417078341723><:fun2:1444090418127048734>, and don't you ever forget it!! I'm glad you're here in this server with us!!"
+  ],
+
   mikuMention: [
     "Oh! The singer? I've heard we'd make a good duo!",
     "Ah yes, a fellow entertainer! I respect that!",

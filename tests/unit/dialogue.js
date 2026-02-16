@@ -120,6 +120,13 @@ const examples = [
   ['tennaQuoteDial', 'dont touch that dial!'],
   ['tennaQuoteFamilyFight', 'the family is fighting again'],
   ['tennaQuoteFamilyFight', "family's fighting again"],
+  ['canYouEncourage', 'Can I have some words of encouragement'],
+  ['canYouEncourage', 'i need some words of encouragement to do some work. pls be nice to me or i will cry'],
+  ['canYouEncourage', 'I have to go back to work today. Can I get some encouragement? (and a cupa coffee)'],
+  ['canYouEncourage', 'I need some motivation'],
+  ['canYouEncourage', 'can I get words of wisdom'],
+  ['canYouEncourage', 'could you give me some well wishes?'],
+  ['canYouEncourage', 'could you give me encouragement?'],
   ['sayThankYou', "You're doing a great job, Tenna!"],
   ['sayThankYou', 'Tenna is very good at his job'],
   ['sayThankYou', 'Tenna, you get an A+ from me'],
@@ -219,7 +226,7 @@ const examples = [
   ['canYouBlowMeUp', 'i need to explode'],
   ['canYouBlowMeUp', "I'm gonna blow up"],
   ['canYouBlowMeUp', 'im blowing up'],
-  
+
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],
   ['spamtonMention', 'do you miss your ex?'],
