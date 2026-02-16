@@ -89,6 +89,15 @@ const tier4_conversational = {
   bark: {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
   },
+  dontWannaGetUp: {
+    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?(get )?(me )?)(out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))/i
+  },
+  sleepIn: {
+    pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
+  },
+  dontWannaGoToWork: {
+    pattern: /((i don('|’)?t (wanna|want to)|do i (seriously|really)?\s?(have|need) to) (go)?\s?(into|to)?\s?) (work|workplace|(my )?job)|(i hate ((going to )?work|(my|this|that)?\s?job))|(((can|should|could) i)?\s?((leave (work|(my )?shift)(.*early)?)|(stop working|quit( (my|this) job)?)))/i
+  },
   tellMeLockIn: {
     pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work|draw|write|(start|keep) (drawing|writing|working))/i
   },
