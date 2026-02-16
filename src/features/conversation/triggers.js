@@ -43,6 +43,12 @@ const tier3_commands = {
   },
   scheduleCommand: {
     pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party|sprint))/i
+  },
+  freePointsCommand: {
+    pattern: /(((give|get|send|add)( me)?)) (([\d,]+(\.\d+)?.)?(free|more|extra)? points)|(i want points|give (me|us|them|her|him) points)/i
+  },
+  takePointsCommand: {
+    pattern: /((throw|give|take|steal|give me|delete) (((.*)('|’)?s|their|her|his) points|([\d,]+(\.\d+)?.)? points)( away)?)/i
   }
 };
 
