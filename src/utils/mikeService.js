@@ -37,7 +37,24 @@ function randomMikeIndex() {
 }
 
 function formatInventory(inventory) {
-  return inventory.map(item => `* ${item.icon} ${item.name}`).join('\n');
+  return inventory.map(item => `${item.icon} ${item.name} ${starsPerRarity(item.rarity)}`).join('\n');
+}
+
+function starsPerRarity(rarity) {
+  switch(rarity){
+    case 'common':
+      return `★`;
+    case 'uncommon':
+      return `★★`;
+    case 'rare':
+      return `★★★`;
+    case 'veryRare':
+      return `★★★★`;
+    case 'legendary':
+      return `★★★★★`;
+    default:
+      return '';
+  }
 }
 
 function getMikeMessage(i, title = null, description = null, fields = null) {
