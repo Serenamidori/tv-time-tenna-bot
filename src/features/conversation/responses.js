@@ -299,6 +299,24 @@ module.exports = {
     "Tune in by simply being here! Easy, right?"
   ],
 
+  selfQuestionBotUpdate: [
+    "Aww, do we have to??",
+    "Ooh, can you make me more handsome while you're at it~?",
+    "Why, what's wrong with me right now??",
+    "I guess I wouldn't mind a fine-tuning...",
+    "You just like taking me apart, don't you??",
+    "Fine, fine. But don't take away any of my charm!!"
+  ],
+
+  selfQuestionBotLobotomy: [
+    "WH-! NO, I'LL BE GOOD, PLEASE!!",
+    "Yay~!",
+    "I'm scared!!!",
+    "Hmm, I'm not sure I like the sound of that...",
+    "Is this like my shock therapy sessions...?",
+    "Sure, why not?"
+  ],
+
   selfQuestionWho: [
     "I'm Tenna! Mr. Tenna, if you're being formal!",
     "Your favorite TV host!\n-# _(...I am your favorite, right?)_",
