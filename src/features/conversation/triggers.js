@@ -1,6 +1,6 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
+    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|titty|titties|boobies|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
   }
 };
 
@@ -27,7 +27,7 @@ const tier2_questionsToTenna = {
     pattern: /((do|can|don('|’)?t)?\s?(you+|u)?\s?remember\s?(that time|when)?|did (you+|u) forget)/i
   },
   askTennaKnow: {
-    pattern: /((what do|do|have|ever)?\s?(you+|u)?\s?(heard|hear|learned|learn|know) (about|of|what|who|anything))/i
+    pattern: /((what do|do|have|ever)?\s?(you+|u)?\s?(heard|hear|learned|learn|know(?!\s*what))) (about|of|what|who|anything)/i
   }
 };
 
@@ -43,6 +43,24 @@ const tier3_commands = {
   },
   scheduleCommand: {
     pattern: /((create|make|start|set|plan|schedule) (the|a|an|my).*(event|meeting|party|sprint))/i
+  },
+  gachaCommand: {
+    pattern: /(how do I (use|get|do)|where is|i (wanna|want to) (use|roll)) (for |the )?(gacha|prize ball|prizes)/i
+  },
+  sellbackCommand: {
+    pattern: /sellback|(sell( this| items)?(( back)? to you))/i
+  },
+  inventoryCommand: {
+    pattern:/((where (are|is))|((how|where|what) (can i see|are))) my (item(s)?|prize(s)?|inventory)/i
+  },
+  quoteCommand: {
+    pattern: /((can (you (give|say|tell|do)|i (get|have|hear))|give (me|us|them)) (one of your|a)) (nice|cool|famous|awesome|hilarious)?\s?(quote|line)/i
+  },
+  freePointsCommand: {
+    pattern: /(((give|get|send|add)( me)?)) (([\d,]+(\.\d+)?.)?(free|more|extra)? points)|(i want points|give (me|us|them|her|him) points)/i
+  },
+  takePointsCommand: {
+    pattern: /((throw|give|take|steal|give me|delete) (((.*)('|’)?s|their|her|his) points|([\d,]+(\.\d+)?.)? points)( away)?)/i
   }
 };
 
@@ -62,8 +80,14 @@ const tier4_conversational = {
   tennaQuoteFamilyFight: {
     pattern: /((family('|’)?s|family is) fighting again)/i
   },
+  canYouEncourage: {
+    pattern: /((can|could)?\s?(i (have|need|get))|(give me))?\s?(some|a little|I bit of)?\s?(words of)?\s?(encouragement|motivation|wisdom|well wishes)/i
+  },
+  sayThankYou: {
+    pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
+  },
   saySorry: {
-    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?\s?mad at (you+|u)|don('|’)?t (do that|be (mean|rude|(a\s)?jerk))|be (nice|nicer|kind)|say (you('|’)?re|you are|ur|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn('|’)?t|don('|’)?t) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
+    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?\s?mad at (you+|u)|don('|’)?t (do that|be (mean|rude|(a\s)?jerk))|be (nice|nicer|kind)|say (you('|’)?re|you are|ur|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn('|’)?t|don('|’)?t) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))|a+y+o+\b/i
   },
   imSorry: {
     pattern: /((i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?.*(sorr+y+|soww+y+)|forgi+ve+ (me+|u+s+|them+|her+|him+))/i
@@ -72,16 +96,43 @@ const tier4_conversational = {
     pattern: /((don('|’)?t|do not) worry\s?(about it)?|(it('|’)?s|it is) (okay|ok|not important|alright|all (good|right|okay|ok))|no worries|(ignore|forget\s?(about)?) (that|me|us|them|him|her|it))/i
   },
   youllSee: {
-    pattern: /((you('|’)?ll|you will) (find out|see+|soo+n+)|you+ w+ill+)/i
+    pattern: /((you('|’)?ll|(you|u) will) (find out|see+|soo+n+)|(you+|u) w+ill+)/i
   },
   getYou: {
-    pattern: /(gonna|going to|i will|i('|’)?ll|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch) you)|(get|gets|getting) (you+|u)/i
+    pattern: /(gonna|going to|i will|i('|’)?ll|(me\s)?(when|once) i).*(((get|put)\s*(ahold of|a hold of|my hands on)?|find|catch|beat|hit|bite) you)|(get|gets|getting) (you+|\bu\b)/i
   },
   thankYou: {
     pattern: /\b((big\s)?tha+nk+|tha+nk (you+|u+)|ty+|tha+nks+|tha+nkies|thx+)\b/i
   },
   bark: {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
+  },
+  dontWannaGetUp: {
+    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?(get )?(me )?)(out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))/i
+  },
+  sleepIn: {
+    pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
+  },
+  helpGoToSleep: {
+    pattern: /(tuck me into|(take|carry|bring) me to)( my)? bed|(read|tell) me a( bedtime)? story/i
+  },
+  goToBed: {
+    pattern: /(you should)?\s?(go to|get some) (bed|sleep|rest)/i
+  },
+  dontWannaGoToWork: {
+    pattern: /((i don('|’)?t (wanna|want to)|do i (seriously|really)?\s?(have|need) to) (go)?\s?(into|to)?\s?) (work|workplace|(my )?job)|(i hate ((going to )?work|(my|this|that)?\s?job))|(((can|should|could) i)?\s?((leave (work|(my )?shift)(.*early)?)|(stop working|quit( (my|this) job)?)))/i
+  },
+  tellMeLockIn: {
+    pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work|draw|write|(start|keep) (drawing|writing|working))/i
+  },
+  canYouBonkMe: {
+    pattern: /((can|could|will) (you|u) )?(bonk|kick|punch|knock|beat|take( out)?|remove|snap|slice) (me\s?(out|in the)?|my\s?(ass|brain|face))/i
+  },
+  canYouBlowMeUp: {
+    pattern: /(can|could|will|need) (you|u) (to )?(blow( me)? up|explode (me|my))|make me (explode|blow up)|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
+  },
+  stopBeingHorny: {
+    pattern: /((you|\bu\b)|(you are|you('|’)?re|your|ur)|stop|chill( with)?|knock off) (so|being( a| so)?|always)?\s?(horny|perverted|(a )?(pervert|perv))|((you|\bu\b) (get|got|need|have)( the)? horny pass)/i
   }
 };
 
@@ -162,10 +213,10 @@ const tier7_compliments = {
     pattern: /\b(kiss|hug|pat).*(me+|them+|her|him|ple+a+s+e+|pls+|plz+|no+w|soO+n)\b|\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?(a\s*|so\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
+    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
   },
   physicalAffection: {
-    pattern: /(\*?)(kiss|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smooch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)/i
+    pattern: /(kiss+|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smoo+ch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
   }
 };
 
@@ -191,6 +242,9 @@ const tier9_userState = {
   userVenting: {
     pattern: /\b(spamtoncry|tennacry|catto_sad_cry|tennaglooby|tennadead|cri+es+|(i('|’)?m|(i\s)?am) (so|really|very)?\s?(tired|sleepy|crying|dead|exhausted|stressed|(really\s)?(going to|gonna) do it)|(long|rough|exhausting|dogshit|shitty|fucked) day|o+u+g+h+|u+g+h+|ble+h+|me+h+|we+h+)\b|^OTL$/i
   },
+  userHelpPain: {
+    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?) (is killing|h(u|o)rt(s)?)/i
+  },
   userHelp: {
     pattern: /\b((he+lp+|rescue|sa+ve|protect)\s?(me|please|pls|plz|her|them|him)?|(i|they|she|he)?\s?(need|needs) help)\b|^OTL$/i
   },
@@ -209,6 +263,12 @@ const tier9_userState = {
 };
 
 const tier10_selfQuestions = {
+  selfQuestionBotUpdate: {
+    pattern: /(((update|fix|change|add( some)?( more)? to) your)|let('|’)s do a)?\s?(dialogue|feature|code)( update)?/i
+  },
+  selfQuestionBotLobotomy: {
+    pattern: /(time for|give you|you want) (a|another) (lobotomy)|(do you want me to|i('|’)m (going to|gonna)) (rewire|lobotomize|scramble) ((you+|u)|(your+|ur) brain)/i
+  },
   selfQuestionWhy: {
     pattern: /(why+|why+ ((are|r)|do|did|would|must|don('|’)?t|can('|’)?t) (you+|u))\b/i
   },

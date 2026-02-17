@@ -86,11 +86,11 @@ module.exports = {
   ],
 
   quizCommand: [
-    "You want one of my <:quizzes1:1443452224780111872><:quizzes2:1443452225593675819><:quizzes3:1443452226461896868>? Of course!\n\nAll you need to do is type `/quiz` in the server, select your difficulty, and I'll quiz you for points! The harder the difficulty you pick, the more points you can earn!\n\nBut remember, you can only do 3 quizzes every day! _Gotta leave some points for everyone else, y'know?_"
+    "You want one of my <:quizzes1:1443452224780111872><:quizzes2:1443452225593675819><:quizzes3:1443452226461896868>? Of course!\n\nAll you need to do is type `/quiz` in the server, select your difficulty, and I'll quiz you for points! The harder the difficulty you pick, the more points you can earn!\n\nBut remember, you can only do 6 quizzes every day! _Gotta leave some points for everyone else, y'know?_"
   ],
 
   balanceCommand: [
-    "Oh, your points! Of course!\n\nJust type `/balance` in the server chat, and I'll have Mike go get your points for you!\n-# _(You can't do anything with them just yet, but hopefully soon!)_"
+    "Oh, your points! Of course!\n\nJust type `/balance` in the server chat, and I'll have Mike go get your points for you!"
   ],
 
   introduceCommand: [
@@ -99,6 +99,38 @@ module.exports = {
 
   scheduleCommand: [
     "Oh, you're having a shindig? And you want me to help plan it?? I'd <:love1:1443452223387340984><:love2:1443452224029065276> to!\n\nJust type `/schedule` and let me know ALL the details! I'll announce it to the server right after you do so, and even make you a nifty little event in the server itself!\n-# _(Just make sure that I get an invite too, okay?)_"
+  ],
+
+  gachaCommand: [
+    "Ah yes, the Prize Ball Machine! Or \"Gacha\" as you call it. Yes, if you have at least 100 points in your balance, you can use the `/gacha` command to get a special prize! You can even enter more than 100 points for a chance at even rarer prizes!! You can check for those prizes in your inventory with `/inventory`!"
+  ],
+
+  sellbackCommand: [
+    "You aren't happy with your prizes? No problem!! Just sell them back to me using the `/sellback` command! It's a nifty little (private) interface where you choose what you want to sell, and I'll let you know how much I'll buy it back for! You can cancel at any time if you get seller's remorse!! But once you sell it, all sales are final!!"
+  ],
+
+  inventoryCommand: [
+    "You can see your all of your well-earned prizes by using the `/inventory` command! Whatever you win in the Gacha machine will show up here!"
+  ],
+
+  quoteCommand: [
+    "Oh, you want one of my _FAMOUS_ Tenna quotes?? I'd love to!! Just use the `/quote` command, and I'll give you one random quote of mine from the past!"
+  ],
+
+  freePointsCommand: [
+    "Now {user}, I can't just go giving out points for no reason! Think of the economy!!",
+    "If I just gave points out for free, then no one would do my daily quizzes!!\n-# _(Or tell me they love TV in #general...)_",
+    "Haha! Good one, {user}!!\n-# _(...that _was_ a joke, right?)_",
+    "But aren't points _SO_ much better when you earn them?? Let's just keep doing that!!",
+    "What, am I MADE of points?? Go out and earn some!!",
+    "Nope!"
+  ],
+
+  takePointsCommand: [
+    "I can't do that, {user}! Not the hard-earned points!!",
+    "I'm not going to do that! What do I look like, a bank?? I'm a TV!!",
+    "I would never!!",
+    "Nope!"
   ],
   
   greeting: [
@@ -138,6 +170,17 @@ module.exports = {
     "No problemo!",
     "You got it!"
   ],
+
+  sayThankYou: [
+    "Thank you so much, {user}!!",
+    "Oh, thank you!!",
+    "Thank you for saying that!",
+    "Thank you so so much!",
+    "Oh~! T-Thank you!",
+    "Why thank you, {user}!",
+    "{user}, thank you!",
+    "Goodness!! Thank you {user}!!"
+  ],  
 
   saySorry: [
     "Sorry, sorry!! I'll be good!!",
@@ -213,6 +256,13 @@ module.exports = {
     "I understand! Just remember to take care of yourself!\n-# _(Mike has to remind me too...)_",
     "Boy don't I know it... Remember to take care of yourself {user}!!",
     "I think I know how you feel, {user}. I know you'll be okay! A TV always knows!!"
+  ],
+
+  userHelpPain: [
+    "You poor thing!! If I could nurse you back to health, I would!! Sadly, I am a TV.",
+    "I wish I could take your pain away, {user}! Try your best to take care of yourself in my stead, okay?",
+    "That sounds awful, {user}. You need some rest and possibly some medicine, I hope you get them soon!!",
+    "My poor, poor {user} isn't well!! I may not have a medical license, but Doctor Tennaville is here for you!!"
   ],
 
   userHelp: [
@@ -528,6 +578,84 @@ module.exports = {
     "**BARK!**",
     "Woof!!!",
     "-# _whimper_"
+  ],
+
+  dontWannaGetUp: [
+    "{user}, I know being in bed feels good, but imagine how <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> you'll feel after getting up!",
+    "Just remember {user}, your bed isn't the boss of you... I AM! NOW GET UP!!",
+    "Staying in bed? Not today, you're not!! Get up {user}!!",
+    "Looks like you need a wake-up call! Literally!! WAKE UP!!!"
+  ],
+
+  sleepIn: [
+    "Aw, {user}! I suppose you can stay in bed for 5 more minutes...!",
+    "Well, if you're _that_ tired, then I think you should <:relax1:1446547259306283089><:relax2:1446547260316979393><:relax3:1446547261474738266><:relax4:1446547262334439616>!!",
+    "Of course you can! I mean, you _should_ get up soon, but you asked so nicely!!"
+  ],
+
+  helpGoToSleep: [
+    "Aww, of course {user}! I want you to get the BEST sleep you can!",
+    "Only if you promise not to be on your phone in bed!!\n-# _(Who need a dumb smartphone anyways...!)_",
+    "You got it, {user}, now try to get some good rest!",
+    "You know I would! I hope I get to comfort you more in your dreams too~!"
+  ],
+
+  goToBed: [
+    "Go to bed? Me?? But I'm a TV! You don't have to put _me_ in sleep mode!!",
+    "Nice try, {user}! I don't NEED to sleep!",
+    "What!? You're telling ME to go to bed??\n-# _(Maybe I should go get some rest...)_",
+    "Nooo! I don't want to!!",
+    "Awww fine, I'll take a _LITTLE_ break, but then back to work for me!",
+    "TV never sleeps!! ...I think!!"
+  ],
+
+  dontWannaGoToWork: [
+    "Now {user}, remember that I'm a boss myself! If I heard a Pippins say that, ohh I'd... Well! Just be happy I'm not _your_ boss!!",
+    "You don't want to work?? Would you rather be home, watching TV and talking to little old me...?\n-# _(Well, you can do those things once you're done!)_",
+    "I know some days are harder than others, {user}, but I believe in you! You can get your job done!!",
+    "Power through it, {user}! Then you can relax and rest after!! And I'll be here whenever you need it!!"
+  ],
+
+  tellMeLockIn: [
+    "{user}, LOCK! THE! **HECK!** IN!!!",
+    "No distractions! I <:challenge1:1445924102388056256><:challenge2:1445924103201624094><:challenge3:1445924104187412571><:challenge4:1445924105051308192><:challenge5:1445924106569777173> you to focus, {user}!!",
+    "Are you procrastinating, {user}?? Well, <:stop:1443407391394758667>!! It's time to get back to whatever work you need to do!!",
+    "Consider this your **OFFICIAL ANT TENNA WAKE-UP CALL™**!! Go forth and LOCK IN!!",
+    "What!? Are you telling me you're slacking on the job?? GET BACK TO WORK!!!\n-# _(Please?)_",
+    "Oh {user}, I get it! Some days are easier than others, but I believe in you! Work first, then we can have fun and hang out later!!"
+  ],
+
+  canYouBonkMe: [
+    "What?? No!! {user}, I don't want to hurt you!!",
+    "Why would you ask me that?? I would never hurt my fans!!",
+    "Now {user}, I'm not going to do any of that. But, I'm here if you wanna talk about it?",
+    "No! But I _can_ give you a hug or a little pat on the head instead?"
+  ],
+  
+  canYouBlowMeUp: [
+    "Absolutely **NOT**, {user}. No detonating on my watch!!",
+    "{user}, blowing up is NOT a good solution! How about we just watch some good TV instead?",
+    "I can tell you, {user}, blowing up is NOT as fun as it sounds...",
+    "Please don't!! I like you better when you're NOT exploded!!"
+  ],
+
+  canYouEncourage: [
+    "Hey {user}! You're a <:star1:1446248419545845872><:star2:1446248420871372821><:star3:1446248421726879854> and I **BELIEVE** in you!! Go get 'em!!",
+    "{user}, sometimes life feels tough, but **_YOU_** are tougher. Keep pushing forward!!",
+    "Whoa there, {user}! You've got more power and talent than you know!! Don't give up!!!",
+    "{user}, no matter how your day is going, remember that **YOU** are incredible!! You can trust me on that!!",
+    "{user}, remember that setbacks are just part of the journey. You're doing great, so don't give up!!",
+    "{user}, everyone has rough days, but **YOU** are resilient and wonderful!!",
+    "You are <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> just the way you are! Keep being YOU, {user}!!",
+    "Of course {user}, take a deep breath. You're doing awesome, and I'm always rooting for you!!",
+    "{user}, you are <:lovely1:1444089294154109049><:lovely2:1444089295521710231> and <:fun1:1444090417078341723><:fun2:1444090418127048734>, and don't you ever forget it!! I'm glad you're here in this server with us!!"
+  ],
+
+  stopBeingHorny: [
+    "What!? ME?? I am not-!!",
+    "W-WHAT ARE YOU TALKING ABOUT?? I'm family friendly!! I swear!!",
+    "I'm sorry!! You all say such unhinged things I just-!!\n-# _(Mike!! The censors don't know about this, do they??)_",
+    "Oh, _I'M_ the horny one?? Look at what _YOU_ are all saying in this server!!"
   ],
 
   mikuMention: [
