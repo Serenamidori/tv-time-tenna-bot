@@ -213,10 +213,10 @@ const tier7_compliments = {
     pattern: /\b(kiss|hug|pat).*(me+|them+|her|him|ple+a+s+e+|pls+|plz+|no+w|soO+n)\b|\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully|too)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie|pookie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
+    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully|too)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie|pookie|sweetie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
   },
   physicalAffection: {
-    pattern: /(kiss+(es+)?|kissing|hug(s)?|hugging|pet(s)?|peting|pat(s)?|patting|glomp(s)?|glomping|smoo+ch(es)?|smooching|cuddle(s)?|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap(s)?|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
+    pattern: /(kiss+(es+)?|kissing|hug(s)?|hugging|pet(s)?|petting|pat(s)?|patting|glomp(s)?|glomping|smoo+ch(es)?|smooching|cuddle(s)?|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap(s)?|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
   }
 };
 
@@ -243,7 +243,7 @@ const tier9_userState = {
     pattern: /\b(spamtoncry|tennacry|catto_sad_cry|tennaglooby|tennadead|cri+es+|(i('|’)?m|(i\s)?am) (so|really|very)?\s?(tired|sleepy|crying|dead|exhausted|stressed|(really\s)?(going to|gonna) do it)|(long|rough|exhausting|dogshit|shitty|fucked) day|o+u+g+h+|u+g+h+|ble+h+|me+h+|we+h+)\b|^OTL$/i
   },
   userHelpPain: {
-    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?|tummy|stomach|hand(s)?|feet|foot|chest) (is killing|h(u|o)rt(s)?)/i
+    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety|everything|mind|head|body))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?|tummy|stomach|hand(s)?|feet|foot|chest) (is killing|h(u|o)rt(s)?)/i
   },
   userHelp: {
     pattern: /\b((he+lp+|rescue|sa+ve|protect)\s?(me|please|pls|plz|her|them|him)?|(i|they|she|he)?\s?(need|needs) help)\b|^OTL$/i
