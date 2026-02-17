@@ -1,5 +1,6 @@
-const { SlashCommandBuilder, MessageFlags, ButtonBuilder, ButtonStyle, ComponentType, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
-const { profileService, pointsService, randomizer } = require("../../utils");
+const { SlashCommandBuilder, MessageFlags, ButtonBuilder, ButtonStyle, ComponentType, ActionRowBuilder, StringSelectMenuBuilder, UserSelectMenuBuilder } = require("discord.js");
+const { profileService, randomizer } = require("../../utils");
+const Profile = require("../../../models/Profile");
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -46,8 +47,25 @@ module.exports = {
       const itemIndex = parseInt(selectedInventory.values[0], 10);
       const item = profile.inventory.at(itemIndex);
 
-      // TODO: add another selectMenu for users
-      // TODO: given selection, get profile from DB
+      const userSelectMenu = new UserSelectMenuBuilder()
+        .setCustomId('server_user_menu')
+        .setPlaceholder('Select who to your item give to');
+          
+      const userRow = new ActionRowBuilder().addComponents(userSelectMenu);
+
+      await selectedInventory.update({
+        content: `Who do you want to give your **${item.icon} ${item.name}** to?`,
+        components: [userRow],
+        flags: MessageFlags.Ephemeral
+      });
+
+      const selectedUser = await sentInventory.awaitMessageComponent({
+        componentType: ComponentType.UserSelect,
+        filter: (i) => i.user.id === interaction.user.id
+      });
+
+      const recipient = await profileService.find(selectedUser.values[0]);
+      const recipientName = profileService.getName(sentInventory, recipient);
 
       const confirm = new ButtonBuilder()
         .setCustomId('yes')
@@ -61,9 +79,8 @@ module.exports = {
       
       const buttonRow = new ActionRowBuilder().addComponents(confirm, cancel);
 
-      // TODO: update this call to user selectedUser instead after it's added
-      await selectedInventory.update({
-        content: `Are you sure you want to give your **${item.icon} ${item.name}** to **${selectedUser}**?`,
+      await selectedUser.update({
+        content: `Are you sure you want to give your **${item.icon} ${item.name}** to **${recipientName}**?`,
         components: [buttonRow]
       });
 
@@ -74,13 +91,16 @@ module.exports = {
 
       if (selectedAnswer.customId === "yes") {
         await selectedAnswer.update({
-          content: `Hooray! You've just given **${selectedUser}** your **${item.icon} ${item.name}**!\n-# _(${quip()})_`,
+          content: `Hooray! You've just given **${recipientName}** your **${item.icon} ${item.name}**!\n-# _(${quip()})_`,
           components: []
         });
 
-        profile.inventory.splice(itemIndex, 1);
+        const gift = profile.inventory.splice(itemIndex, 1);
+        recipient.inventory.push(gift[0]);
+        recipient.save();
         profile.save();
-        pointsService.give(profile.id, itemPoints);
+
+        selectedAnswer.followUp(`<@${recipient.id}>, you've been given a **${item.icon} ${item.name}** from <@${profile.id}>!`);
       } else {
         await selectedAnswer.update({
           content: 'No gifting, then! Have a TV-tastic day!',
@@ -102,7 +122,7 @@ function quip() {
   const lines = [
     'Happy to help!!',
     'Everyone in this server is so nice!',
-    'I wish someone would give ME a gift!',
+    'I wish someone would give ME a gift... But nothing from the Gacha Machine though!!',
     'Sharing is caring!',
     `I wonder if they'll give you something back?`,
     'How lovely!!'

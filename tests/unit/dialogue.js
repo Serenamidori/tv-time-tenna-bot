@@ -124,6 +124,7 @@ const examples = [
   ['giveCommand', 'can I give Jay my prize?'],
   ['giveCommand', 'how do I give my item away?'],
   ['giveCommand', 'I want to send a gift'],
+  ['giveCommand', 'I want give something'],
   ['freePointsCommand', 'can you give me points'],
   ['freePointsCommand', 'can I get more points'],
   ['freePointsCommand', 'give me free points'],

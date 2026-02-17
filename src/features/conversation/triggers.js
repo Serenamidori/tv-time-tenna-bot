@@ -57,7 +57,7 @@ const tier3_commands = {
     pattern: /((can (you (give|say|tell|do)|i (get|have|hear))|give (me|us|them)) (one of your|a)) (nice|cool|famous|awesome|hilarious)?\s?(quote|line)/i
   },
   giveCommand: {
-    pattern: /((give|send|gift|trade)(.*)?(my)?) (stuff|prize(s)?|item(s)?|things(s)?|gift(s)?|inventory)/i
+    pattern: /((give|send|gift|trade)(.*)?(my|a)?) (stuff|prize(s)?|item(s)?|something|things(s)?|gift(s)?|inventory)/i
   },
   freePointsCommand: {
     pattern: /(((give|get|send|add|have)( me)?)) (([\d,]+(\.\d+)?.)?(free|(some)?\s?(more)?|extra|(a)?\s?(few)?)? points)|(i want points|give (me|us|them|her|him) points)/i
