@@ -593,6 +593,13 @@ module.exports = {
     "Of course you can! I mean, you _should_ get up soon, but you asked so nicely!!"
   ],
 
+  helpGoToSleep: [
+    "Aww, of course {user}! I want you to get the BEST sleep you can!",
+    "Only if you promise not to be on your phone in bed!!\n-# _(Who need a dumb smartphone anyways...!)_",
+    "You got it, {user}, now try to get some good rest!",
+    "You know I would! I hope I get to comfort you more in your dreams too~!"
+  ],
+
   goToBed: [
     "Go to bed? Me?? But I'm a TV! You don't have to put _me_ in sleep mode!!",
     "Nice try, {user}! I don't NEED to sleep!",
@@ -642,6 +649,13 @@ module.exports = {
     "You are <:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360> just the way you are! Keep being YOU, {user}!!",
     "Of course {user}, take a deep breath. You're doing awesome, and I'm always rooting for you!!",
     "{user}, you are <:lovely1:1444089294154109049><:lovely2:1444089295521710231> and <:fun1:1444090417078341723><:fun2:1444090418127048734>, and don't you ever forget it!! I'm glad you're here in this server with us!!"
+  ],
+
+  stopBeingHorny: [
+    "What!? ME?? I am not-!!",
+    "W-WHAT ARE YOU TALKING ABOUT?? I'm family friendly!! I swear!!",
+    "I'm sorry!! You all say such unhinged things I just-!!\n-# _(Mike!! The censors don't know about this, do they??)_",
+    "Oh, _I'M_ the horny one?? Look at what _YOU_ are all saying in this server!!"
   ],
 
   mikuMention: [

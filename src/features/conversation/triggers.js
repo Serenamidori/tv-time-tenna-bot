@@ -87,7 +87,7 @@ const tier4_conversational = {
     pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
   },
   saySorry: {
-    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?\s?mad at (you+|u)|don('|’)?t (do that|be (mean|rude|(a\s)?jerk))|be (nice|nicer|kind)|say (you('|’)?re|you are|ur|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn('|’)?t|don('|’)?t) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))\b/i
+    pattern: /\b((knock|quit|stop) (doing)?\s?(it|that)\s?(off)?|(i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?\s?mad at (you+|u)|don('|’)?t (do that|be (mean|rude|(a\s)?jerk))|be (nice|nicer|kind)|say (you('|’)?re|you are|ur|your)?\s?(sorry|something nice|a nice thing|psyche|(you+|u) (didn('|’)?t|don('|’)?t) mean (it|that))|apologize|apologise|say something (nice|nicer|kind|better))|a+y+o+\b/i
   },
   imSorry: {
     pattern: /((i am|i('|’)?m|they('|’)?re|they are|she is|she('|’)?s|he is|he('|’)?s)?.*(sorr+y+|soww+y+)|forgi+ve+ (me+|u+s+|them+|her+|him+))/i
@@ -112,6 +112,9 @@ const tier4_conversational = {
   },
   sleepIn: {
     pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
+  },
+  helpGoToSleep: {
+    pattern: /(tuck me into|(take|carry|bring) me to)( my)? bed|(read|tell) me a( bedtime)? story/i
   },
   goToBed: {
     pattern: /(you should)?\s?(go to|get some) (bed|sleep|rest)/i
