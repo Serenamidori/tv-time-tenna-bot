@@ -64,6 +64,16 @@ module.exports = {
         filter: (i) => i.user.id === interaction.user.id
       });
 
+      const recipientUser = selectedUser.users.values().next().value;
+
+      if (recipientUser.bot) {
+          await selectedUser.update({
+          content: `Whoops! You can't give these items to me or Mike! Try only sending gifts to _other_ users!`,
+          components: []
+        });
+        return true;
+      }
+
       const recipient = await profileService.find(selectedUser.values[0]);
       const recipientName = profileService.getName(sentInventory, recipient);
 
