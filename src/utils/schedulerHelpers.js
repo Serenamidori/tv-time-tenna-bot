@@ -1,5 +1,6 @@
 const randomizer = require('./randomizer');
 const profileService = require('./profileService');
+const pointsService = require('./pointsService');
 
 function iLoveTVMessage() {
   const lines = [
@@ -60,10 +61,13 @@ function happyBirthdayMessage(birthdays) {
   let line = "";
 
   if (userIds.length > 1) {
-    line = linesPlural[randomizer.random(linesPlural.length)-1]
+    line = linesPlural[randomizer.random(linesPlural.length)-1];
   } else {
-    line = lines[randomizer.random(lines.length)-1]
+    line = lines[randomizer.random(lines.length)-1];
   }
+
+  line += "\nHere's a little gift for you! [+200 POINTS]";
+  userIds.forEach(userId => pointsService.give(userId, 200));
 
   return line.replace('{users}', userIds.join(' '));
 }
