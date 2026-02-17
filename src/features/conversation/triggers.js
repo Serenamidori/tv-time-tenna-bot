@@ -123,7 +123,7 @@ const tier4_conversational = {
     pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work|draw|write|(start|keep) (drawing|writing|working))/i
   },
   canYouBonkMe: {
-    pattern: /((can|could|will) (you|u) )?(bonk|kick|punch|knock|beat|take( out)?|remove|snap|slice) (me\s?(out|in the)?|my\s?(ass|brain|face)?)/i
+    pattern: /((can|could|will) (you|u) )?(bonk|kick|punch|knock|beat|take( out)?|remove|snap|slice) (me\s?(out|in the)?|my\s?(ass|brain|face))/i
   },
   canYouBlowMeUp: {
     pattern: /(can|could|will|need) (you|u) (to )?(blow( me)? up|explode (me|my))|make me (explode|blow up)|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
@@ -238,6 +238,9 @@ const tier8_insults = {
 const tier9_userState = {
   userVenting: {
     pattern: /\b(spamtoncry|tennacry|catto_sad_cry|tennaglooby|tennadead|cri+es+|(i('|’)?m|(i\s)?am) (so|really|very)?\s?(tired|sleepy|crying|dead|exhausted|stressed|(really\s)?(going to|gonna) do it)|(long|rough|exhausting|dogshit|shitty|fucked) day|o+u+g+h+|u+g+h+|ble+h+|me+h+|we+h+)\b|^OTL$/i
+  },
+  userHelpPain: {
+    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?) (is killing|h(u|o)rt(s)?)/i
   },
   userHelp: {
     pattern: /\b((he+lp+|rescue|sa+ve|protect)\s?(me|please|pls|plz|her|them|him)?|(i|they|she|he)?\s?(need|needs) help)\b|^OTL$/i
