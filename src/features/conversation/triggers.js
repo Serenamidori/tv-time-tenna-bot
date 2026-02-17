@@ -213,10 +213,10 @@ const tier7_compliments = {
     pattern: /\b(kiss|hug|pat).*(me+|them+|her|him|ple+a+s+e+|pls+|plz+|no+w|soO+n)\b|\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully|too)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
+    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully|too)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie|pookie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
   },
   physicalAffection: {
-    pattern: /(kiss+|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smoo+ch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
+    pattern: /(kiss+(es+)?|kissing|hug(s)?|hugging|pet(s)?|peting|pat(s)?|patting|glomp(s)?|glomping|smoo+ch(es)?|smooching|cuddle(s)?|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap(s)?|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
   }
 };
 
@@ -234,7 +234,7 @@ const tier8_insults = {
     pattern: /(tennafuckyou|fuckyou|(tiny|small) nose|trash heap|i.*(hate|loathe|despise|detest) (you+|u)|(fuck|kills) (you+|u)|kill (yourself|urself)|(you+|u|you('|’)?re|your|ur) (suck|stink|fail|((are|r)?\s?(an|a|so|very|really|rly)?\s?(bad|mean|horrible|rude|stupid|stinky|whiney|idiot|dumb|bitch|meanie|failure)))|(you('|’)?re|ur|your) (lame|annoying|boring))/i
   },
   physicalViolence: {
-    pattern: /(\*?)(blow(s)|slap(s)?|slapping|explode(s)?|exploding|shock(s)?|shocking|rip(s)?( off)?|ripping( off)?|bonk(s)?|bonking|punch(es)?|punching|kick(s)?|kicking|hit(s)?|hitting|smack(s)?|smacking|beat(s)?|beating|attack(s)?|attacking|stab(s)?|stabbing|shoot(s)?|shooting|bite(s)?|biting|throw(s)?|throwing|shove(s)?|shoving|whack(s)?|whacking|bap(s)?|bapping)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|credit|debit|money|mike)/i
+    pattern: /(\*?)(cleave(s)?|cleaving|blow(s)|blowing|slap(s)?|slapping|explode(s)?|exploding|shock(s)?|shocking|rip(s)?( off)?|ripping( off)?|bonk(s)?|bonking|punch(es)?|punching|kick(s)?|kicking|hit(s)?|hitting|smack(s)?|smacking|beat(s)?|beating|attack(s)?|attacking|stab(s)?|stabbing|shoot(s)?|shooting|bite(s)?|biting|throw(s)?|throwing|shove(s)?|shoving|whack(s)?|whacking|bap(s)?|bapping)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|credit|debit|money|mike)/i
   }
 };
 
