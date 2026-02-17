@@ -117,6 +117,10 @@ module.exports = {
     "Oh, you want one of my _FAMOUS_ Tenna quotes?? I'd love to!! Just use the `/quote` command, and I'll give you one random quote of mine from the past!"
   ],
 
+  giveCommand: [
+    "You want to give someone something? Certainly! You'll need to use the `/give` command if you want to give someone an item from your inventory!"
+  ],
+  
   freePointsCommand: [
     "Now {user}, I can't just go giving out points for no reason! Think of the economy!!",
     "If I just gave points out for free, then no one would do my daily quizzes!!\n-# _(Or tell me they love TV in #general...)_",
@@ -132,7 +136,7 @@ module.exports = {
     "I would never!!",
     "Nope!"
   ],
-  
+
   greeting: [
     "Hi there!",
     "Hello!",
