@@ -37,7 +37,7 @@ function randomMikeIndex() {
 }
 
 function formatInventory(inventory) {
-  return inventory.map(item => `${item.icon} ${item.name} ${starsPerRarity(item.rarity)}`).join('\n');
+  return inventory.map(item => `${item.icon} ~ ${item.name} \`${starsPerRarity(item.rarity)}\``).join('\n');
 }
 
 function starsPerRarity(rarity) {
