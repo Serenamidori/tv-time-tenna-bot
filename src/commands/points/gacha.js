@@ -35,7 +35,7 @@ module.exports = {
     const attachment = new AttachmentBuilder(imagePath, { name: `${prize.image}` });
     const embed = new EmbedBuilder()
       .setColor(0xFF362C)
-      .setDescription(`## Your ${prizeText} is "${prize.name}"!\n-# ${prize.description}`)
+      .setDescription(`## Your ${prizeText} is "${prize.name}"!\n-# \`${starsPerRarity(prize.rarity)}\` ${prize.description}`)
       .setImage(`attachment://${attachment.name}`);
     
     await interaction.reply({ embeds: [embed], files: [attachment] });
@@ -85,4 +85,21 @@ function selectRarity(probabilities) {
     }
   }
   return Object.keys(probabilities)[Object.keys(probabilities).length - 1];
+}
+
+function starsPerRarity(rarity) {
+  switch(rarity){
+    case 'common':
+      return `★`;
+    case 'uncommon':
+      return `★★`;
+    case 'rare':
+      return `★★★`;
+    case 'veryRare':
+      return `★★★★`;
+    case 'legendary':
+      return `★★★★★`;
+    default:
+      return '';
+  }
 }
