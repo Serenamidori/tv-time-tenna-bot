@@ -113,6 +113,9 @@ const tier4_conversational = {
   sleepIn: {
     pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
   },
+  goToBed: {
+    pattern: /(you should)?\s?(go to|get some) (bed|sleep|rest)/i
+  },
   dontWannaGoToWork: {
     pattern: /((i don('|’)?t (wanna|want to)|do i (seriously|really)?\s?(have|need) to) (go)?\s?(into|to)?\s?) (work|workplace|(my )?job)|(i hate ((going to )?work|(my|this|that)?\s?job))|(((can|should|could) i)?\s?((leave (work|(my )?shift)(.*early)?)|(stop working|quit( (my|this) job)?)))/i
   },

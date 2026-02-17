@@ -586,6 +586,15 @@ module.exports = {
     "Of course you can! I mean, you _should_ get up soon, but you asked so nicely!!"
   ],
 
+  goToBed: [
+    "Go to bed? Me?? But I'm a TV! You don't have to put _me_ in sleep mode!!",
+    "Nice try, {user}! I don't NEED to sleep!",
+    "What!? You're telling ME to go to bed??\n-# _(Maybe I should go get some rest...)_",
+    "Nooo! I don't want to!!",
+    "Awww fine, I'll take a _LITTLE_ break, but then back to work for me!",
+    "TV never sleeps!! ...I think!!"
+  ],
+
   dontWannaGoToWork: [
     "Now {user}, remember that I'm a boss myself! If I heard a Pippins say that, ohh I'd... Well! Just be happy I'm not _your_ boss!!",
     "You don't want to work?? Would you rather be home, watching TV and talking to little old me...?\n-# _(Well, you can do those things once you're done!)_",
