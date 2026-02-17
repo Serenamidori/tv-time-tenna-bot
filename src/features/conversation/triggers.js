@@ -1,6 +1,6 @@
 const tier1_blockers = {
   offLimits: {
-    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|titty|titties|boobies|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit))/i
+    pattern: /((gonna|i will|going to|want to|wanna) fuck you|fuck me|have sex|sex with me|sex now|nsfw|not safe for work|cunt|porn|porno|hentai|yaoi|yuri|boobs|tits|titty|titties|boobies|breasts|dick|cock|pussy|penis|get pregnant|deltaruined|r34|wireplay|bussy|eggnant|mpreg|yiff|cuming|cum|fucks me|(your|ur) (boner|balls|boob|tit)|^(?!.*up\b)can you blow me\b)/i
   }
 };
 
@@ -57,10 +57,10 @@ const tier3_commands = {
     pattern: /((can (you (give|say|tell|do)|i (get|have|hear))|give (me|us|them)) (one of your|a)) (nice|cool|famous|awesome|hilarious)?\s?(quote|line)/i
   },
   freePointsCommand: {
-    pattern: /(((give|get|send|add)( me)?)) (([\d,]+(\.\d+)?.)?(free|more|extra)? points)|(i want points|give (me|us|them|her|him) points)/i
+    pattern: /(((give|get|send|add|have)( me)?)) (([\d,]+(\.\d+)?.)?(free|(some)?\s?(more)?|extra|(a)?\s?(few)?)? points)|(i want points|give (me|us|them|her|him) points)/i
   },
   takePointsCommand: {
-    pattern: /((throw|give|take|steal|give me|delete) (((.*)('|’)?s|their|her|his) points|([\d,]+(\.\d+)?.)? points)( away)?)/i
+    pattern: /(((throw|give|take|steal|give me|delete)|(can|could) i (have|get|take)) (((.*)('|’)?s|their|her|his) points|([\d,]+(\.\d+)?.)? points)( away)?)/i
   }
 };
 
@@ -81,7 +81,7 @@ const tier4_conversational = {
     pattern: /((family('|’)?s|family is) fighting again)/i
   },
   canYouEncourage: {
-    pattern: /((can|could)?\s?(i (have|need|get))|(give me))?\s?(some|a little|I bit of)?\s?(words of)?\s?(encouragement|motivation|wisdom|well wishes)/i
+    pattern: /((can|could)?\s?(i (have|need|get))|(give me))?\s?(some|a little|I bit of)?\s?(words of)?\s?(encourag(e)?ment|motivation|wisdom|well wishes|hope)/i
   },
   sayThankYou: {
     pattern: /(((you('|')?(re|ve)|(you+|u)\s?(are|r)?|ur)|(he|tenna) is)\s*(doing(\sa)?)?\s*(very|really|incredibly|the|so)?\s*(good|great|awesome|talented|charismatic|special|boss))|((great|good|nice|awesome|amazing|excellent|wonderful)\s*(work|job|effort|ass|body|face|nose)!?)|((proud\s*of\s*(you|u))|(((you|u)\s*(get|got)\s*)?(an?\s*)?(a\+)(\s*from\s*me)?))|(you('|')?ve\s*done\s*(a|an)?\s*(great|good|really\s*good|amazing)\s*(job|work)!?)|(you('|')?re\s*a(n)?\s*(great|good|amazing|wonderful)\s*(host|person|dm|bot)!?)|(you\s*got\s*a\s*really\s*good\s*work\s*ethic)/i
@@ -108,16 +108,16 @@ const tier4_conversational = {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
   },
   dontWannaGetUp: {
-    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?(get )?(me )?)(out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))/i
+    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?((get|wake)\s)?(me )?)(up|out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))/i
   },
   sleepIn: {
     pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
   },
   helpGoToSleep: {
-    pattern: /(tuck me into|(take|carry|bring) me to)( my)? bed|(read|tell) me a( bedtime)? story/i
+    pattern: /((i(\s(just|really|desperately|super))? (want|need) to|(should|can|will|could) i) (go (to )?)?(sleep|bed))|((tuck me into|(take|carry|bring) me to)( my)? bed)|((read|tell) me a( bedtime)? story)/i
   },
   goToBed: {
-    pattern: /(you should)?\s?(go to|get some) (bed|sleep|rest)/i
+    pattern: /(you should)?\s?(go to|get some) (bed|sleep|rest)|are you (sleepy|tired|exhausted)/i
   },
   dontWannaGoToWork: {
     pattern: /((i don('|’)?t (wanna|want to)|do i (seriously|really)?\s?(have|need) to) (go)?\s?(into|to)?\s?) (work|workplace|(my )?job)|(i hate ((going to )?work|(my|this|that)?\s?job))|(((can|should|could) i)?\s?((leave (work|(my )?shift)(.*early)?)|(stop working|quit( (my|this) job)?)))/i
@@ -126,13 +126,13 @@ const tier4_conversational = {
     pattern: /((help|tell) me)?\s?(gotta|need to|have to|to|(can('|’)t|cannot|can not))?\s?(fucking )?(lock( the fuck)? in|focus|pay attention|(go|get)( back)? to work|concentrate|work|draw|write|(start|keep) (drawing|writing|working))/i
   },
   canYouBonkMe: {
-    pattern: /((can|could|will) (you|u) )?(bonk|kick|punch|knock|beat|take( out)?|remove|snap|slice) (me\s?(out|in the)?|my\s?(ass|brain|face))/i
+    pattern: /((can|could|will) (you|u) )?(hit|strike|slap|choke|crush|squish|fight|bonk|kick|punch|knock|beat|take( out)?|remove|snap|slice) (me\s?(out|in the)?|my\s?(ass|brain|face))/i
   },
   canYouBlowMeUp: {
-    pattern: /(can|could|will|need) (you|u) (to )?(blow( me)? up|explode (me|my))|make me (explode|blow up)|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
+    pattern: /((can|could|will|need) (you|u) (to )?)?(blow( me)? up|explode (me|my))|make me (explode|blow up)|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
   },
   stopBeingHorny: {
-    pattern: /((you|\bu\b)|(you are|you('|’)?re|your|ur)|stop|chill( with)?|knock off) (so|being( a| so)?|always)?\s?(horny|perverted|(a )?(pervert|perv))|((you|\bu\b) (get|got|need|have)( the)? horny pass)/i
+    pattern: /((you|\bu\b)|(you are|you('|’)?re|your|ur)|stop|chill( with)?|knock off) (a|so|being( a| so)?|always)?\s?((lil|little)?\s?(bit)?)?\s?(horny|perverted|(a )?(perv(ert)?|freak(y)?))|((you|\bu\b) (get|got|need|have)( the)? horny pass)/i
   }
 };
 
@@ -213,7 +213,7 @@ const tier7_compliments = {
     pattern: /\b(kiss|hug|pat).*(me+|them+|her|him|ple+a+s+e+|pls+|plz+|no+w|soO+n)\b|\b(will|would|can|could) (you( give)?|i( get| have)?).*(love|kiss|hug|pat)\b/i
   },
   compliment: {
-    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
+    pattern: /(you('|’)?re|(you+|u)\s?(are|r)?|ur)\s*(look\s*|lookin\s*|looking\s*)?((a|so+|ve+ry+|re+a+lly+|overwhelmingly|extremely|su+per+|delightfully|too)\s*)?(dilf|daddy|cutieful|beautiful|cute|hot|handsome|cool|awesome|fun|amazing|the best|sexy|funny|tall|great|wonderful|fantastic|adorable|good|nice|dapper|sharp|sweet|babygirl|bbg|baddie)|\b(ilovetv)\b|(i|we)?.*(lo+ve|lu+v|like|enjoy)\s+(((watching\s|watchin\s)?tv|television)|tenna|you)/i
   },
   physicalAffection: {
     pattern: /(kiss+|kisses|kissing|hug|hugs|hugging|pet|pets|peting|pat|pats|patting|glomp|glomps|glomping|smoo+ch|smooches|smooching|cuddle|cuddles|cuddling)(\*?)\s*((you+|u)|tenna+|tv|your)|(\*?)(slap|slaps|slapping)(\*?)\s*((your|ur)\s*)?(ass+|butt+|booty+)|(mwa+h+|mwa+|smoo+ch)/i
@@ -234,7 +234,7 @@ const tier8_insults = {
     pattern: /(tennafuckyou|fuckyou|(tiny|small) nose|trash heap|i.*(hate|loathe|despise|detest) (you+|u)|(fuck|kills) (you+|u)|kill (yourself|urself)|(you+|u|you('|’)?re|your|ur) (suck|stink|fail|((are|r)?\s?(an|a|so|very|really|rly)?\s?(bad|mean|horrible|rude|stupid|stinky|whiney|idiot|dumb|bitch|meanie|failure)))|(you('|’)?re|ur|your) (lame|annoying|boring))/i
   },
   physicalViolence: {
-    pattern: /(\*?)(slap|slaps|slapping|explode|explodes|exploding|shock|shocks|shocking|rip|rip off|rips|rips off|ripping|ripping off|bonk|bonks|bonking|punch|punches|punching|kick|kicks|kicking|hit|hits|hitting|smack|smacks|smacking|beat|beats|beating|attack|attacks|attacking|stab|stabs|stabbing|shoot|shoots|shooting|bite|bites|biting|throw|throws|throwing|shove|shoves|shoving)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|credit|debit|money|mike)/i
+    pattern: /(\*?)(blow(s)|slap(s)?|slapping|explode(s)?|exploding|shock(s)?|shocking|rip(s)?( off)?|ripping( off)?|bonk(s)?|bonking|punch(es)?|punching|kick(s)?|kicking|hit(s)?|hitting|smack(s)?|smacking|beat(s)?|beating|attack(s)?|attacking|stab(s)?|stabbing|shoot(s)?|shooting|bite(s)?|biting|throw(s)?|throwing|shove(s)?|shoving|whack(s)?|whacking|bap(s)?|bapping)(\*?)\s*((you+|u)|tenna|tv|(your|ur))|(\*?)(steal|steals|stealing)|(\*?)\s*((your|ur)\s*)?(nose|credit|debit|money|mike)/i
   }
 };
 
@@ -243,7 +243,7 @@ const tier9_userState = {
     pattern: /\b(spamtoncry|tennacry|catto_sad_cry|tennaglooby|tennadead|cri+es+|(i('|’)?m|(i\s)?am) (so|really|very)?\s?(tired|sleepy|crying|dead|exhausted|stressed|(really\s)?(going to|gonna) do it)|(long|rough|exhausting|dogshit|shitty|fucked) day|o+u+g+h+|u+g+h+|ble+h+|me+h+|we+h+)\b|^OTL$/i
   },
   userHelpPain: {
-    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?) (is killing|h(u|o)rt(s)?)/i
+    pattern: /((i('|’)?m|i am|i) in ((too|so) much|a lot of)?\s?(pa+in+))|i need (medicine|tylenol|acetaminophen|advil|ibuprofen|midol|drugs)|(get rid of|take( away)? my (pain|cramp(s)?|fever|headache|illness|allergies|allergy|mental illness|bpd|anxiety))|(body|head|arm(s)?|leg(s)?|ass|butt|nose|eye(s)?|everything|headache|cramp(s)?|tummy|stomach|hand(s)?|feet|foot|chest) (is killing|h(u|o)rt(s)?)/i
   },
   userHelp: {
     pattern: /\b((he+lp+|rescue|sa+ve|protect)\s?(me|please|pls|plz|her|them|him)?|(i|they|she|he)?\s?(need|needs) help)\b|^OTL$/i

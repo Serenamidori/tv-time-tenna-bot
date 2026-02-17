@@ -262,7 +262,8 @@ module.exports = {
     "You poor thing!! If I could nurse you back to health, I would!! Sadly, I am a TV.",
     "I wish I could take your pain away, {user}! Try your best to take care of yourself in my stead, okay?",
     "That sounds awful, {user}. You need some rest and possibly some medicine, I hope you get them soon!!",
-    "My poor, poor {user} isn't well!! I may not have a medical license, but Doctor Tennaville is here for you!!"
+    "My poor, poor {user} isn't well!! I may not have a medical license, but Doctor Tennaville is here for you!!",
+    "Don't worry! I'm here for you, {user}! _Pain, pain, fly away~!_"
   ],
 
   userHelp: [
