@@ -32,7 +32,7 @@ module.exports = {
         await interaction.reply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _(Mike, where did the trivia go!? ... Well, go find some more! And hurry!!)_`);
       } else {
         const answers = formatAnswers(question);
-        let points = 5;
+        let points = 10;
         if (difficulty == "medium") {
           points = points * 2;
         } else if (difficulty == "hard") {
