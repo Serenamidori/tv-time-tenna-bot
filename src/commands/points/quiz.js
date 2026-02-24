@@ -111,7 +111,10 @@ module.exports = {
 async function getQuestion(difficulty) {
   let questions = await api.trivia.getQuestion(difficulty);
 
-  if (quizHelpers.answersTooLong(questions[0])) {
+  if (questions.length == 0) {
+    console.error(`No quiz question returned by The Trivia API:`, questions);
+    return null;
+  } else if (quizHelpers.answersTooLong(questions[0])) {
     for (let i = 0; i < 3; i++) {
       questions = await api.trivia.getQuestion(difficulty);
       if (!quizHelpers.answersTooLong(questions[0])) {
