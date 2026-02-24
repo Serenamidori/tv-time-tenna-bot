@@ -28,8 +28,9 @@ module.exports = {
     } else {
       const difficulty = interaction.options.getString("difficulty") || 2;
       const question = await getQuestion(difficulty);
+      await interaction.deferReply();
       if (question == null) {
-        await interaction.reply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _(Mike, where did the trivia go!? ... Well, go find some more! And hurry!!)_`);
+        await interaction.editReply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _(Mike, where did the trivia go!? ... Well, go find some more! And hurry!!)_`);
       } else {
         const answers = formatAnswers(question);
         let points = 10;
@@ -66,7 +67,7 @@ module.exports = {
 
         const row = new ActionRowBuilder().addComponents(buttonA, buttonB, buttonC, buttonD);
 
-        const sentQuiz = await interaction.reply({
+        const sentQuiz = await interaction.editReply({
           embeds: [embed],
           components: [row],
         });
