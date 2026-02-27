@@ -1,5 +1,5 @@
 const BASE_URL = 'https://the-trivia-api.com/v2';
-const { randomizer } = require("../utils");
+const { randomizer } = require("../../utils");
 
 async function getQuestion(difficulty) {
   try {
