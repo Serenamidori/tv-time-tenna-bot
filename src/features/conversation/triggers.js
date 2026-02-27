@@ -111,7 +111,7 @@ const tier4_conversational = {
     pattern: /((command|demand) (that\s)?you (to\s)?bark|bark for (me|us)|bark (right\s)?now|(you('|’)?re|your|ur)\s*((a\s)?.*(dog|pup|puppy|doggy|doggo|buppy|pupper))|walkies)/i
   },
   dontWannaGetUp: {
-    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?((get|wake)\s)?(me )?)(up|out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))/i
+    pattern: /(((should|can|could|will) (i|you|\bu\b)|(help|make|tell) me|don('|’)?t (wa+nna+|want to)) ((to )?((get|wake)\s)?(me )?)(up|out of (my|the)?\s?bed|((to )?(wake|get) up))|((really|just) (wa+nna+|want to)) (stay) (in (my|the)?\s?bed))|(is it) time\s?(for (me|us))? to (((get|wake)\s)?(me )?)(up|out of (my|the)?\s?bed|((to )?(wake|get) up))/i
   },
   sleepIn: {
     pattern: /\b(((can|could) i )(stay in bed|sleep in))\b/i
@@ -270,7 +270,7 @@ const tier10_selfQuestions = {
     pattern: /(((update|fix|change|add( some)?( more)? to) your)|let('|’)s do a)?\s?(dialogue|feature|code)( update)?/i
   },
   selfQuestionBotLobotomy: {
-    pattern: /(time for|give you|you want) (a|another) (lobotomy)|(do you want me to|i('|’)m (going to|gonna)) (rewire|lobotomize|scramble) ((you+|u)|(your+|ur) brain)/i
+    pattern: /(time for|give you|you want) (a|another) (lobotomy)|(do you want me to|i('|’)m (going to|gonna)) (rewire|lobotomize|scramble) ((you+|u)|(your+|ur) brain)|((it)?\s?(('|’)s|is)?) lobotomy (day|time|o('|’)clock)/i
   },
   selfQuestionWhy: {
     pattern: /(why+|why+ ((are|r)|do|did|would|must|don('|’)?t|can('|’)?t) (you+|u))\b/i
@@ -285,7 +285,7 @@ const tier10_selfQuestions = {
     pattern: /(how ((are|r) (you+|ya+|u)|do you feel(?! about)|(you+|u) (doing|doin)|about (you+|u)|art thou|do (you+|u) do)|how('|’)?re (you+|u)|(how('|’)?s|how( is)?) (it (going+|hanging+|hangin))|hru|(are|r) (you+|u) (doing )?(ok|okay|alright|good|well|fine|groovy|awesome|great)|(has|was|is) your day)/i
   },
   selfQuestionWhatsUp: {
-    pattern: /((what( is)?|what('|’)?s) (up|going (on|down)|happenin+|new)|wa+s+u+p|wa+z+u+p|(watcha|whatcha|(what (are|r)|what('|’)?re) (you+|u)) (up to|doin+)|su+p)/i
+    pattern: /((what( is)?|what('|’)?s) (up|going (on|down)|happenin+|new)|wa+s+u+p|wa+z+u+p|(watcha|whatcha|(what (are|r)|what('|’)?re) (you+|u)) (up to|doin+)|\bsu+p\b)/i
   },
   selfQuestionWhat: {
     pattern: /(what ((the|da) (hell|fuck|shit)|even)?\s?)((are|r) (you+|u)|is (a)?\s?tenna|do you.*do)/i
