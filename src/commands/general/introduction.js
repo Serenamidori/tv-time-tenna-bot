@@ -84,27 +84,16 @@ function isValidBirthday(birthdayStr) {
 };
 
 async function setPreferences(profile, options) {
-  const nickname = options.getString("nickname");
-  const pronouns = options.getString("pronouns");
+  const fields = ["nickname", "pronouns", "timezone"];
+  for (const field of fields) {
+    const value = options.getString(field);
+    if (value) profile[field] = value;
+  }
+
   const birthdayStr = options.getString("birthday");
-  const timezone = options.getString("timezone");
-
-  if (nickname) {
-    profile.nickname = nickname;
-  }
-
-  if (pronouns) {
-    profile.pronouns = pronouns;
-  }
-
   if (birthdayStr && isValidBirthday(birthdayStr)) {
     profile.birthday = new Date(birthdayStr);
   }
 
-  console.log(timezone);
-  if (timezone) {
-    profile.timezone = timezone;
-  }
-
-  profile.save();
+  await profile.save();
 };
