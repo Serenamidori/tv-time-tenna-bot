@@ -1,27 +1,25 @@
+const { DateTime } = require("luxon");
+
 function quizCount(profile) {
-  if (profile.quizCount != null) {
-    if (profile.lastQuizAt != null && isToday(profile.lastQuizAt)) {
-      return profile.quizCount;
-    }
+  if (profile.quizCount != null && profile.lastQuizAt != null && isToday(profile.lastQuizAt, profile.timezone)) {
+    return profile.quizCount;
   }
   return 0;
 }
 
-function isToday(someDate) {
-  const today = new Date();
-  return (
-    someDate.getDate() === today.getDate() &&
-    someDate.getMonth() === today.getMonth() &&
-    someDate.getFullYear() === today.getFullYear()
-  );
+function isToday(someDate, timezone = "UTC") {
+  const tz = timezone || "UTC";
+  const now = DateTime.now().setZone(tz);
+  const date = DateTime.fromJSDate(someDate).setZone(tz);
+  return now.hasSame(date, "day");
 }
 
-function getWaitMessage(name, lastQuizAt) {
-  const today = new Date();
-  const target = new Date(lastQuizAt);
-  target.setDate(target.getDate() + 1);
+function getWaitMessage(name, timezone = "UTC") {
+  const tz = timezone || "UTC";
+  const now = DateTime.now().setZone(tz);
+  const target = now.plus({ days: 1 }).startOf("day");
 
-  const timeDifference = target.getTime() - today.getTime();
+  const timeDifference = target.toMillis() - now.toMillis();
   const hoursLeft = Math.floor(timeDifference / (1000 * 60 * 60));
   const minsLeft = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
   

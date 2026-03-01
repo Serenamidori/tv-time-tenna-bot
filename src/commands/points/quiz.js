@@ -24,7 +24,7 @@ module.exports = {
     const name = profileService.getName(interaction, profile);
     const count = quizHelpers.quizCount(profile);
     if (count >= 6) {
-      const waitMessage = quizHelpers.getWaitMessage(name, profile.lastQuizAt);
+      const waitMessage = quizHelpers.getWaitMessage(name, profile.timezone);
       await interaction.editReply(waitMessage);
     } else {
       const difficulty = interaction.options.getString("difficulty") || 2;
