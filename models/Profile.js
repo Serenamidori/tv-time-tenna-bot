@@ -17,7 +17,7 @@ const Profile = new Schema({
     lastQuizAt: Date,
     timezone: {
       type: String,
-      default: 'Etc/UTC'
+      default: 'UTC'
     },
     inventory: [{
       name: {
