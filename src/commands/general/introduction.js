@@ -75,7 +75,7 @@ module.exports = {
   },
 };
 
-const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday"));
+const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday") || options.getString("timezone"));
 const validBirthday = (options) => !!(isValidBirthday(options.getString("birthday")))
 
 function isValidBirthday(birthdayStr) {
@@ -101,6 +101,7 @@ async function setPreferences(profile, options) {
     profile.birthday = new Date(birthdayStr);
   }
 
+  console.log(timezone);
   if (timezone) {
     profile.timezone = timezone;
   }
