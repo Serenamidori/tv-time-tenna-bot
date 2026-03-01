@@ -1,14 +1,15 @@
-const pointsService = require('./pointsService');
 const helper = require("./schedulerHelpers");
 const { setTimeout } = require('timers/promises');
 const DailyTask = require('../../models/DailyTask');
-let respondedUsers = new Set();
+const { DateTime } = require("luxon");
 
 class ScheduledTasks {
   static async runDailyTasks(client) {
     console.log('📋 Running Daily Tasks');
-    await this.runBirthdayWishes(client);
-    await this.runTVChatMessage(client);
+    const birthdayRan = await this.shouldRunToday('birthday') && await this.runBirthdayWishes(client);
+    if (!birthdayRan && await this.shouldRunToday('ilovetv')) {
+      await this.runTVChatMessage(client);
+    }
   }
 
   static async getTask(taskType) {
@@ -30,7 +31,7 @@ class ScheduledTasks {
       task.lastExecuted = lastExecuted;
       task.executionDay = executionDay;
       task.messageId = messageId;
-      task.save();
+      await task.save();
       return true;
     } catch (error) {
       console.error(`Error updating task ${task.taskType}:`, error);
@@ -39,14 +40,15 @@ class ScheduledTasks {
   }
 
   static async shouldRunToday(taskType) {
-    const today = new Date();
-    const todayString = today.toISOString().split('T')[0];
-    const currentHourUTC = today.getUTCHours();
-    const isWithinTimeSlot = currentHourUTC >= 16 || currentHourUTC < 0;
+    const now = DateTime.now().setZone("America/Chicago");
+    const currentHour = now.hour;
+    const isWithinTimeSlot = currentHour >= 9 && currentHour < 22;
+    const todayString = now.toISODate();
+
     if (!isWithinTimeSlot) {
       console.log(`📋 [${taskType}] currently outside allowed hours`);
       return false;
-    };
+    }
 
     try {
       const task = await this.getTask(taskType);
@@ -63,80 +65,56 @@ class ScheduledTasks {
   }
   
   static async runBirthdayWishes(bot) {
-    if (await this.shouldRunToday('birthday')) {
-      const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
-      const today = new Date();
-      const todayString = today.toISOString().split('T')[0];
-      const task = await this.getTask('birthday');
+    const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
+    const now = DateTime.now().setZone("America/Chicago");
+    const today = now.toJSDate();
+    const todayString = now.toISODate();
+    const task = await this.getTask('birthday');
 
-      try {
-        const birthdays = await helper.getTodaysBirthdays(today);
-        let sentMessageID = null;
-        if (birthdays.length > 0) {
-          await channel.sendTyping();
-          await setTimeout(3000);
-          const sentMessage = await channel.send(helper.happyBirthdayMessage(birthdays));
-          sentMessageID = sentMessage.id;
-          console.log(`📋 [birthday] message was sent on ${today.toDateString()} at ${helper.toCST(today)}`);
-        } else {
-          console.log(`📋 [birthday] no message sent today (${today.toDateString()})`);
-        }
-
-        await this.updateTask(task, today, todayString, sentMessageID);
-        
-      } catch (error) {
-        console.error('Failed to send Birthday chat message:', error);
+    try {
+      const birthdays = await helper.getTodaysBirthdays(today);
+      let sent = false;
+      let sentMessageID = null;
+      if (birthdays.length > 0) {
+        await channel.sendTyping();
+        await setTimeout(3000);
+        const sentMessage = await channel.send(helper.happyBirthdayMessage(birthdays));
+        sentMessageID = sentMessage.id;
+        console.log(`📋 [birthday] message was sent on ${today.toDateString()} at ${helper.toCST(today)}`);
+        sent = true;
+      } else {
+        console.log(`📋 [birthday] no message sent today (${today.toDateString()})`);
       }
+
+      await this.updateTask(task, today, todayString, sentMessageID);
+      return sent;
+    } catch (error) {
+      console.error('Failed to send Birthday chat message:', error);
+      return false;
     }
   }
 
   static async runTVChatMessage(bot) {
-    const lovesTvPattern = /\b((i|we) do|me+|indee+d|ye+s+|yea+h+|ilovetv)\b|\b((i|we)( really)?)?\s+(lo+ve|lu+v|li+ke|enjoy)\s+((watching\s)?(tv|television))\b/i;
+    const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
+    const now = DateTime.now().setZone("America/Chicago");
+    const today = now.toJSDate();
+    const todayString = now.toISODate();
+    const task = await this.getTask('ilovetv');
 
-    if (await this.shouldRunToday('ilovetv')) {
-      const channel = await bot.channels.fetch(process.env.GENERAL_CHAT);
-      const today = new Date();
-      const todayString = today.toISOString().split('T')[0];
-      const task = await this.getTask('ilovetv');
-
-      try {
-        await channel.sendTyping();
-        await setTimeout(3000);
-        const sentMessage = await channel.send(helper.iLoveTVMessage());
-        console.log(`📋 [ilovetv] message was sent on ${today.toDateString()} at ${helper.toCST(today)}`);
-        respondedUsers.clear();
-        await this.updateTask(task, today, todayString, sentMessage.id);
-
-        bot.on('messageCreate', async (message) => {
-          if (message.author.bot) return;
-          
-          if (message.reference?.messageId === sentMessage.id) {
-            let response = null
-      
-            if (lovesTvPattern.test(message.content)) {
-              response = helper.tennaThankYouMessage();
-      
-              if (!respondedUsers.has(message.author.id)) {
-                response += " [+15 POINTS]"
-                pointsService.give(message.author.id, 15)
-                respondedUsers.add(message.author.id);
-              };
-      
-            } else {
-              response = {content: helper.tennaNopeMessage(), ephemeral: true};
-            }
-            await message.reply(response);
-          }
-        });
-      } catch (error) {
-        console.error('Failed to send TV chat message:', error);
-      }
+    try {
+      await channel.sendTyping();
+      await setTimeout(3000);
+      const sentMessage = await channel.send(helper.iLoveTVMessage());
+      console.log(`📋 [ilovetv] message was sent on ${today.toDateString()} at ${helper.toCST(today)}`);
+      await this.updateTask(task, today, todayString, sentMessage.id);
+    } catch (error) {
+      console.error('Failed to send TV chat message:', error);
     }
   }
-
+  
   static async getDailyMessageId(taskType = 'ilovetv') {
     const task = await this.getTask(taskType);
-    return task.messageId;
+    return (task !== null) ? task.messageId : null;
   }
 }
 
