@@ -12,24 +12,30 @@ const quotes = [
 ]
 
 async function getPoints(interaction, profile, name) {
-  const i = randomMikeIndex();
+  const mikeIndex = randomMikeIndex();
   const fields = { name: `${name.toUpperCase()}'S BALANCE`, value: `${profile.points} POINTS` }
-  await interaction.channel.send(getMikeMessage(i, null, null, fields));
+  await interaction.channel.send(getMikeMessage(mikeIndex, null, null, fields));
 }
 
 async function getInventory(interaction, profile, name) {
-  const i = randomMikeIndex();
+  const mikeIndex = randomMikeIndex();
   const inventory = profile.inventory;
-  let inventoryList;
+  const inventoryCount = inventory.length;
 
-  if (inventory.length == 0) {
-    inventoryList = "You have nothing in your inventory yet!"
+  if (inventoryCount == 0) {
+    const fields = { name: `${name.toUpperCase()}'S INVENTORY`, value: "You have nothing in your inventory yet!" }
+    await interaction.channel.send(getMikeMessage(mikeIndex, null, null, fields));
   } else {
-    inventoryList = formatInventory(inventory);
-  }
+    let pages = Math.ceil(inventoryCount / 15);
+    let inventoryList = formatInventory(inventory);
 
-  const fields = { name: `${name.toUpperCase()}'S INVENTORY`, value: inventoryList }
-  await interaction.channel.send(getMikeMessage(i, null, null, fields));
+    for (let i = 0; i < pages; i++) {
+      const pageStr = pages > 1 ? ` (${i+1})` : '';
+      const fields = { name: `${name.toUpperCase()}'S INVENTORY${pageStr}`, value: inventoryList[i] }
+      const title = i == 0 ? `"${quotes[mikeIndex]}"` : ' ';
+      await interaction.channel.send(getMikeMessage(mikeIndex, title, null, fields));
+    }
+  }
 }
 
 function randomMikeIndex() {
@@ -37,7 +43,12 @@ function randomMikeIndex() {
 }
 
 function formatInventory(inventory) {
-  return inventory.map(item => `${item.icon} ~ ${item.name} \`${starsPerRarity(item.rarity)}\``).join('\n');
+  const lines = inventory.map(item => `${item.icon} ~ ${item.name} \`${starsPerRarity(item.rarity)}\``);
+  const pages = [];
+  for (let i = 0; i < lines.length; i += 15) {
+    pages.push(lines.slice(i, i + 15).join('\n'));
+  }
+  return pages;
 }
 
 function starsPerRarity(rarity) {
