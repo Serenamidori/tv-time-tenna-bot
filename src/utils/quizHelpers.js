@@ -24,7 +24,10 @@ function getWaitMessage(name, timezone = "UTC") {
   const minsLeft = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
   
   let timeStr;
-  if (hoursLeft > 0) {
+  
+  if (hoursLeft > 0 && minsLeft > 0) {
+    timeStr = `${hoursLeft} ${hoursLeft == 1 ? 'hour' : 'hours'} and ${minsLeft == 1 ? 'minute' : 'minutes'}`;
+  } else if (hoursLeft > 0) {
     timeStr = `${hoursLeft} ${hoursLeft == 1 ? 'hour' : 'hours'}`;
   } else if (minsLeft > 0) {
     timeStr = `${minsLeft} ${minsLeft == 1 ? 'minute' : 'minutes'}`;
