@@ -25,6 +25,35 @@ module.exports = {
       option.setName("birthday")
         .setDescription("When's your birthday? I wanna mark it down! (MM/DD/YYYY)")
         .setRequired(false)
+    )
+    .addStringOption((option) =>
+      option.setName("timezone")
+        .setDescription("What timezone are you in?")
+        .setRequired(false)
+        .addChoices(
+          { name: "ET (America/New_York)", value: "America/New_York" },
+          { name: "CT (America/Chicago)", value: "America/Chicago" },
+          { name: "MT (America/Denver)", value: "America/Denver" },
+          { name: "PT (America/Los_Angeles)", value: "America/Los_Angeles" },
+          { name: "AKT (America/Anchorage)", value: "America/Anchorage" },
+          { name: "HT (America/Honolulu)", value: "America/Honolulu" },
+          { name: "Eastern Canada (America/Toronto)", value: "America/Toronto" },
+          { name: "Pacific Canada (America/Vancouver)", value: "America/Vancouver" },
+          { name: "Brazil (America/Sao_Paulo)", value: "America/Sao_Paulo" },
+          { name: "Mexico (America/Mexico_City)", value: "America/Mexico_City" },
+          { name: "GMT/BST (Europe/London)", value: "Europe/London" },
+          { name: "CET (Europe/Paris)", value: "Europe/Paris" },
+          { name: "EET (Europe/Helsinki)", value: "Europe/Helsinki" },
+          { name: "Moscow (Europe/Moscow)", value: "Europe/Moscow" },
+          { name: "JST (Asia/Tokyo)", value: "Asia/Tokyo" },
+          { name: "KST (Asia/Seoul)", value: "Asia/Seoul" },
+          { name: "CST (Asia/Shanghai)", value: "Asia/Shanghai" },
+          { name: "IST (Asia/Kolkata)", value: "Asia/Kolkata" },
+          { name: "GST (Asia/Dubai)", value: "Asia/Dubai" },
+          { name: "AEDT/AEST (Australia/Sydney)", value: "Australia/Sydney" },
+          { name: "NZST (Pacific/Auckland)", value: "Pacific/Auckland" },
+          { name: "UTC", value: "UTC" },
+        )
     ),
   async execute(interaction) {
     try {
@@ -46,7 +75,7 @@ module.exports = {
   },
 };
 
-const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday"));
+const anyOptions = (options) => !!(options.getString("nickname") || options.getString("pronouns") || options.getString("birthday") || options.getString("timezone"));
 const validBirthday = (options) => !!(isValidBirthday(options.getString("birthday")))
 
 function isValidBirthday(birthdayStr) {
@@ -55,21 +84,16 @@ function isValidBirthday(birthdayStr) {
 };
 
 async function setPreferences(profile, options) {
-  const nickname = options.getString("nickname");
-  const pronouns = options.getString("pronouns");
+  const fields = ["nickname", "pronouns", "timezone"];
+  for (const field of fields) {
+    const value = options.getString(field);
+    if (value) profile[field] = value;
+  }
+
   const birthdayStr = options.getString("birthday");
-
-  if (nickname) {
-    profile.nickname = nickname;
-  }
-
-  if (pronouns) {
-    profile.pronouns = pronouns;
-  }
-
   if (birthdayStr && isValidBirthday(birthdayStr)) {
     profile.birthday = new Date(birthdayStr);
   }
 
-  profile.save();
+  await profile.save();
 };

@@ -18,31 +18,6 @@ function iLoveTVMessage() {
   return lines[randomizer.random(lines.length)-1];
 }
 
-function tennaThankYouMessage() {
-  const lines = [
-    `Yes, you _do_ love TV, don't you?`,
-    `That's CORRECT!`,
-    'I could hear that 99 more times!',
-    `Haha, that's right!`,
-    '<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>',
-    'You really <:love1:1443452223387340984><:love2:1443452224029065276> TV? I knew it!'
-  ];
-
-  return lines[randomizer.random(lines.length)-1];
-}
-
-function tennaNopeMessage() {
-  const lines = [
-    `That's the wrong answer!`,
-    `Hmm, that doesn't sound quite right...`,
-    `Sorry, what was that?! Couldn't hear you!`,
-    'I must not have heard you right. You meant to say "I love TV" right?',
-    'Ooh, so close. But, not really. Try again!'
-  ];
-
-  return lines[randomizer.random(lines.length)-1];
-}
-
 function happyBirthdayMessage(birthdays) {
   const lines = [
     `<:breaking1:1446597036601507840><:breaking2:1446597037486375113><:breaking3:1446597038639681628><:breaking4:1446597046290350151><:breaking5:1446597047615754280> We've got a birthday today! Happy Birthday {users}!`,
@@ -84,7 +59,7 @@ function toCST(today) {
 
 async function getTodaysBirthdays(today) {
   const all = await profileService.all();
-  return all.filter(profile => profile.birthday != null && this.sameMonthAndDay(profile.birthday, today));
+  return all.filter(profile => profile.birthday != null && sameMonthAndDay(profile.birthday, today));
 }
 
 function sameMonthAndDay(date1, date2) {
@@ -105,8 +80,6 @@ function sameMonthAndDay(date1, date2) {
 
 module.exports = {
   iLoveTVMessage,
-  tennaThankYouMessage,
-  tennaNopeMessage,
   happyBirthdayMessage,
   getTodaysBirthdays,
   sameMonthAndDay,

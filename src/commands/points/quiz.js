@@ -24,10 +24,10 @@ module.exports = {
     const name = profileService.getName(interaction, profile);
     const count = quizHelpers.quizCount(profile);
     if (count >= 6) {
-      const waitMessage = quizHelpers.getWaitMessage(name, profile.lastQuizAt);
+      const waitMessage = quizHelpers.getWaitMessage(name, profile.timezone);
       await interaction.editReply(waitMessage);
     } else {
-      const difficulty = interaction.options.getString("difficulty") || 2;
+      const difficulty = interaction.options.getString("difficulty") || "easy";
       const question = await getQuestion(difficulty);
       if (question == null) {
         await interaction.editReply(`...Uh, looks like we're experiencing some technical difficulties! Why don't you try again in just a sec?\n-# _(Mike, where did the trivia go!? ... Well, go find some more! And hurry!!)_`);

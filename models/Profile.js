@@ -15,6 +15,11 @@ const Profile = new Schema({
     birthday: Date,
     quizCount: Number,
     lastQuizAt: Date,
+    lastILoveTVAt: Date,
+    timezone: {
+      type: String,
+      default: 'UTC'
+    },
     inventory: [{
       name: {
         type: String, 

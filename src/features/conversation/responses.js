@@ -193,6 +193,15 @@ module.exports = {
     "Oops! I'm so sorry!!",
     "I'm a nice TV!! Please don't be mad!!"
   ],
+
+  iLoveTV: [
+    `Yes, you _do_ love TV, don't you?`,
+    `That's CORRECT {user}!`,
+    'I could hear that 99 more times!',
+    `Haha, that's right {user}!`,
+    '<:amazing1:1443408304779952139><:amazing2:1443408305971138611><:amazing3:1443408306767921313><:amazing4:1443408307514511360>',
+    'You really <:love1:1443452223387340984><:love2:1443452224029065276> TV? I knew it!'
+  ],
   
   compliment: [
     "{user}! I've never wanted to hear ANYTHING more!!",
