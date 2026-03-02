@@ -311,6 +311,7 @@ const examples = [
   ['stopBeingHorny', 'u horny'],
   ['stopBeingHorny', 'you perv'],
   ['stopBeingHorny', "You're a lil freak"],
+  ['stopBeingHorny', 'your exhibitionism is showing'],
 
   // tier5_characters
   ['spamtonMention', 'do you miss your ex partner?'],

@@ -135,7 +135,7 @@ const tier4_conversational = {
     pattern: /((can|could|will|need) (you|u) (to )?)?(blow( me)? up|explode (me|my))|make me (explode|blow up)|goal is to blow up|(i (need to|gotta|will)|(i('|’)?m|i am)\s?(gonna|going to|about to|finna)?) (blow up|explode|blowing up|exploding)/i
   },
   stopBeingHorny: {
-    pattern: /((you|\bu\b)|(you are|you('|’)?re|your|ur)|stop|chill( with)?|knock off) (a|so|being( a| so)?|always)?\s?((lil|little)?\s?(bit)?)?\s?(horny|perverted|(a )?(perv(ert)?|freak(y)?))|((you|\bu\b) (get|got|need|have)( the)? horny pass)/i
+    pattern: /((you|\bu\b)|(you are|you('|’)?re|your|ur)|stop|chill( with)?|knock off) (a|so|being( a| so)?|always)?\s?((lil|little)?\s?(bit)?)?\s?(horny|perverted|(a )?(perv(ert)?|freak(y)?))|((you|\bu\b) (get|got|need|have)( the)? horny pass)|(your|ur) (exhibitionism|horniness)/i
   }
 };
 
