@@ -26,11 +26,11 @@ async function getInventory(interaction, profile, name) {
     const fields = { name: `${name.toUpperCase()}'S INVENTORY`, value: "You have nothing in your inventory yet!" }
     await interaction.channel.send(getMikeMessage(mikeIndex, null, null, fields));
   } else {
-    let pages = Math.ceil(inventoryCount / 15);
+    let pages = Math.ceil(inventoryCount / 10);
     let inventoryList = formatInventory(inventory);
 
     for (let i = 0; i < pages; i++) {
-      const pageStr = pages > 1 ? ` (${i+1})` : '';
+      const pageStr = pages > 1 ? ` [${i+1}]` : '';
       const fields = { name: `${name.toUpperCase()}'S INVENTORY${pageStr}`, value: inventoryList[i] }
       const title = i == 0 ? `"${quotes[mikeIndex]}"` : ' ';
       await interaction.channel.send(getMikeMessage(mikeIndex, title, null, fields));
@@ -43,10 +43,10 @@ function randomMikeIndex() {
 }
 
 function formatInventory(inventory) {
-  const lines = inventory.map(item => `${item.icon} ~ ${item.name} \`${starsPerRarity(item.rarity)}\``);
+  const lines = inventory.map(item => `${item.icon} ~ ${item.name} | \`${item.quantity}\` | \`${starsPerRarity(item.rarity)}\``);
   const pages = [];
-  for (let i = 0; i < lines.length; i += 15) {
-    pages.push(lines.slice(i, i + 15).join('\n'));
+  for (let i = 0; i < lines.length; i += 10) {
+    pages.push(lines.slice(i, i + 10).join('\n'));
   }
   return pages;
 }

@@ -20,7 +20,7 @@ module.exports = {
       return {
         label: `${item.name}`,
         value: `${index}`,
-        description: `Sellback: ${pointsPerRarity(item.rarity)} points`,
+        description: `Qty: ${item.quantity} | Sellback: ${pointsPerRarity(item.rarity)} points`,
         emoji: `${item.icon} `
       };
     });
@@ -48,6 +48,34 @@ module.exports = {
       const item = profile.inventory.at(itemIndex);
       const itemPoints = pointsPerRarity(item.rarity);
 
+      const itemQuantLimit = Math.min(item.quantity, 5);
+      const quantityOptions = [];
+
+      for (let i = 1; i <= itemQuantLimit; i++) {
+        quantityOptions.push({label: `${i}`, value: `${i}`});
+      }
+
+      const quantitySelectMenu = new StringSelectMenuBuilder()
+      .setCustomId('quantity_item_menu')
+      .setPlaceholder(``)
+      .addOptions(quantityOptions);
+
+      const quantityRow = new ActionRowBuilder().addComponents(quantitySelectMenu);
+
+      await selectedInventory.update({
+        content: `How many of your **${item.icon} ${item.name}** do you want to sell?`,
+        components: [quantityRow],
+        flags: MessageFlags.Ephemeral
+      });
+
+      const selectedQuantity = await sentInventory.awaitMessageComponent({
+        componentType: ComponentType.StringSelect,
+        filter: (i) => i.user.id === interaction.user.id
+      });
+
+      const sellQuantity = parseInt(selectedQuantity.values[0]);
+      const pointsTotal = itemPoints * sellQuantity;
+
       const confirm = new ButtonBuilder()
         .setCustomId('yes')
         .setLabel('Yes')
@@ -60,8 +88,8 @@ module.exports = {
       
       const buttonRow = new ActionRowBuilder().addComponents(confirm, cancel);
 
-      await selectedInventory.update({
-        content: `Are you sure you want to sell your **${item.icon} ${item.name}** for **${itemPoints} points**?`,
+      await selectedQuantity.update({
+        content: `Are you sure you want to sell your **${item.icon} ${item.name} x${sellQuantity}** for **${pointsTotal} points**?`,
         components: [buttonRow]
       });
 
@@ -72,13 +100,20 @@ module.exports = {
 
       if (selectedAnswer.customId === "yes") {
         await selectedAnswer.update({
-          content: `You got it! Here's **${itemPoints} points** for your **${item.icon} ${item.name}**!\n-# _(${quip()})_`,
+          content: `You got it! Here's **${pointsTotal} points** for your **${item.icon} ${item.name} x${sellQuantity}**!\n-# _(${quip()})_`,
           components: []
         });
 
-        profile.inventory.splice(itemIndex, 1);
+        const soldItem = profile.inventory[itemIndex]
+
+        if (sellQuantity == soldItem.quantity) {
+          profile.inventory.splice(itemIndex, 1);
+        } else {
+          soldItem.quantity -= sellQuantity;
+        }
+
         profile.save();
-        pointsService.give(profile.id, itemPoints);
+        pointsService.give(profile.id, pointsTotal);
       } else {
         await selectedAnswer.update({
           content: 'No sale, then! Have a TV-tastic day!',
