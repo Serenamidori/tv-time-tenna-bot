@@ -41,7 +41,15 @@ module.exports = {
     await interaction.reply({ embeds: [embed], files: [attachment] });
 
     profile.points = profile.points - points;
-    profile.inventory.push(prize);
+
+    const existingItem = profile.inventory.find(i => i.name.toLowerCase() === prize.name.toLowerCase());
+    
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      profile.inventory.push({ ...prize, quantity: 1 });
+    }
+
     profile.save();
   },
 };

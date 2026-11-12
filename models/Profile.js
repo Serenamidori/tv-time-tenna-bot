@@ -39,6 +39,10 @@ const Profile = new Schema({
         enum: ['common', 'uncommon', 'rare', 'veryRare', 'legendary'],
         default: 'common'
       },
+      quantity: {
+        type: Number, 
+        default: 1
+      },
       createdAt: {
         type: Date,
         default: Date.now

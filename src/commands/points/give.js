@@ -21,6 +21,7 @@ module.exports = {
       return {
         label: `${item.name}`,
         value: `${index}`,
+        description: `Qty: ${item.quantity}`,
         emoji: `${item.icon} `
       };
     });
@@ -47,14 +48,42 @@ module.exports = {
       const itemIndex = parseInt(selectedInventory.values[0], 10);
       const item = profile.inventory.at(itemIndex);
 
+      const itemQuantLimit = Math.min(item.quantity, 5);
+      const quantityOptions = [];
+
+      for (let i = 1; i <= itemQuantLimit; i++) {
+        quantityOptions.push({label: `${i}`, value: `${i}`});
+      }
+
+      const quantitySelectMenu = new StringSelectMenuBuilder()
+      .setCustomId('quantity_item_menu')
+      .setPlaceholder(``)
+      .addOptions(quantityOptions);
+
+      const quantityRow = new ActionRowBuilder().addComponents(quantitySelectMenu);
+
+      await selectedInventory.update({
+        content: `How many of your **${item.icon} ${item.name}** do you want to give?`,
+        components: [quantityRow],
+        flags: MessageFlags.Ephemeral
+      });
+
+      const selectedQuantity = await sentInventory.awaitMessageComponent({
+        componentType: ComponentType.StringSelect,
+        filter: (i) => i.user.id === interaction.user.id
+      });
+
+      const giftQuantity = parseInt(selectedQuantity.values[0]);
+      const showGiftQuantity = giftQuantity > 1 ? `${giftQuantity} ` : "";
+
       const userSelectMenu = new UserSelectMenuBuilder()
         .setCustomId('server_user_menu')
         .setPlaceholder('Select who to your item give to');
           
       const userRow = new ActionRowBuilder().addComponents(userSelectMenu);
 
-      await selectedInventory.update({
-        content: `Who do you want to give your **${item.icon} ${item.name}** to?`,
+      await selectedQuantity.update({
+        content: `Who do you want to give your **${showGiftQuantity}${item.icon} ${item.name}** to?`,
         components: [userRow],
         flags: MessageFlags.Ephemeral
       });
@@ -90,7 +119,7 @@ module.exports = {
       const buttonRow = new ActionRowBuilder().addComponents(confirm, cancel);
 
       await selectedUser.update({
-        content: `Are you sure you want to give your **${item.icon} ${item.name}** to **${recipientName}**?`,
+        content: `Are you sure you want to give your **${showGiftQuantity}${item.icon} ${item.name}** to **${recipientName}**?`,
         components: [buttonRow]
       });
 
@@ -105,12 +134,26 @@ module.exports = {
           components: []
         });
 
-        const gift = profile.inventory.splice(itemIndex, 1);
-        recipient.inventory.push(gift[0]);
+        const gift = profile.inventory[itemIndex];
+        const existingItem = recipient.inventory.find(i => i.name.toLowerCase() === gift.name.toLowerCase());      
+
+        if (existingItem) {
+          existingItem.quantity += giftQuantity;
+        } else {
+          recipient.inventory.push({...gift, quantity: giftQuantity});
+        }
+
+        if (giftQuantity == gift.quantity) {
+          profile.inventory.splice(itemIndex, 1);
+        } else {
+          gift.quantity -= giftQuantity;
+        }
+
         recipient.save();
         profile.save();
 
-        selectedAnswer.followUp(`<@${recipient.id}>, you've been given a **${item.icon} ${item.name}** from <@${profile.id}>!`);
+        const giftText = showGiftQuantity !== "" ?  `**${item.icon} ${item.name} x${giftQuantity}**` : `a **${item.icon} ${item.name}**`;
+        selectedAnswer.followUp(`<@${recipient.id}>, you've been given ${giftText} from <@${profile.id}>!`);
       } else {
         await selectedAnswer.update({
           content: 'No gifting, then! Have a TV-tastic day!',
